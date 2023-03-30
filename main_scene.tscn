@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bgix46oh7dm3x"]
+[gd_scene load_steps=6 format=3 uid="uid://osh1ei3rs8g6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_plfij"]
 albedo_color = Color(0.937255, 0.796078, 0.0901961, 1)
@@ -12,6 +12,8 @@ albedo_color = Color(0.227451, 0.0196078, 0.184314, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_uq56s"]
 material = SubResource("StandardMaterial3D_vs0ir")
 size = Vector3(10, 0.2, 10)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_6rn0w"]
 
 [node name="MainScene" type="Node3D"]
 
@@ -27,3 +29,7 @@ transform = Transform3D(0.999989, -7.63694e-10, -0.00467747, 0.0034952, 0.664553
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_uq56s")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.09187, 0.820663, -0.544885)
+mesh = SubResource("CapsuleMesh_6rn0w")
