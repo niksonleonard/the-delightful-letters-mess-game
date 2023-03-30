@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgix46oh7dm3x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_plfij"]
+albedo_color = Color(0.937255, 0.796078, 0.0901961, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_earnn"]
+material = SubResource("StandardMaterial3D_plfij")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vs0ir"]
+albedo_color = Color(0.227451, 0.0196078, 0.184314, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_uq56s"]
+material = SubResource("StandardMaterial3D_vs0ir")
+size = Vector3(10, 0.2, 10)
+
+[node name="MainScene" type="Node3D"]
+
+[node name="PlayerMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.742661, 0)
+mesh = SubResource("BoxMesh_earnn")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.954344, 2.2722)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.999989, -7.63694e-10, -0.00467747, 0.0034952, 0.664553, 0.747233, 0.00310842, -0.747242, 0.664545, 0, 1.78807, 3.33741)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_uq56s")
