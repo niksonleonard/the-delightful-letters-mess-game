@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://3uok1u2yitbo"]
+
+[ext_resource type="Script" path="res://LetterBudy.gd" id="1_oq725"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vighb"]
+size = Vector3(1, 0.05, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o30tw"]
+size = Vector3(1, 0.1, 0.5)
+
+[node name="LetterBudy" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.35303, 3.50629, 0)
+collision_layer = 9
+collision_mask = 9
+mass = 0.01
+contact_monitor = true
+constant_torque = Vector3(2.08165e-12, 0.01, 2.08165e-12)
+script = ExtResource("1_oq725")
+
+[node name="Letter" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.08165e-12)
+mesh = SubResource("BoxMesh_vighb")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_o30tw")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
