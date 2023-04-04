@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cl0fqubkhle6p"]
+[gd_scene load_steps=9 format=3 uid="uid://bgix46oh7dm3x"]
 
-[ext_resource type="PackedScene" uid="uid://mrgdsy2jrmeo" path="res://PlayerObject.tscn" id="1_a5whe"]
-[ext_resource type="PackedScene" uid="uid://dpuxgnkl2bsmg" path="res://LetterObject.tscn" id="2_oy542"]
-[ext_resource type="PackedScene" uid="uid://c1mbd01sf4615" path="res://JoaninhaObject.tscn" id="3_iepm1"]
+[ext_resource type="PackedScene" path="res://PlayerObject.tscn" id="1_a5whe"]
+[ext_resource type="PackedScene" path="res://LetterObject.tscn" id="2_oy542"]
+[ext_resource type="PackedScene" path="res://JoaninhaObject.tscn" id="3_iepm1"]
 
 [sub_resource type="Environment" id="Environment_tnx11"]
 
