@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1mbd01sf4615"]
+
+[ext_resource type="Script" path="res://JoaninhaController.gd" id="1_trdbi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1t2d1"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_lxvwa"]
+height = 0.5
+
+[node name="JoaninhaObject" type="CharacterBody3D"]
+collision_layer = 9
+collision_mask = 9
+script = ExtResource("1_trdbi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.25, 2.08165e-12)
+shape = SubResource("BoxShape3D_1t2d1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.25, 2.08165e-12)
+mesh = SubResource("CylinderMesh_lxvwa")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_desired_distance = 0.1
+
+[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="."]
