@@ -4,7 +4,7 @@ extends CharacterBody3D
 
 const LETTERS_GROUP = "letters"
 
-var Speed = 3
+var Speed = 2
 
 func _letter_touched_floor(target_position: Vector3):
 	navigationAgent.target_position = target_position
@@ -37,6 +37,7 @@ func moveToPoint():
 
 ## Represents all the proccess that must be done when touch a letter
 func eatTheFoundLetter(letter: Object):
+	$AudioStreamPlayer3D.play()
 	print("Nhaaac!")
 
 	# For now just destroy the letter

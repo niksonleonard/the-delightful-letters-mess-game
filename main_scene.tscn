@@ -1,10 +1,27 @@
+<<<<<<< HEAD
 [gd_scene load_steps=9 format=3 uid="uid://bgix46oh7dm3x"]
 
 [ext_resource type="PackedScene" path="res://PlayerObject.tscn" id="1_a5whe"]
 [ext_resource type="PackedScene" path="res://LetterObject.tscn" id="2_oy542"]
 [ext_resource type="PackedScene" path="res://JoaninhaObject.tscn" id="3_iepm1"]
+=======
+[gd_scene load_steps=16 format=3 uid="uid://cl0fqubkhle6p"]
+
+[ext_resource type="PackedScene" uid="uid://mrgdsy2jrmeo" path="res://PlayerObject.tscn" id="1_a5whe"]
+[ext_resource type="PackedScene" uid="uid://dpuxgnkl2bsmg" path="res://LetterObject.tscn" id="2_oy542"]
+[ext_resource type="PackedScene" uid="uid://c1mbd01sf4615" path="res://JoaninhaObject.tscn" id="3_iepm1"]
+[ext_resource type="Script" path="res://LetterSpawmerController.gd" id="4_wvl66"]
+[ext_resource type="AudioStream" uid="uid://bfsd5majcu8dr" path="res://sounds/bg-music-helice-theme.mp3" id="5_ck2hf"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_34ium"]
+
+[sub_resource type="Sky" id="Sky_xl4yy"]
+sky_material = SubResource("ProceduralSkyMaterial_34ium")
+>>>>>>> 06ef61296db2726f2ad1326d866060a0a631edf1
 
 [sub_resource type="Environment" id="Environment_tnx11"]
+background_mode = 2
+sky = SubResource("Sky_xl4yy")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jidap"]
 size = Vector3(9.83, 0.2, 10)
@@ -20,6 +37,14 @@ albedo_color = Color(0.227451, 0.0196078, 0.184314, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_uq56s"]
 material = SubResource("StandardMaterial3D_vs0ir")
 size = Vector3(10, 0.2, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_65lqd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l35dc"]
+albedo_color = Color(0.152941, 1, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_20n2d"]
+material = SubResource("StandardMaterial3D_l35dc")
 
 [node name="MainScene" type="Node3D"]
 
@@ -59,3 +84,47 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.92005, 1.30693, -4.28212)
 
 [node name="LetterObject2" parent="." instance=ExtResource("2_oy542")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.96388, 1.47546, 0.294993)
+
+[node name="DeliveryPost" type="StaticBody3D" parent="." groups=["delivery-post"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.601092, -4.75443)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeliveryPost"]
+shape = SubResource("BoxShape3D_65lqd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="DeliveryPost"]
+mesh = SubResource("BoxMesh_20n2d")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Score" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "Pontos: 0"
+
+[node name="HoldingLetter" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "Segurando: Carta Tipo Fogo"
+
+[node name="LetterSpawmer" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.57879, 0)
+script = ExtResource("4_wvl66")
+letter_object_scene = ExtResource("2_oy542")
+
+[node name="CreateLetterTimer" type="Timer" parent="LetterSpawmer"]
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ck2hf")
+autoplay = true
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]

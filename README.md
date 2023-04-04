@@ -2,6 +2,10 @@
 
 It is a project to intent to study Game Development and who knows be a solution to catch resource for the Hospital de Amor institution.
 
+# Assets resources
+
+https://freesound.org/people/InspectorJ/sounds/412068/
+
 # Development
 
 | Projet code repo | https://github.com/niksonleonard/mamu-adventure |
