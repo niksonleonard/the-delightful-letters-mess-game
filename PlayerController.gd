@@ -10,7 +10,7 @@ var Speed = 5
 func _process(delta):
 	if(navigationAgent.is_navigation_finished()):
 		return
-	
+		
 	# deal with character movement
 	moveToPoint(delta, Speed)
 
@@ -27,8 +27,15 @@ func faceDirection(direction):
 func _input(_event):
 	# Check if the player performed a click 
 	if Input.is_action_just_pressed("PointClick"):
+
+		# The following stuff it is about Trigonometry, we must to calculate
+		# where is the point clicked from the camera view that is
+		# in the floor
 		var camera = get_tree().get_nodes_in_group("Camera")[0]
 		var mousePos = get_viewport().get_mouse_position()
+
+		# ray is the way we calculate the point, it is like we shot a 
+		# imaginary ray from the camera and detects what it instersects
 		var rayLength = 100
 		var from = camera.project_ray_origin(mousePos)
 		var to = from + camera.project_ray_normal(mousePos) * rayLength
@@ -37,7 +44,7 @@ func _input(_event):
 		rayQuery.from = from
 		rayQuery.to = to
 		rayQuery.collide_with_areas = true
-		var result = space.intersect_ray(rayQuery)
-		print(result)
-		
+
+		# here is the result of ray insersection found
+		var result = space.intersect_ray(rayQuery)		
 		navigationAgent.target_position = result.position
