@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1mbd01sf4615"]
+[gd_scene load_steps=5 format=3 uid="uid://c1mbd01sf4615"]
 
 [ext_resource type="Script" path="res://JoaninhaController.gd" id="1_trdbi"]
+[ext_resource type="AudioStream" uid="uid://dmmsskhicg28m" path="res://sounds/4chewing-carrot-a.wav" id="2_qbpow"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1t2d1"]
 
@@ -24,3 +25,6 @@ mesh = SubResource("CylinderMesh_lxvwa")
 path_desired_distance = 0.1
 
 [node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="."]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_qbpow")
