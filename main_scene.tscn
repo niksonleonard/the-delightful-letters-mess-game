@@ -37,7 +37,7 @@ environment = SubResource("Environment_tnx11")
 transform = Transform3D(1, 0, 0, 0, 0.9681, 0.250566, 0, -0.250566, 0.9681, 0, 4.3998, 6.4456)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.999989, -7.63694e-10, -0.00467747, 0.0034952, 0.664553, 0.747233, 0.00310842, -0.747242, 0.664545, 0, 1.78807, 3.33741)
+transform = Transform3D(0.999989, -3.79046e-09, -0.00467747, 0.0034952, 0.664553, 0.747233, 0.00310842, -0.747242, 0.664545, 0, 3.21174, 1.01298)
 
 [node name="Floor" type="StaticBody3D" parent="."]
 collision_layer = 9
