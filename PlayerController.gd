@@ -1,19 +1,18 @@
 extends CharacterBody3D
 
+# NavigationAgent3D it is a node that help us to find paths easily
+# for reference see: 
+# https://docs.godotengine.org/en/stable/tutorials/navigation/navigation_introduction_3d.html
 @onready var navigationAgent : NavigationAgent3D = $NavigationAgent3D
 var Speed = 5
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if(navigationAgent.is_navigation_finished()):
 		return
 	
+	# deal with character movement
 	moveToPoint(delta, Speed)
-	pass
 
 func moveToPoint(_delta, speed):
 	var targetPos = navigationAgent.get_next_path_position()
@@ -26,6 +25,7 @@ func faceDirection(direction):
 	look_at(Vector3(direction.x, global_position.y, direction.z), Vector3.UP)
 
 func _input(_event):
+	# Check if the player performed a click 
 	if Input.is_action_just_pressed("PointClick"):
 		var camera = get_tree().get_nodes_in_group("Camera")[0]
 		var mousePos = get_viewport().get_mouse_position()
