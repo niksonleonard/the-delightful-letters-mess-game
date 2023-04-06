@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://mrgdsy2jrmeo"]
+[gd_scene load_steps=6 format=3 uid="uid://mrgdsy2jrmeo"]
 
 [ext_resource type="Script" path="res://PlayerController.gd" id="1_e0bng"]
+[ext_resource type="AudioStream" uid="uid://dc5118avwh0a1" path="res://sounds/collect_sound.wav" id="2_u34yo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_plfij"]
-albedo_color = Color(0.937255, 0.796078, 0.0901961, 1)
+albedo_color = Color(0.937255, 0.709804, 0.0901961, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_earnn"]
 material = SubResource("StandardMaterial3D_plfij")
@@ -25,3 +26,6 @@ shape = SubResource("CylinderShape3D_k3bgw")
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 
 [node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="."]
+
+[node name="CollectAudio" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_u34yo")
