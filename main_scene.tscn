@@ -47,11 +47,11 @@ environment = SubResource("Environment_tnx11")
 transform = Transform3D(1, 0, 0, 0, 0.637034, 0.770836, 0, -0.770836, 0.637034, 0, 4.55529, 3.53849)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.999989, -7.63694e-10, -0.00467747, 0.0034952, 0.664553, 0.747233, 0.00310842, -0.747242, 0.664545, 0, 1.78807, 3.33741)
+transform = Transform3D(0.999989, -3.79046e-09, -0.00467747, 0.0034952, 0.664553, 0.747233, 0.00310842, -0.747242, 0.664545, 0, 3.21174, 1.01298)
 
 [node name="Floor" type="StaticBody3D" parent="."]
-collision_layer = 9
-collision_mask = 9
+collision_layer = 8
+collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
 shape = SubResource("BoxShape3D_jidap")
@@ -65,20 +65,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.71188, 0)
 mesh = SubResource("BoxMesh_uq56s")
 skeleton = NodePath("../../..")
 
-[node name="Player" parent="." instance=ExtResource("1_a5whe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, -2.2552)
+[node name="Player" parent="." node_paths=PackedStringArray("scoretext") instance=ExtResource("1_a5whe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.247132, 1, -2.34539)
+collision_mask = 14
+scoretext = NodePath("../Control/VBoxContainer/Score")
+
+[node name="PlayerMesh" parent="Player" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.200332)
 
 [node name="JoaninhaObject" parent="." groups=["joaninha"] instance=ExtResource("3_iepm1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.929, 2.08165e-12, 2.08165e-12)
 
 [node name="LetterObject" parent="." instance=ExtResource("2_oy542")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.92005, 1.30693, -4.28212)
+collision_layer = 8
+collision_mask = 15
 
-[node name="LetterObject2" parent="." instance=ExtResource("2_oy542")]
+[node name="LetterObject2" parent="." groups=["delivery-post"] instance=ExtResource("2_oy542")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.96388, 1.47546, 0.294993)
+collision_layer = 8
+collision_mask = 15
 
-[node name="DeliveryPost" type="StaticBody3D" parent="." groups=["delivery-post"]]
+[node name="DeliveryPost" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.601092, -4.75443)
+collision_layer = 8
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DeliveryPost"]
 shape = SubResource("BoxShape3D_65lqd")
@@ -120,3 +131,5 @@ autoplay = true
 [node name="XROrigin3D" type="XROrigin3D" parent="."]
 
 [node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+
+[editable path="Player"]

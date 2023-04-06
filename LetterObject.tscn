@@ -21,6 +21,7 @@ script = ExtResource("1_owhgl")
 
 [node name="Letter" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.08165e-12)
+layers = 8
 mesh = SubResource("BoxMesh_vighb")
 skeleton = NodePath("../..")
 
