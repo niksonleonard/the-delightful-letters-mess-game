@@ -8,11 +8,15 @@ func _ready():
 	$CreateLetterTimer.timeout.connect(createLetterInstance)
 
 func createLetterInstance():
-	# Create a new letter
+	# Create a new instance of the Mob scene.
 	var letter = letter_object_scene.instantiate()
 
-	# Add it to the scene
-	add_child(letter)
+	# Choose a random location on the SpawnPath.
+	# We store the reference to the SpawnLocation node.
+	var mob_spawn_location = get_node("Path3D/PathFollow3D")
+	# And give it a random offset.
+	mob_spawn_location.progress_ratio = randf()
+	letter.position = mob_spawn_location.position
 
-	# Restart the timer
-	$CreateLetterTimer.start(2)
+	# Spawn the mob by adding it to the Main scene.
+	add_child(letter)

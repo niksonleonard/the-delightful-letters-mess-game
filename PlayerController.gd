@@ -12,7 +12,8 @@ var Speed = 5
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-		# Collision detection for touching letters
+	
+	# Collision detection for touching letters
 	# in this peace of code we find out if it touched a Letter
 	var collisionCount = get_slide_collision_count()
 	if (collisionCount > 0):
@@ -21,7 +22,7 @@ func _process(delta):
 			var collider = collision.get_collider()
 			if collider and collider.is_in_group(LETTERS_GROUP):
 				collectTheLetter(collider)	
-				break	
+				continue	
 
 	if(navigationAgent.is_navigation_finished()):
 		return
@@ -67,8 +68,9 @@ func _input(_event):
 		rayQuery.collide_with_areas = true
 
 		# here is the result of ray insersection found
-		var result = space.intersect_ray(rayQuery)		
-		navigationAgent.target_position = result.position
+		var result = space.intersect_ray(rayQuery)
+		if result:
+			navigationAgent.target_position = result.position
 
 ## Represents all the proccess that must be done when touch a letter
 func holdTheFoundLetter(letter: Object):

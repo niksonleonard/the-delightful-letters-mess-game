@@ -12,9 +12,8 @@ func _ready():
 
 ## Signal calls it whe touch something
 func _on_body_entered(_body:Node):
+	print("palmito incolor")
 	isOnTheFloor = true
-
-	print("something touched me")
 	get_tree().call_group("joaninha", "_letter_touched_floor", global_position)
 
 func _applyWindForce():
@@ -29,6 +28,5 @@ func _applyWindForce():
 
 	# apply wind force at the pressure point
 	apply_force(Vector3(0, .3, 0), lastPressurePoint)
-	print("Force applied")
 
 

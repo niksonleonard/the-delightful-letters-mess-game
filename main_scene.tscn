@@ -1,10 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://cl0fqubkhle6p"]
+[gd_scene load_steps=19 format=3 uid="uid://cl0fqubkhle6p"]
 
 [ext_resource type="PackedScene" uid="uid://mrgdsy2jrmeo" path="res://PlayerObject.tscn" id="1_a5whe"]
 [ext_resource type="PackedScene" uid="uid://dpuxgnkl2bsmg" path="res://LetterObject.tscn" id="2_oy542"]
 [ext_resource type="PackedScene" uid="uid://c1mbd01sf4615" path="res://JoaninhaObject.tscn" id="3_iepm1"]
 [ext_resource type="Script" path="res://LetterSpawmerController.gd" id="4_wvl66"]
 [ext_resource type="AudioStream" uid="uid://bfsd5majcu8dr" path="res://sounds/bg-music-helice-theme.mp3" id="5_ck2hf"]
+[ext_resource type="PackedScene" uid="uid://bryljgh5sxuok" path="res://models/fixing_shop.tscn" id="6_l6ypb"]
+[ext_resource type="PackedScene" uid="uid://vyemxvm4o3pm" path="res://models/barber_shop.tscn" id="7_p2elg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_34ium"]
 
@@ -16,19 +18,19 @@ background_mode = 2
 sky = SubResource("Sky_xl4yy")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jidap"]
-size = Vector3(9.83, 0.2, 10)
+size = Vector3(20, 0.4, 20)
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_dlbk4"]
-vertices = PackedVector3Array(-4.5, -1.41188, -4.5, -4.5, -1.41188, 4.5, 4.5, -1.41188, 4.5, 4.5, -1.41188, -4.5)
-polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
-cell_height = 0.1
+vertices = PackedVector3Array(0, -1.51188, -9.5, -9.5, -1.51188, 0, -9.5, -1.51188, 9.5, 0, -1.51188, 9.5, 9.5, -1.51188, 0, 9.5, -1.51188, -9.5, 0, -1.51188, 9.5, 9.5, -1.51188, 9.5, 9.5, -1.51188, 0, 0, -1.51188, -9.5, -9.5, -1.51188, -9.5, -9.5, -1.51188, 0)
+polygons = [PackedInt32Array(5, 4, 0), PackedInt32Array(0, 4, 3), PackedInt32Array(0, 3, 1), PackedInt32Array(1, 3, 2), PackedInt32Array(8, 7, 6), PackedInt32Array(11, 10, 9)]
+cell_height = 0.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vs0ir"]
 albedo_color = Color(0.227451, 0.0196078, 0.184314, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_uq56s"]
 material = SubResource("StandardMaterial3D_vs0ir")
-size = Vector3(10, 0.2, 10)
+size = Vector3(20, 0.2, 20)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_65lqd"]
 
@@ -38,19 +40,27 @@ albedo_color = Color(0.152941, 1, 1, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_20n2d"]
 material = SubResource("StandardMaterial3D_l35dc")
 
+[sub_resource type="Curve3D" id="Curve3D_iyj42"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -7.54688, 0, -7.36835, 0, 0, 0, 0, 0, 0, 7.74164, 0, -7.04376, 0, 0, 0, 0, 0, 0, 8.00132, 0, 7.04376, 0, 0, 0, 0, 0, 0, -8.35837, 0, 7.85525, 0, 0, 0, 0, 0, 0, -7.54688, 0, -7.36835),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
 [node name="MainScene" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tnx11")
 
 [node name="Camera3D" type="Camera3D" parent="." groups=["Camera"]]
-transform = Transform3D(1, 0, 0, 0, 0.637034, 0.770836, 0, -0.770836, 0.637034, 0, 4.55529, 3.53849)
+transform = Transform3D(1, 0, 0, 0, 0.782228, 0.622993, 0, -0.622993, 0.782228, 0, 11.477, 12.929)
+fov = 56.3
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.999989, -3.79046e-09, -0.00467747, 0.0034952, 0.664553, 0.747233, 0.00310842, -0.747242, 0.664545, 0, 3.21174, 1.01298)
 
 [node name="Floor" type="StaticBody3D" parent="."]
-collision_layer = 8
+collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
@@ -66,28 +76,13 @@ mesh = SubResource("BoxMesh_uq56s")
 skeleton = NodePath("../../..")
 
 [node name="Player" parent="." node_paths=PackedStringArray("scoretext") instance=ExtResource("1_a5whe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.247132, 1, -2.34539)
-collision_mask = 14
 scoretext = NodePath("../Control/VBoxContainer/Score")
 
-[node name="PlayerMesh" parent="Player" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.200332)
-
-[node name="JoaninhaObject" parent="." groups=["joaninha"] instance=ExtResource("3_iepm1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.929, 2.08165e-12, 2.08165e-12)
-
-[node name="LetterObject" parent="." instance=ExtResource("2_oy542")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.92005, 1.30693, -4.28212)
-collision_layer = 8
-collision_mask = 15
-
-[node name="LetterObject2" parent="." groups=["delivery-post"] instance=ExtResource("2_oy542")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.96388, 1.47546, 0.294993)
-collision_layer = 8
-collision_mask = 15
+[node name="JoaninhaObject" parent="." instance=ExtResource("3_iepm1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.76278, 0.550516, 0)
 
 [node name="DeliveryPost" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.601092, -4.75443)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.601092, -10.1249)
 collision_layer = 8
 collision_mask = 3
 
@@ -110,6 +105,7 @@ offset_bottom = 40.0
 
 [node name="Score" type="Label" parent="Control/VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 45
 text = "Pontos: 0"
 
 [node name="HoldingLetter" type="Label" parent="Control/VBoxContainer"]
@@ -117,12 +113,19 @@ layout_mode = 2
 text = "Segurando: Carta Tipo Fogo"
 
 [node name="LetterSpawmer" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.57879, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.9319, 0)
 script = ExtResource("4_wvl66")
 letter_object_scene = ExtResource("2_oy542")
 
 [node name="CreateLetterTimer" type="Timer" parent="LetterSpawmer"]
 autostart = true
+
+[node name="Path3D" type="Path3D" parent="LetterSpawmer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.81321, 2.08165e-12)
+curve = SubResource("Curve3D_iyj42")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="LetterSpawmer/Path3D"]
+transform = Transform3D(0.0212262, 0, 0.999775, 0, 1, 0, -0.999775, 0, 0.0212262, -7.54688, 0, -7.36835)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_ck2hf")
@@ -132,4 +135,10 @@ autoplay = true
 
 [node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
 
-[editable path="Player"]
+[node name="Cenario" type="Node3D" parent="."]
+
+[node name="fixing_shop" parent="Cenario" instance=ExtResource("6_l6ypb")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -13.8394)
+
+[node name="barber_shop" parent="Cenario" instance=ExtResource("7_p2elg")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12.953, 0, 0)

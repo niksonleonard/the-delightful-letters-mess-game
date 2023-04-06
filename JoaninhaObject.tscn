@@ -4,17 +4,18 @@
 [ext_resource type="AudioStream" uid="uid://dmmsskhicg28m" path="res://sounds/4chewing-carrot-a.wav" id="2_qbpow"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1t2d1"]
+size = Vector3(1.5, 1, 1.5)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_lxvwa"]
 height = 0.5
 
-[node name="JoaninhaObject" type="CharacterBody3D"]
+[node name="JoaninhaObject" type="CharacterBody3D" groups=["joaninha"]]
 collision_layer = 2
-collision_mask = 8
+collision_mask = 12
 script = ExtResource("1_trdbi")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.25, 2.08165e-12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.247241, 2.08165e-12)
 shape = SubResource("BoxShape3D_1t2d1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -23,7 +24,6 @@ layers = 2
 mesh = SubResource("CylinderMesh_lxvwa")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
-path_desired_distance = 0.1
 
 [node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="."]
 

@@ -4,29 +4,34 @@ extends CharacterBody3D
 
 const LETTERS_GROUP = "letters"
 
-var Speed = 2
+var Speed = 5
 
 func _letter_touched_floor(target_position: Vector3):
-	navigationAgent.target_position = target_position
-
+	if navigationAgent.is_navigation_finished():
+		navigationAgent.target_position = target_position
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-
-	# Collision detection for touching letters
-	# in this peace of code we find out if it touched a Letter
-	var collisionCount = get_slide_collision_count()
-	if (collisionCount > 0):
-		for i in collisionCount:
-			var collision = get_slide_collision(i)
-			var collider = collision.get_collider()
-			if collider && collider.is_in_group(LETTERS_GROUP):
-				print("Wow, found some thing")
-				eatTheFoundLetter(collider)
-				break
 
 	# Move the character if it still has to
 	if(!navigationAgent.is_navigation_finished()):
 		moveToPoint()
+	
+	# Collision detection for touching letters
+	# in this peace of code we find out if it touched a Letter
+	for i in range(get_slide_collision_count()):
+		var collision = get_slide_collision(i)
+
+		# If the collision is with ground
+		if (collision.get_collider() == null):
+			continue
+
+		var collider = collision.get_collider()
+	
+		if collider.is_in_group(LETTERS_GROUP):
+			print("Wow, found some thing")
+			eatTheFoundLetter(collider)
+			continue
 				
 func moveToPoint():
 	var targetPos = navigationAgent.get_next_path_position()
@@ -41,6 +46,7 @@ func eatTheFoundLetter(letter: Object):
 	print("Nhaaac!")
 
 	# For now just destroy the letter
+	global_position = letter.global_position
 	letter.queue_free()
 
 	# After ate tryies to find another one
@@ -56,5 +62,5 @@ func findAnotherLetter():
 		if (letter.is_queued_for_deletion()):
 			continue
 
-		print("Next one please")
+		print("Next one please", letter.global_position)
 		navigationAgent.target_position = letter.global_position

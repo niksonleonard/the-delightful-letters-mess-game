@@ -3,17 +3,18 @@
 [ext_resource type="Script" path="res://LetterController.gd" id="1_owhgl"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_vighb"]
-size = Vector3(1, 0.05, 0.5)
+size = Vector3(1, 0.02, 0.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o30tw"]
-size = Vector3(1, 0.2, 0.5)
+size = Vector3(1.2, 0.05, 0.8)
 
 [node name="LetterObject" type="RigidBody3D" groups=["letters"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
-collision_layer = 9
-collision_mask = 9
+collision_layer = 8
+collision_mask = 6
 mass = 0.01
-max_contacts_reported = 1
+continuous_cd = true
+max_contacts_reported = 4
 contact_monitor = true
 freeze_mode = 1
 constant_torque = Vector3(2.08165e-12, 2.08165e-12, 2.08165e-12)
