@@ -4,7 +4,10 @@ It is a project to intent to study Game Development and who knows be a solution 
 
 # Assets resources
 
+Here some places in web to get free studff
+
 https://freesound.org/people/InspectorJ/sounds/412068/
+https://freemusicarchive.org/home
 
 # Development
 

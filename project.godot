@@ -26,6 +26,7 @@ PointClick={
 [rendering]
 
 renderer/rendering_method="mobile"
+renderer/rendering_method.web="mobile"
 
 [xr]
 
