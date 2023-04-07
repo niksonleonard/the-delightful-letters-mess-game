@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://c1mbd01sf4615" path="res://JoaninhaObject.tscn" id="3_iepm1"]
 [ext_resource type="Script" path="res://LetterSpawmerController.gd" id="4_wvl66"]
 [ext_resource type="AudioStream" uid="uid://bfsd5majcu8dr" path="res://sounds/bg-music-helice-theme.mp3" id="5_ck2hf"]
-[ext_resource type="PackedScene" uid="uid://bryljgh5sxuok" path="res://models/fixing_shop.tscn" id="6_l6ypb"]
-[ext_resource type="PackedScene" uid="uid://vyemxvm4o3pm" path="res://models/barber_shop.tscn" id="7_p2elg"]
+[ext_resource type="PackedScene" uid="uid://bryljgh5sxuok" path="res://models/fixing_shop.tscn" id="6_d080s"]
+[ext_resource type="PackedScene" uid="uid://vyemxvm4o3pm" path="res://models/barber_shop.tscn" id="7_4hr5x"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_34ium"]
 
@@ -81,7 +81,7 @@ scoretext = NodePath("../Control/VBoxContainer/Score")
 [node name="JoaninhaObject" parent="." instance=ExtResource("3_iepm1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.76278, 0.550516, 0)
 
-[node name="DeliveryPost" type="StaticBody3D" parent="."]
+[node name="DeliveryPost" type="StaticBody3D" parent="." groups=["delliverypost"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.601092, -10.1249)
 collision_layer = 8
 collision_mask = 3
@@ -137,8 +137,8 @@ autoplay = true
 
 [node name="Cenario" type="Node3D" parent="."]
 
-[node name="fixing_shop" parent="Cenario" instance=ExtResource("6_l6ypb")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -13.8394)
+[node name="fixing_shop" parent="Cenario" instance=ExtResource("6_d080s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.6655)
 
-[node name="barber_shop" parent="Cenario" instance=ExtResource("7_p2elg")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12.953, 0, 0)
+[node name="barber_shop" parent="." instance=ExtResource("7_4hr5x")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.275533, 0, -12.7474)

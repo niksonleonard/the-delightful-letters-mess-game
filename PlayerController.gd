@@ -1,7 +1,10 @@
 extends CharacterBody3D
 
 const LETTERS_GROUP = "letters"
+const DELLIVERYPOST_GROUP = "delliverypost"
 var score = 0
+var holdingLetter: bool = false
+
 @export var scoretext: Label
 
 # NavigationAgent3D it is a node that help us to find paths easily
@@ -21,8 +24,13 @@ func _process(delta):
 			var collision = get_slide_collision(i)
 			var collider = collision.get_collider()
 			if collider and collider.is_in_group(LETTERS_GROUP):
-				collectTheLetter(collider)	
+				collectTheLetter(collider)
+				print(holdingLetter)	
 				continue	
+			if collider and collider.is_in_group(DELLIVERYPOST_GROUP):
+				delliveryLetterInPost()
+				print("colidiu com o posto de entrega")
+				continue
 
 	if(navigationAgent.is_navigation_finished()):
 		return
@@ -30,11 +38,20 @@ func _process(delta):
 	moveToPoint(delta, Speed)
 
 func collectTheLetter(collider):
+	holdingLetter = true
 	score += 10
 	scoretext.text="Pontos:"+ str(score)
 	print("I take a letter " + str(score))
 	$CollectAudio.play()
 	collider.queue_free()
+
+func delliveryLetterInPost():
+	if(holdingLetter==true):
+		score += 20
+		scoretext.text="Pontos:"+ str(score)
+		holdingLetter = false
+		$DelliveryAudio.play()
+		
 
 func moveToPoint(_delta, speed):
 	var targetPos = navigationAgent.get_next_path_position()
