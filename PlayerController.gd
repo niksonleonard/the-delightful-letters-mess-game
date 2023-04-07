@@ -11,27 +11,33 @@ var holdingLetter: bool = false
 # for reference see: 
 # https://docs.godotengine.org/en/stable/tutorials/navigation/navigation_introduction_3d.html
 @onready var navigationAgent : NavigationAgent3D = $NavigationAgent3D
+
+## Speed that player moves
 var Speed = 5
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
+
 	# Collision detection for touching letters
 	# in this peace of code we find out if it touched a Letter
-	var collisionCount = get_slide_collision_count()
-	if (collisionCount > 0):
-		for i in collisionCount:
-			var collision = get_slide_collision(i)
-			var collider = collision.get_collider()
-			if collider and collider.is_in_group(LETTERS_GROUP):
-				collectTheLetter(collider)
-				print(holdingLetter)	
-				continue	
-			if collider and collider.is_in_group(DELLIVERYPOST_GROUP):
-				delliveryLetterInPost()
-				print("colidiu com o posto de entrega")
-				continue
+	for i in range(get_slide_collision_count()):
+		var collision = get_slide_collision(i)
+		# If the collision is with ground
+		if (collision.get_collider() == null):
+			continue
+		
+		# Get in current Loop index the collision information
+		var collider = collision.get_collider()
+		# Check if touched some letter
+		if collider.is_in_group(LETTERS_GROUP):
+			collectTheLetter(collider)
+			continue
 
+		# Check if touched delivery office
+		if collider.is_in_group(DELLIVERYPOST_GROUP):
+			delliveryLetterInPost()
+			continue
+	
 	if(navigationAgent.is_navigation_finished()):
 		return
 	# deal with character movement
@@ -45,13 +51,13 @@ func collectTheLetter(collider):
 	$CollectAudio.play()
 	collider.queue_free()
 
+## When player has catch a letter and touches a deliverry office
 func delliveryLetterInPost():
 	if(holdingLetter==true):
 		score += 20
 		scoretext.text="Pontos:"+ str(score)
 		holdingLetter = false
 		$DelliveryAudio.play()
-		
 
 func moveToPoint(_delta, speed):
 	var targetPos = navigationAgent.get_next_path_position()
