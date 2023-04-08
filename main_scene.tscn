@@ -146,6 +146,12 @@ para jogar novamente."
 label_settings = SubResource("LabelSettings_jtjql")
 horizontal_alignment = 1
 
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+focus_neighbor_left = NodePath(".")
+
 [node name="LetterSpawmer" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.9319, 0)
 script = ExtResource("4_wvl66")
@@ -181,4 +187,5 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.2755
 wait_time = 10.0
 autostart = true
 
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
