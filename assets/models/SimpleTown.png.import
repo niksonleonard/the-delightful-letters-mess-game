@@ -3,17 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://72dolrgcqmaa"
-path.s3tc="res://.godot/imported/SimpleTown.png-f4eb7ea0816cdfc3d48250c23bce8ce7.s3tc.ctex"
-path.etc2="res://.godot/imported/SimpleTown.png-f4eb7ea0816cdfc3d48250c23bce8ce7.etc2.ctex"
+path.etc2="res://.godot/imported/SimpleTown.png-c07b8e57af213d23093d3728f3caf131.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
-source_file="res://models/SimpleTown.png"
-dest_files=["res://.godot/imported/SimpleTown.png-f4eb7ea0816cdfc3d48250c23bce8ce7.s3tc.ctex", "res://.godot/imported/SimpleTown.png-f4eb7ea0816cdfc3d48250c23bce8ce7.etc2.ctex"]
+source_file="res://assets/models/SimpleTown.png"
+dest_files=["res://.godot/imported/SimpleTown.png-c07b8e57af213d23093d3728f3caf131.etc2.ctex"]
 
 [params]
 

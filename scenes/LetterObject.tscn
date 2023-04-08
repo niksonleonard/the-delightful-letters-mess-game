@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpuxgnkl2bsmg"]
+[gd_scene load_steps=4 format=3]
 
-[ext_resource type="Script" path="res://LetterController.gd" id="1_owhgl"]
+[ext_resource type="Script" path="res://scripts/LetterController.gd" id="1_owhgl"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_vighb"]
 size = Vector3(1, 0.02, 0.5)

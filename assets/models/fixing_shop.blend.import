@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://blr132xmjuhct"
-path="res://.godot/imported/fixing_shop.blend-f8daaeb256304ad947654f59e521498a.scn"
+path="res://.godot/imported/fixing_shop.blend-9dbde664f17873f99eba64ff4170a237.scn"
 
 [deps]
 
-source_file="res://models/fixing_shop.blend"
-dest_files=["res://.godot/imported/fixing_shop.blend-f8daaeb256304ad947654f59e521498a.scn"]
+source_file="res://assets/models/fixing_shop.blend"
+dest_files=["res://.godot/imported/fixing_shop.blend-9dbde664f17873f99eba64ff4170a237.scn"]
 
 [params]
 

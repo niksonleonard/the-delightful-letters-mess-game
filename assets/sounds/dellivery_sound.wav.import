@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://1lgof1mf0a6"
-path="res://.godot/imported/dellivery_sound.wav-5964377f7784ef1dbc13cbc79f9959a7.sample"
+path="res://.godot/imported/dellivery_sound.wav-2d2f3887f1dd1266a765e70e47a9ef5e.sample"
 
 [deps]
 
-source_file="res://sounds/dellivery_sound.wav"
-dest_files=["res://.godot/imported/dellivery_sound.wav-5964377f7784ef1dbc13cbc79f9959a7.sample"]
+source_file="res://assets/sounds/dellivery_sound.wav"
+dest_files=["res://.godot/imported/dellivery_sound.wav-2d2f3887f1dd1266a765e70e47a9ef5e.sample"]
 
 [params]
 

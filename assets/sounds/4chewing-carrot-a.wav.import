@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dmmsskhicg28m"
-path="res://.godot/imported/4chewing-carrot-a.wav-0e929499950bda3a5683527b69344a98.sample"
+path="res://.godot/imported/4chewing-carrot-a.wav-22d11f97f4ef5969b6d3121df1261b9c.sample"
 
 [deps]
 
-source_file="res://sounds/4chewing-carrot-a.wav"
-dest_files=["res://.godot/imported/4chewing-carrot-a.wav-0e929499950bda3a5683527b69344a98.sample"]
+source_file="res://assets/sounds/4chewing-carrot-a.wav"
+dest_files=["res://.godot/imported/4chewing-carrot-a.wav-22d11f97f4ef5969b6d3121df1261b9c.sample"]
 
 [params]
 

@@ -1,0 +1,185 @@
+[gd_scene load_steps=21 format=3]
+
+[ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_314rm"]
+[ext_resource type="PackedScene" path="res://scenes/PlayerObject.tscn" id="1_wi3b8"]
+[ext_resource type="PackedScene" path="res://scenes/JoaninhaObject.tscn" id="2_2nq0w"]
+[ext_resource type="Script" path="res://scripts/LetterSpawmerController.gd" id="3_v7jav"]
+[ext_resource type="PackedScene" path="res://scenes/LetterObject.tscn" id="4_u832i"]
+[ext_resource type="AudioStream" uid="uid://bfsd5majcu8dr" path="res://assets/sounds/bg-music-helice-theme.mp3" id="5_oyj76"]
+[ext_resource type="PackedScene" uid="uid://5n24h6tvjqpi" path="res://assets/models/fixing_shop.tscn" id="6_ey0g3"]
+[ext_resource type="PackedScene" path="res://assets/models/barber_shop.tscn" id="7_th4pw"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_34ium"]
+
+[sub_resource type="Sky" id="Sky_xl4yy"]
+sky_material = SubResource("ProceduralSkyMaterial_34ium")
+
+[sub_resource type="Environment" id="Environment_tnx11"]
+background_mode = 2
+sky = SubResource("Sky_xl4yy")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jidap"]
+size = Vector3(20, 0.4, 20)
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_dlbk4"]
+vertices = PackedVector3Array(0, -1.51188, -9.5, -9.5, -1.51188, 0, -9.5, -1.51188, 9.5, 0, -1.51188, 9.5, 9.5, -1.51188, 0, 9.5, -1.51188, -9.5, 0, -1.51188, 9.5, 9.5, -1.51188, 9.5, 9.5, -1.51188, 0, 0, -1.51188, -9.5, -9.5, -1.51188, -9.5, -9.5, -1.51188, 0)
+polygons = [PackedInt32Array(5, 4, 0), PackedInt32Array(0, 4, 3), PackedInt32Array(0, 3, 1), PackedInt32Array(1, 3, 2), PackedInt32Array(8, 7, 6), PackedInt32Array(11, 10, 9)]
+cell_height = 0.05
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vs0ir"]
+albedo_color = Color(0.227451, 0.0196078, 0.184314, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_uq56s"]
+material = SubResource("StandardMaterial3D_vs0ir")
+size = Vector3(20, 0.2, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_65lqd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l35dc"]
+albedo_color = Color(0.152941, 1, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_20n2d"]
+material = SubResource("StandardMaterial3D_l35dc")
+
+[sub_resource type="Curve3D" id="Curve3D_iyj42"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -7.54688, 0, -7.36835, 0, 0, 0, 0, 0, 0, 7.74164, 0, -7.04376, 0, 0, 0, 0, 0, 0, 8.00132, 0, 7.04376, 0, 0, 0, 0, 0, 0, -8.35837, 0, 7.85525, 0, 0, 0, 0, 0, 0, -7.54688, 0, -7.36835),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_to3bp"]
+font_size = 50
+
+[node name="MainScene" type="Node3D"]
+script = ExtResource("1_314rm")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_tnx11")
+
+[node name="Cenario" type="Node3D" parent="."]
+
+[node name="fixing_shop" parent="Cenario" instance=ExtResource("6_ey0g3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.6655)
+
+[node name="barber_shop" parent="Cenario" instance=ExtResource("7_th4pw")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.275533, 0, -12.7474)
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="Cenario"]
+stream = ExtResource("5_oyj76")
+autoplay = true
+
+[node name="Floor" type="StaticBody3D" parent="Cenario"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cenario/Floor"]
+shape = SubResource("BoxShape3D_jidap")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="Cenario/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.71188, 0)
+navigation_mesh = SubResource("NavigationMesh_dlbk4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cenario/Floor/NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.71188, 0)
+mesh = SubResource("BoxMesh_uq56s")
+skeleton = NodePath("../../../..")
+
+[node name="Camera3D" type="Camera3D" parent="." groups=["Camera"]]
+transform = Transform3D(1, 0, 0, 0, 0.782228, 0.622993, 0, -0.622993, 0.782228, 0, 11.477, 12.929)
+current = true
+fov = 56.3
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.999989, -3.79046e-09, -0.00467747, 0.0034952, 0.664553, 0.747233, 0.00310842, -0.747242, 0.664545, 0, 3.21174, 1.01298)
+
+[node name="Player" parent="." node_paths=PackedStringArray("scoretext") instance=ExtResource("1_wi3b8")]
+scoretext = NodePath("../UserInterface/ScoreGameStateUI/Score")
+
+[node name="JoaninhaObject" parent="." instance=ExtResource("2_2nq0w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.76278, 0.550516, 0)
+
+[node name="DeliveryPost" type="StaticBody3D" parent="." groups=["delliverypost"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.601092, -10.1249)
+collision_layer = 8
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeliveryPost"]
+shape = SubResource("BoxShape3D_65lqd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="DeliveryPost"]
+mesh = SubResource("BoxMesh_20n2d")
+
+[node name="LetterSpawner" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.9319, 0)
+script = ExtResource("3_v7jav")
+letter_object_scene = ExtResource("4_u832i")
+
+[node name="CreateLetterTimer" type="Timer" parent="LetterSpawner"]
+autostart = true
+
+[node name="Path3D" type="Path3D" parent="LetterSpawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.81321, 2.08165e-12)
+curve = SubResource("Curve3D_iyj42")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="LetterSpawner/Path3D"]
+transform = Transform3D(0.0212262, 0, 0.999775, 0, 1, 0, -0.999775, 0, 0.0212262, -7.54688, 0, -7.36835)
+
+[node name="GameTimer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="UserInterface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScoreGameStateUI" type="VBoxContainer" parent="UserInterface"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Score" type="Label" parent="UserInterface/ScoreGameStateUI"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "Pontos: 0"
+
+[node name="HoldingLetter" type="Label" parent="UserInterface/ScoreGameStateUI"]
+layout_mode = 2
+text = "Segurando: Carta Tipo Fogo"
+
+[node name="Retry" type="ColorRect" parent="UserInterface"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.403922, 0.501961, 0.454902)
+
+[node name="Label" type="Label" parent="UserInterface/Retry"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Dê um clique
+para jogar novamente."
+label_settings = SubResource("LabelSettings_to3bp")
+horizontal_alignment = 1
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+
+[connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]

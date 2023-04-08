@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b30uyd6uxjw8s"
-path="res://.godot/imported/barber_shop.blend-1fb57a38f35b91f4c5c8d740ee410e88.scn"
+path="res://.godot/imported/barber_shop.blend-aa0384e5ce1fd5724939f4b8279dbb79.scn"
 
 [deps]
 
-source_file="res://models/barber_shop.blend"
-dest_files=["res://.godot/imported/barber_shop.blend-1fb57a38f35b91f4c5c8d740ee410e88.scn"]
+source_file="res://assets/models/barber_shop.blend"
+dest_files=["res://.godot/imported/barber_shop.blend-aa0384e5ce1fd5724939f4b8279dbb79.scn"]
 
 [params]
 

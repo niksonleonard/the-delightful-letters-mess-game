@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://5n24h6tvjqpi"]
+
+[ext_resource type="PackedScene" uid="uid://blr132xmjuhct" path="res://assets/models/fixing_shop.blend" id="1_h3rp3"]
+[ext_resource type="Texture2D" uid="uid://72dolrgcqmaa" path="res://assets/models/SimpleTown.png" id="2_fksgo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_latbs"]
+albedo_texture = ExtResource("2_fksgo")
+
+[node name="fixing_shop" instance=ExtResource("1_h3rp3")]
+
+[node name="Building_AutoRepair_A" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_latbs")
