@@ -1,5 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://cl0fqubkhle6p"]
+[gd_scene load_steps=21 format=3 uid="uid://cl0fqubkhle6p"]
 
+[ext_resource type="Script" path="res://main_scene.gd" id="1_0af3d"]
 [ext_resource type="PackedScene" uid="uid://mrgdsy2jrmeo" path="res://PlayerObject.tscn" id="1_a5whe"]
 [ext_resource type="PackedScene" uid="uid://dpuxgnkl2bsmg" path="res://LetterObject.tscn" id="2_oy542"]
 [ext_resource type="PackedScene" uid="uid://c1mbd01sf4615" path="res://JoaninhaObject.tscn" id="3_iepm1"]
@@ -40,6 +41,9 @@ albedo_color = Color(0.152941, 1, 1, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_20n2d"]
 material = SubResource("StandardMaterial3D_l35dc")
 
+[sub_resource type="LabelSettings" id="LabelSettings_jtjql"]
+font_size = 50
+
 [sub_resource type="Curve3D" id="Curve3D_iyj42"]
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, -7.54688, 0, -7.36835, 0, 0, 0, 0, 0, 0, 7.74164, 0, -7.04376, 0, 0, 0, 0, 0, 0, 8.00132, 0, 7.04376, 0, 0, 0, 0, 0, 0, -8.35837, 0, 7.85525, 0, 0, 0, 0, 0, 0, -7.54688, 0, -7.36835),
@@ -48,6 +52,7 @@ _data = {
 point_count = 5
 
 [node name="MainScene" type="Node3D"]
+script = ExtResource("1_0af3d")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tnx11")
@@ -94,9 +99,11 @@ mesh = SubResource("BoxMesh_20n2d")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control"]
 layout_mode = 0
@@ -111,6 +118,33 @@ text = "Pontos: 0"
 [node name="HoldingLetter" type="Label" parent="Control/VBoxContainer"]
 layout_mode = 2
 text = "Segurando: Carta Tipo Fogo"
+
+[node name="Retry" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.403922, 0.501961, 0.454902)
+
+[node name="Label" type="Label" parent="Control/Retry"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Dê um clique
+para jogar novamente."
+label_settings = SubResource("LabelSettings_jtjql")
+horizontal_alignment = 1
 
 [node name="LetterSpawmer" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.9319, 0)
@@ -138,7 +172,13 @@ autoplay = true
 [node name="Cenario" type="Node3D" parent="."]
 
 [node name="fixing_shop" parent="Cenario" instance=ExtResource("6_d080s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.6655)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 13.7869, 0, 0.0223303)
 
 [node name="barber_shop" parent="." instance=ExtResource("7_4hr5x")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.275533, 0, -12.7474)
+
+[node name="GameTimer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
