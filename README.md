@@ -2,6 +2,14 @@
 
 It is a project to intent to study Game Development and who knows be a solution to catch resource for the Hospital de Amor institution.
 
+# Documentation Stuff
+
+Well, to have a good and enjoyable reading of it documentation it is remcomended to open it using [Obsidian](https://obsidian.md). It is not a FOSS kind of software but til now it is free and could be helpfull.
+
+## Narrative
+
+The story can be found in [[Game Story Narrative]] page.
+
 # Assets resources
 
 Here some places in web to get free studff
