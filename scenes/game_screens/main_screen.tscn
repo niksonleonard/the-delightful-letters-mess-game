@@ -1,7 +1,7 @@
-[gd_scene load_steps=21 format=3]
+[gd_scene load_steps=21 format=3 uid="uid://boox7qkod0yl0"]
 
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_314rm"]
-[ext_resource type="PackedScene" path="res://scenes/PlayerObject.tscn" id="1_wi3b8"]
+[ext_resource type="PackedScene" uid="uid://bwmhxba2yl7lk" path="res://scenes/PlayerObject.tscn" id="1_wi3b8"]
 [ext_resource type="PackedScene" path="res://scenes/JoaninhaObject.tscn" id="2_2nq0w"]
 [ext_resource type="Script" path="res://scripts/LetterSpawmerController.gd" id="3_v7jav"]
 [ext_resource type="PackedScene" path="res://scenes/LetterObject.tscn" id="4_u832i"]
@@ -126,7 +126,7 @@ curve = SubResource("Curve3D_iyj42")
 transform = Transform3D(0.0212262, 0, 0.999775, 0, 1, 0, -0.999775, 0, 0.0212262, -7.54688, 0, -7.36835)
 
 [node name="GameTimer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 60.0
 autostart = true
 
 [node name="UserInterface" type="Control" parent="."]

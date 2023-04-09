@@ -6,5 +6,10 @@ func _ready():
 
 func _on_game_timer_timeout():
 	$UserInterface/Retry.show()
+	$Player.queue_free()
 	print("It is over darling")
-	#letter.queue_free()
+
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_accept") and $UserInterface/Retry.visible:
+		# This restarts the current scene.
+		get_tree().reload_current_scene()
