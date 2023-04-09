@@ -18,8 +18,8 @@ Important thing that is gender free. Loves to help and engage easily in new adve
 
 ## References
 
-![[harena-invite-mamu-reference.jpeg|width=50]]
-![[referece-mamu-original.png]]
+![Mamu scratch for the Harena Invite Project](../images/harena-invite-mamu-reference.jpeg)
+![Original Mamu design from HA branding manual](../images/referece-mamu-original.png)
 # Pombis
 
 ## Summary
@@ -33,7 +33,7 @@ Basically the carelles character that initially caused the mess of the main stor
 
 ## References
 
-![[IMG_5179.jpeg]]
+![HA Infantil - Entrance has some ladybug models](../images/IMG_5179.jpeg)
 
 # Leiamess
 
@@ -41,4 +41,4 @@ They are ladybugs that are inconcious over letter effects and the anti-hero of t
 
 # General References
 
-![[FKy5y_wXMAIk5By.jpeg]]
+![HA Infantil has some flowers that could be characters or part of some scenery](../images/FKy5y_wXMAIk5By.jpeg)
