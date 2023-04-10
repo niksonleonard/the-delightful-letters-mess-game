@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"type":"text","text":"Characters","id":"7e73cd25f1642f07","x":-311,"y":-214,"width":250,"height":60},
+		{"type":"text","text":"Mamu","id":"e3b5ded1bbfe1aaf","x":-420,"y":-60,"width":120,"height":60},
+		{"type":"file","file":"documentation/images/referece-mamu-original.png","id":"950a82279b5870c7","x":-740,"y":60,"width":340,"height":120},
+		{"type":"file","file":"documentation/images/harena-invite-mamu-reference.jpeg","id":"8abf76545912fb4e","x":-740,"y":220,"width":157,"height":198},
+		{"id":"010658d9f0016d61","x":200,"y":-30,"width":250,"height":60,"type":"text","text":"Joaninha"},
+		{"type":"text","text":"Pombis","id":"c14198afde956d9d","x":-140,"y":-60,"width":250,"height":60},
+		{"type":"file","file":"documentation/images/Pasted image 20230410195441.png","id":"3776feb6bea98ab9","x":400,"y":79,"width":201,"height":201},
+		{"id":"05f4d634c7479f94","x":613,"y":-187,"width":250,"height":60,"type":"text","text":"Joaninhas Operarias"}
+	],
+	"edges":[
+		{"id":"de9731b8bfe11727","fromNode":"7e73cd25f1642f07","fromSide":"bottom","toNode":"e3b5ded1bbfe1aaf","toSide":"top"},
+		{"id":"c1291d64bde9f0f7","fromNode":"e3b5ded1bbfe1aaf","fromSide":"left","toNode":"950a82279b5870c7","toSide":"top"},
+		{"id":"8da25b96ee288b0d","fromNode":"7e73cd25f1642f07","fromSide":"bottom","toNode":"c14198afde956d9d","toSide":"left"},
+		{"id":"7fd9ffa89bd951af","fromNode":"7e73cd25f1642f07","fromSide":"right","toNode":"010658d9f0016d61","toSide":"top"},
+		{"id":"78c4f4ef9256983b","fromNode":"010658d9f0016d61","fromSide":"bottom","toNode":"3776feb6bea98ab9","toSide":"left"},
+		{"id":"cd3436a9e3539531","fromNode":"7e73cd25f1642f07","fromSide":"right","toNode":"05f4d634c7479f94","toSide":"left"}
+	]
+}
