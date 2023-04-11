@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 var holdingLetter: bool = false
-var score = 0
+@onready var gameSession: GameSessionState = get_node("/root/GameSession")
 
 @export var scoretext: Label
 
@@ -41,21 +41,24 @@ func _process(delta):
 	# deal with character movement
 	moveToPoint(delta, Speed)
 
+## When player touches a letter on the floor before the antagonist
 func collectTheLetter(collider):
 	holdingLetter = true
-	score += 10
-	scoretext.text="Pontos:"+ str(score)
-	print("I take a letter " + str(score))
+	gameSession.add_score(10, GameSessionState.ScoreReason.DeliveredLetter)
+	scoretext.text="Pontos:"+ str(gameSession.score)
+	print("I take a letter " + str(gameSession.score))
 	$CollectAudio.play()
 	collider.queue_free()
+	gameSession.picked_letter()
 
 ## When player has catch a letter and touches a deliverry office
 func delliveryLetterInPost():
 	if(holdingLetter==true):
-		score += 20
-		scoretext.text="Pontos:"+ str(score)
+		gameSession.add_score(20, GameSessionState.ScoreReason.DeliveredLetter)
+		scoretext.text="Pontos:"+ str(gameSession.score)
 		holdingLetter = false
 		$DelliveryAudio.play()
+		gameSession.delivered_letter()
 
 func moveToPoint(_delta, speed):
 	var targetPos = navigationAgent.get_next_path_position()

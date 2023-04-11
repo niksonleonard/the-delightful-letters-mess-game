@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+@onready var gameSession: GameSessionState = get_node("/root/GameSession")
 @onready var navigationAgent: NavigationAgent3D = $NavigationAgent3D
 
 var Speed = 5
@@ -46,6 +47,9 @@ func eatTheFoundLetter(letter: Object):
 	# For now just destroy the letter
 	global_position = letter.global_position
 	letter.queue_free()
+
+	# Letter the game session know that a letter was eaten 
+	gameSession.eaten_letter()
 
 	# After ate tryies to find another one
 	findAnotherLetter()
