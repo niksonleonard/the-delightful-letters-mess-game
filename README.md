@@ -1,5 +1,6 @@
 # The Delightful Letters Mess Game
-| | |
+
+| Property| Value|
 | ------------- | ------------- |
 | Project Name | The Delightful Letters Mess |
 | Project short code | TDLM |
@@ -40,11 +41,14 @@ https://freemusicarchive.org/home
 
 ### Versioning 
 
-https://semver.org
-https://rogerdudler.github.io/git-guide/
-https://docs.godotengine.org/en/stable/
+* https://semver.org
+* https://rogerdudler.github.io/git-guide/
+* https://docs.godotengine.org/en/stable/
 
-## Git commands to remember
+
+Lets try to have a good commit history? For now just a suggestion but soon lets adopt it: [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+
+Git commands to remember
 
 ```
 git pull origin main
