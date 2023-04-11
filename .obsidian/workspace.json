@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "documentation/pages/Characters Design.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "documentation/pages/Characters Design.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "documentation/pages/Characters Design.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "documentation/pages/Characters Design.md"
+                "file": "README.md"
               }
             }
           }
@@ -148,8 +148,10 @@
   },
   "active": "0345561f85e900ae",
   "lastOpenFiles": [
-    "documentation/images/ha-infatil-intenal-facility.jpeg",
+    "documentation/pages/Game Story Narrative.md",
+    "README.md",
     "documentation/pages/Characters Design.md",
+    "documentation/images/ha-infatil-intenal-facility.jpeg",
     "documentation/CharactersDesignCanvas.canvas",
     "documentation/images/IMG_5179.jpeg",
     "documentation/images/Hospital-2-640x424.jpg",
@@ -170,10 +172,8 @@
     "documentation/images/harena-invite-mamu-reference.jpeg.import",
     "documentation/images/ha-infatil-intenal-facility.jpeg.import",
     "documentation/images/IMG_5179.jpeg.import",
-    "documentation/pages/Game Story Narrative.md",
     "Narrative.md",
     "documentation/pages/Scenes Design.md",
-    "README.md",
     "Obsidian.md"
   ]
 }
