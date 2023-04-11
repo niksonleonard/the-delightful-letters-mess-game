@@ -15,6 +15,10 @@ run/main_scene="res://scenes/game_screens/main_screen.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameSession="*res://scripts/GameSessionState.gd"
+
 [filesystem]
 
 import/fbx/enabled=false

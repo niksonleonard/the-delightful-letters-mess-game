@@ -1,5 +1,8 @@
 extends Node3D
 
+# imports the Game Session Singleton to a variable
+@onready var gameSession: GameSessionState = get_node("/root/GameSession")
+
 # Reference to wich scene create (a link  to Letter Object)
 @export var letter_object_scene: PackedScene
 
@@ -20,3 +23,6 @@ func createLetterInstance():
 
 	# Spawn the mob by adding it to the Main scene.
 	add_child(letter)
+
+	# Register to game session that a new brand beaultiful letter was created
+	gameSession.created_letter()

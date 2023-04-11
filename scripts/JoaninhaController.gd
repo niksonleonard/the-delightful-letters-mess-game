@@ -1,8 +1,7 @@
 extends CharacterBody3D
 
+@onready var gameSession: GameSessionState = get_node("/root/GameSession")
 @onready var navigationAgent: NavigationAgent3D = $NavigationAgent3D
-
-const LETTERS_GROUP = "letters"
 
 var Speed = 5
 
@@ -28,7 +27,7 @@ func _process(_delta):
 
 		var collider = collision.get_collider()
 	
-		if collider.is_in_group(LETTERS_GROUP):
+		if collider.is_in_group(GameSessionState.LETTERS_GROUP):
 			print("Wow, found some thing")
 			eatTheFoundLetter(collider)
 			continue
@@ -49,11 +48,14 @@ func eatTheFoundLetter(letter: Object):
 	global_position = letter.global_position
 	letter.queue_free()
 
+	# Letter the game session know that a letter was eaten 
+	gameSession.eaten_letter()
+
 	# After ate tryies to find another one
 	findAnotherLetter()
 
 func findAnotherLetter():
-	var letters = get_tree().get_nodes_in_group(LETTERS_GROUP)
+	var letters = get_tree().get_nodes_in_group(GameSessionState.LETTERS_GROUP)
 	if letters.size() == 0:
 		print("Nothing new to eat!")
 		return

@@ -6,7 +6,7 @@ Each character session should have the follow structure:
 * Personality and Background Story: Used to outline attitude of the character in narrative and game play. Here will describe the language that the character will comunicate in the game.
 * References: Images and attachments that could be used to inspire the character composition. It not necessary could be images and scratches of the character but reference from another character from another games, moveis, graphic novels
 
-# Mamu
+# Mamu - Main character
 
 ## Summary
 
@@ -20,7 +20,7 @@ Important thing that is gender free. Loves to help and engage easily in new adve
 
 ![Mamu scratch for the Harena Invite Project](../images/harena-invite-mamu-reference.jpeg)
 ![Original Mamu design from HA branding manual](../images/referece-mamu-original.png)
-# Pombis
+# Pombis - The Delivery Operator Comandant
 
 ## Summary
 
@@ -35,10 +35,12 @@ Basically the carelles character that initially caused the mess of the main stor
 
 ![HA Infantil - Entrance has some ladybug models](../images/IMG_5179.jpeg)
 
-# Leiamess
+# Leiamess - Letter Delivery Workers
 
 They are ladybugs that are inconcious over letter effects and the anti-hero of the story.
 
 # General References
 
 ![HA Infantil has some flowers that could be characters or part of some scenery](../images/FKy5y_wXMAIk5By.jpeg)
+
+![Internal facilities](../images/ha-infatil-intenal-facility.jpeg)
