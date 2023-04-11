@@ -2,8 +2,6 @@ extends CharacterBody3D
 
 @onready var navigationAgent: NavigationAgent3D = $NavigationAgent3D
 
-const LETTERS_GROUP = "letters"
-
 var Speed = 5
 
 func _letter_touched_floor(target_position: Vector3):
@@ -28,7 +26,7 @@ func _process(_delta):
 
 		var collider = collision.get_collider()
 	
-		if collider.is_in_group(LETTERS_GROUP):
+		if collider.is_in_group(GameSessionState.LETTERS_GROUP):
 			print("Wow, found some thing")
 			eatTheFoundLetter(collider)
 			continue
@@ -53,7 +51,7 @@ func eatTheFoundLetter(letter: Object):
 	findAnotherLetter()
 
 func findAnotherLetter():
-	var letters = get_tree().get_nodes_in_group(LETTERS_GROUP)
+	var letters = get_tree().get_nodes_in_group(GameSessionState.LETTERS_GROUP)
 	if letters.size() == 0:
 		print("Nothing new to eat!")
 		return

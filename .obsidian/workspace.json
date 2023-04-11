@@ -11,14 +11,11 @@
             "id": "0345561f85e900ae",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "documentation/CharactersDesignCanvas.canvas",
-                "viewState": {
-                  "x": 95.47115739115172,
-                  "y": -205.36193069972353,
-                  "zoom": -0.3998623524040277
-                }
+                "file": "documentation/pages/Characters Design.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -88,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "documentation/CharactersDesignCanvas.canvas",
+                "file": "documentation/pages/Characters Design.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "documentation/CharactersDesignCanvas.canvas",
+                "file": "documentation/pages/Characters Design.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "documentation/CharactersDesignCanvas.canvas"
+                "file": "documentation/pages/Characters Design.md"
               }
             }
           }
@@ -151,28 +148,31 @@
   },
   "active": "0345561f85e900ae",
   "lastOpenFiles": [
-    "documentation/images/Pasted image 20230410195441.png",
-    "documentation/CharactersDesignCanvas.canvas",
-    "documentation/images/FKy5y_wXMAIk5By.jpeg",
-    "documentation/images/harena-invite-mamu-reference.jpeg",
-    "documentation/images/Hospital-2-640x424.jpg",
-    "documentation/images/IMG_5179.jpeg",
-    "documentation/images/referece-mamu-original.png",
+    "documentation/images/ha-infatil-intenal-facility.jpeg",
     "documentation/pages/Characters Design.md",
+    "documentation/CharactersDesignCanvas.canvas",
+    "documentation/images/IMG_5179.jpeg",
+    "documentation/images/Hospital-2-640x424.jpg",
+    "documentation/images/harena-invite-mamu-reference.jpeg",
+    "documentation/images/FKy5y_wXMAIk5By.jpeg",
+    "documentation/images/Pasted image 20230411132822.png",
+    "documentation/images/Pasted image 20230411133756.png.import",
+    "documentation/images/Pasted image 20230411133824.png.import",
+    "documentation/images/Pasted image 20230411132858.png.import",
+    "documentation/images/Pasted image 20230411132822.png.import",
+    "documentation/images/Pasted image 20230411133824.png",
+    "documentation/images/Pasted image 20230411133756.png",
+    "documentation/images/Pasted image 20230411132858.png",
+    "scripts/GameSessionState.gd",
+    "documentation/images/Pasted image 20230410195441.png.import",
+    "documentation/images/Pasted image 20230410195441.png",
     "documentation/images/referece-mamu-original.png.import",
     "documentation/images/harena-invite-mamu-reference.jpeg.import",
     "documentation/images/ha-infatil-intenal-facility.jpeg.import",
     "documentation/images/IMG_5179.jpeg.import",
-    "documentation/images/Hospital-2-640x424.jpg.import",
-    "documentation/images/FKy5y_wXMAIk5By.jpeg.import",
-    "documentation/images/ha-infatil-intenal-facility.jpeg",
     "documentation/pages/Game Story Narrative.md",
-    "documentation/attachments/HA_OFICIAL_V7.pdf",
     "Narrative.md",
-    "documentation/attachments",
-    "documentation/images/WhatsApp Image 2023-03-14 at 09.35.28.jpeg",
     "documentation/pages/Scenes Design.md",
-    "documentation/images",
     "README.md",
     "Obsidian.md"
   ]

@@ -1,20 +1,25 @@
 {
 	"nodes":[
+		{"type":"group","id":"919696e1555e029a","x":80,"y":240,"width":658,"height":480,"color":"2","label":"External References"},
+		{"id":"e9b96ddbb222c9b7","x":-880,"y":110,"width":545,"height":460,"type":"group","label":"References"},
 		{"type":"text","text":"Characters","id":"7e73cd25f1642f07","x":-311,"y":-214,"width":250,"height":60},
 		{"type":"text","text":"Mamu","id":"e3b5ded1bbfe1aaf","x":-420,"y":-60,"width":120,"height":60},
-		{"type":"file","file":"documentation/images/referece-mamu-original.png","id":"950a82279b5870c7","x":-740,"y":60,"width":340,"height":120},
-		{"type":"file","file":"documentation/images/harena-invite-mamu-reference.jpeg","id":"8abf76545912fb4e","x":-740,"y":220,"width":157,"height":198},
-		{"id":"010658d9f0016d61","x":200,"y":-30,"width":250,"height":60,"type":"text","text":"Joaninha"},
+		{"type":"text","text":"Joaninhas","id":"010658d9f0016d61","x":200,"y":-30,"width":250,"height":60},
 		{"type":"text","text":"Pombis","id":"c14198afde956d9d","x":-140,"y":-60,"width":250,"height":60},
-		{"type":"file","file":"documentation/images/Pasted image 20230410195441.png","id":"3776feb6bea98ab9","x":400,"y":79,"width":201,"height":201},
-		{"id":"05f4d634c7479f94","x":613,"y":-187,"width":250,"height":60,"type":"text","text":"Joaninhas Operarias"}
+		{"type":"file","file":"documentation/images/Pasted image 20230411132822.png","id":"55533c8a7328d0c0","x":331,"y":339,"width":154,"height":121},
+		{"type":"file","file":"documentation/images/Pasted image 20230410195441.png","id":"3776feb6bea98ab9","x":558,"y":328,"width":142,"height":142},
+		{"type":"file","file":"documentation/images/referece-mamu-original.png","id":"950a82279b5870c7","x":-800,"y":180,"width":340,"height":120},
+		{"type":"file","file":"documentation/images/harena-invite-mamu-reference.jpeg","id":"8abf76545912fb4e","x":-800,"y":339,"width":157,"height":198},
+		{"type":"file","file":"documentation/images/Pasted image 20230411132858.png","id":"a9964f866acfe7eb","x":129,"y":329,"width":146,"height":140},
+		{"type":"file","file":"documentation/images/Pasted image 20230411133824.png","id":"87cb577615356474","x":346,"y":500,"width":354,"height":168},
+		{"type":"file","file":"documentation/images/Pasted image 20230411133756.png","id":"99ded56864c585d8","x":130,"y":500,"width":145,"height":145},
+		{"type":"file","file":"documentation/images/IMG_5179.jpeg","id":"4ad282e60578ee63","x":521,"y":0,"width":216,"height":162}
 	],
 	"edges":[
 		{"id":"de9731b8bfe11727","fromNode":"7e73cd25f1642f07","fromSide":"bottom","toNode":"e3b5ded1bbfe1aaf","toSide":"top"},
-		{"id":"c1291d64bde9f0f7","fromNode":"e3b5ded1bbfe1aaf","fromSide":"left","toNode":"950a82279b5870c7","toSide":"top"},
 		{"id":"8da25b96ee288b0d","fromNode":"7e73cd25f1642f07","fromSide":"bottom","toNode":"c14198afde956d9d","toSide":"left"},
 		{"id":"7fd9ffa89bd951af","fromNode":"7e73cd25f1642f07","fromSide":"right","toNode":"010658d9f0016d61","toSide":"top"},
-		{"id":"78c4f4ef9256983b","fromNode":"010658d9f0016d61","fromSide":"bottom","toNode":"3776feb6bea98ab9","toSide":"left"},
-		{"id":"cd3436a9e3539531","fromNode":"7e73cd25f1642f07","fromSide":"right","toNode":"05f4d634c7479f94","toSide":"left"}
+		{"id":"9a10508a755532af","fromNode":"010658d9f0016d61","fromSide":"bottom","toNode":"919696e1555e029a","toSide":"top"},
+		{"id":"1afc28fc80fe0813","fromNode":"e3b5ded1bbfe1aaf","fromSide":"left","toNode":"e9b96ddbb222c9b7","toSide":"top"}
 	]
 }

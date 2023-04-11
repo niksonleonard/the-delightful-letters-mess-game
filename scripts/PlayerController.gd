@@ -1,9 +1,7 @@
 extends CharacterBody3D
 
-const LETTERS_GROUP = "letters"
-const DELLIVERYPOST_GROUP = "delliverypost"
-var score = 0
 var holdingLetter: bool = false
+var score = 0
 
 @export var scoretext: Label
 
@@ -29,12 +27,12 @@ func _process(delta):
 		# Get in current Loop index the collision information
 		var collider = collision.get_collider()
 		# Check if touched some letter
-		if collider.is_in_group(LETTERS_GROUP):
+		if collider.is_in_group(GameSessionState.LETTERS_GROUP):
 			collectTheLetter(collider)
 			continue
 
 		# Check if touched delivery office
-		if collider.is_in_group(DELLIVERYPOST_GROUP):
+		if collider.is_in_group(GameSessionState.DELLIVERYPOST_GROUP):
 			delliveryLetterInPost()
 			continue
 	
