@@ -1,6 +1,9 @@
 extends Node
 class_name GameSessionState
 
+# For more understanding of the use of it patter singleton:
+# https://docs.godotengine.org/en/stable/tutorials/scripting/singletons_autoload.html
+
 # Nodes Groups keys, mustly used to detects collision
 const LETTERS_GROUP = "letters"
 const DELLIVERYPOST_GROUP = "delliverypost"
@@ -35,11 +38,14 @@ func add_score(score_value: int, _score_reason: ScoreReason):
 func created_letter():
     levelCreatedLetters += 1
 
+## Register when an antagonist eats a letter
 func eaten_letter():
     eatenLetters += 1
 
+## Register when the player successfuly collect a letter from the floor
 func picked_letter():
     pickedLetters += 1
 
+## Register when the player successfuly delivery to a post office
 func delivered_letter():
     deliveredLetters += 1

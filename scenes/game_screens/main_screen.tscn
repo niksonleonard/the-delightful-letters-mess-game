@@ -126,7 +126,7 @@ curve = SubResource("Curve3D_iyj42")
 transform = Transform3D(0.0212262, 0, 0.999775, 0, 1, 0, -0.999775, 0, 0.0212262, -7.54688, 0, -7.36835)
 
 [node name="GameTimer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 30.0
 autostart = true
 
 [node name="UserInterface" type="Control" parent="."]
