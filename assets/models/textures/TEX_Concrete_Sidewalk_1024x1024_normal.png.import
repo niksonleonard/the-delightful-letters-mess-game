@@ -3,16 +3,17 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ck3ergkbdpbmp"
+path.s3tc="res://.godot/imported/TEX_Concrete_Sidewalk_1024x1024_normal.png-3589ef976484843c6fe199fdfc9f8256.s3tc.ctex"
 path.etc2="res://.godot/imported/TEX_Concrete_Sidewalk_1024x1024_normal.png-3589ef976484843c6fe199fdfc9f8256.etc2.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/models/textures/TEX_Concrete_Sidewalk_1024x1024_normal.png"
-dest_files=["res://.godot/imported/TEX_Concrete_Sidewalk_1024x1024_normal.png-3589ef976484843c6fe199fdfc9f8256.etc2.ctex"]
+dest_files=["res://.godot/imported/TEX_Concrete_Sidewalk_1024x1024_normal.png-3589ef976484843c6fe199fdfc9f8256.s3tc.ctex", "res://.godot/imported/TEX_Concrete_Sidewalk_1024x1024_normal.png-3589ef976484843c6fe199fdfc9f8256.etc2.ctex"]
 
 [params]
 

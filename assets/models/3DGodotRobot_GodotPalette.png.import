@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcj4nplrar614"
+path.s3tc="res://.godot/imported/3DGodotRobot_GodotPalette.png-fe9dbe965da7b22438eec86244591b66.s3tc.ctex"
 path.etc2="res://.godot/imported/3DGodotRobot_GodotPalette.png-fe9dbe965da7b22438eec86244591b66.etc2.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://assets/models/3DGodotRobot_GodotPalette.png"
-dest_files=["res://.godot/imported/3DGodotRobot_GodotPalette.png-fe9dbe965da7b22438eec86244591b66.etc2.ctex"]
+dest_files=["res://.godot/imported/3DGodotRobot_GodotPalette.png-fe9dbe965da7b22438eec86244591b66.s3tc.ctex", "res://.godot/imported/3DGodotRobot_GodotPalette.png-fe9dbe965da7b22438eec86244591b66.etc2.ctex"]
 
 [params]
 

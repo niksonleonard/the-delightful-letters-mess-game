@@ -3,16 +3,17 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bonunai4sgnqp"
+path.s3tc="res://.godot/imported/TEX_Concrete_Sidewalk_1024x1024_albedo.png-7c547ef8f88bffc7ad0d148cb5777e61.s3tc.ctex"
 path.etc2="res://.godot/imported/TEX_Concrete_Sidewalk_1024x1024_albedo.png-7c547ef8f88bffc7ad0d148cb5777e61.etc2.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/models/textures/TEX_Concrete_Sidewalk_1024x1024_albedo.png"
-dest_files=["res://.godot/imported/TEX_Concrete_Sidewalk_1024x1024_albedo.png-7c547ef8f88bffc7ad0d148cb5777e61.etc2.ctex"]
+dest_files=["res://.godot/imported/TEX_Concrete_Sidewalk_1024x1024_albedo.png-7c547ef8f88bffc7ad0d148cb5777e61.s3tc.ctex", "res://.godot/imported/TEX_Concrete_Sidewalk_1024x1024_albedo.png-7c547ef8f88bffc7ad0d148cb5777e61.etc2.ctex"]
 
 [params]
 
