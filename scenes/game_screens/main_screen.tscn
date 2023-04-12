@@ -1,15 +1,23 @@
-[gd_scene load_steps=21 format=3 uid="uid://boox7qkod0yl0"]
+[gd_scene load_steps=25 format=3 uid="uid://boox7qkod0yl0"]
 
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_314rm"]
 [ext_resource type="PackedScene" uid="uid://bwmhxba2yl7lk" path="res://scenes/PlayerObject.tscn" id="1_wi3b8"]
-[ext_resource type="PackedScene" path="res://scenes/JoaninhaObject.tscn" id="2_2nq0w"]
+[ext_resource type="PackedScene" uid="uid://bvq4dmjw4q181" path="res://scenes/JoaninhaObject.tscn" id="2_2nq0w"]
 [ext_resource type="Script" path="res://scripts/LetterSpawmerController.gd" id="3_v7jav"]
 [ext_resource type="PackedScene" path="res://scenes/LetterObject.tscn" id="4_u832i"]
 [ext_resource type="AudioStream" uid="uid://bfsd5majcu8dr" path="res://assets/sounds/bg-music-helice-theme.mp3" id="5_oyj76"]
-[ext_resource type="PackedScene" uid="uid://5n24h6tvjqpi" path="res://assets/models/fixing_shop.tscn" id="6_ey0g3"]
+[ext_resource type="Texture2D" uid="uid://bonunai4sgnqp" path="res://assets/models/textures/TEX_Concrete_Sidewalk_1024x1024_albedo.png" id="5_qaa3v"]
+[ext_resource type="Texture2D" uid="uid://ck3ergkbdpbmp" path="res://assets/models/textures/TEX_Concrete_Sidewalk_1024x1024_normal.png" id="6_8jlnp"]
+[ext_resource type="PackedScene" path="res://assets/models/fixing_shop.tscn" id="6_ey0g3"]
+[ext_resource type="Texture2D" uid="uid://cwevymh53jhgf" path="res://assets/models/textures/TEX_Concrete_Sidewalk_1024x1024_roughness.png" id="7_ningw"]
 [ext_resource type="PackedScene" path="res://assets/models/barber_shop.tscn" id="7_th4pw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_34ium"]
+sky_top_color = Color(0.2, 0.705882, 1, 1)
+sky_horizon_color = Color(0.47451, 0.709804, 0.647059, 1)
+sky_energy_multiplier = 1.27
+ground_bottom_color = Color(0.2, 0.701961, 0.133333, 1)
+ground_horizon_color = Color(0.792157, 0.878431, 0.670588, 1)
 
 [sub_resource type="Sky" id="Sky_xl4yy"]
 sky_material = SubResource("ProceduralSkyMaterial_34ium")
@@ -17,6 +25,7 @@ sky_material = SubResource("ProceduralSkyMaterial_34ium")
 [sub_resource type="Environment" id="Environment_tnx11"]
 background_mode = 2
 sky = SubResource("Sky_xl4yy")
+sky_custom_fov = 64.5
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jidap"]
 size = Vector3(20, 0.4, 20)
@@ -32,6 +41,12 @@ albedo_color = Color(0.227451, 0.0196078, 0.184314, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_uq56s"]
 material = SubResource("StandardMaterial3D_vs0ir")
 size = Vector3(20, 0.2, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjxvq"]
+albedo_texture = ExtResource("5_qaa3v")
+roughness_texture = ExtResource("7_ningw")
+normal_enabled = true
+normal_texture = ExtResource("6_8jlnp")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_65lqd"]
 
@@ -60,7 +75,7 @@ environment = SubResource("Environment_tnx11")
 [node name="Cenario" type="Node3D" parent="."]
 
 [node name="fixing_shop" parent="Cenario" instance=ExtResource("6_ey0g3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.6655)
+transform = Transform3D(-4.37114e-08, -3.48787e-16, -1, 3.48787e-16, 1, -3.48787e-16, 1, -3.48787e-16, -4.37114e-08, -13.4998, 0.140366, 0.365382)
 
 [node name="barber_shop" parent="Cenario" instance=ExtResource("7_th4pw")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.275533, 0, -12.7474)
@@ -84,20 +99,34 @@ navigation_mesh = SubResource("NavigationMesh_dlbk4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.71188, 0)
 mesh = SubResource("BoxMesh_uq56s")
 skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_jjxvq")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Cenario"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.494036, 10.7062, 5.9512)
+light_energy = 4.689
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 11.432
+light_size = 0.174
+omni_range = 28.571
 
 [node name="Camera3D" type="Camera3D" parent="." groups=["Camera"]]
-transform = Transform3D(1, 0, 0, 0, 0.782228, 0.622993, 0, -0.622993, 0.782228, 0, 11.477, 12.929)
+transform = Transform3D(1, 0, 0, 0, 0.964123, 0.265455, 0, -0.265455, 0.964123, 0.219497, 8.56812, 18.7637)
 current = true
-fov = 56.3
+fov = 53.2
+far = 40.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.999989, -3.79046e-09, -0.00467747, 0.0034952, 0.664553, 0.747233, 0.00310842, -0.747242, 0.664545, 0, 3.21174, 1.01298)
+transform = Transform3D(0.999989, -3.68055e-09, -0.00467747, 0.0034952, 0.664553, 0.747233, 0.00310842, -0.747242, 0.664545, 0, 13.1525, 1.01298)
+light_energy = 1.196
+shadow_enabled = true
+shadow_opacity = 0.82
+shadow_blur = 2.465
 
 [node name="Player" parent="." node_paths=PackedStringArray("scoretext") instance=ExtResource("1_wi3b8")]
 scoretext = NodePath("../UserInterface/ScoreGameStateUI/Score")
 
 [node name="JoaninhaObject" parent="." instance=ExtResource("2_2nq0w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.76278, 0.550516, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.763, 0.476683, 2.08165e-12)
 
 [node name="DeliveryPost" type="StaticBody3D" parent="." groups=["delliverypost"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.601092, -10.1249)

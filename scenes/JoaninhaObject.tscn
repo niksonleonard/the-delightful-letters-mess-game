@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=6 format=3 uid="uid://bvq4dmjw4q181"]
 
 [ext_resource type="Script" path="res://scripts/JoaninhaController.gd" id="1_trdbi"]
 [ext_resource type="AudioStream" uid="uid://dmmsskhicg28m" path="res://assets/sounds/4chewing-carrot-a.wav" id="2_ubcd5"]
+[ext_resource type="PackedScene" uid="uid://dbjbwv8wd0gi0" path="res://assets/models/ladybug.tscn" id="3_s6gok"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1t2d1"]
 size = Vector3(1.5, 1, 1.5)
@@ -20,6 +21,7 @@ shape = SubResource("BoxShape3D_1t2d1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.25, 2.08165e-12)
+visible = false
 layers = 2
 mesh = SubResource("CylinderMesh_lxvwa")
 
@@ -29,3 +31,6 @@ mesh = SubResource("CylinderMesh_lxvwa")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("2_ubcd5")
+
+[node name="ladybug" parent="." instance=ExtResource("3_s6gok")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 2.08165e-12, 0.326685, 2.08165e-12)

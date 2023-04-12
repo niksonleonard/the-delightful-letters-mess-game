@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbjbwv8wd0gi0"]
+
+[ext_resource type="PackedScene" uid="uid://c5shtlk2rvhbp" path="res://assets/models/blender_files/ladybug.blend" id="1_7sepr"]
+[ext_resource type="Material" uid="uid://dkvxp80vmmk0o" path="res://assets/models/materials/ladybug_material.tres" id="2_03vs5"]
+
+[node name="ladybug" instance=ExtResource("1_7sepr")]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+
+[node name="Light" parent="." index="0"]
+visible = false
+
+[node name="Camera" parent="." index="1"]
+visible = false
+
+[node name="Cube" parent="Armature/Skeleton3D" index="0"]
+transform = Transform3D(0.0044331, 0, 0, 0, 0.0076403, 3.59963e-10, 0, -6.20385e-10, 0.0044331, 0, 5.96046e-08, 4.47035e-08)
+bone_idx = 2
+
+[node name="Cube" parent="Armature/Skeleton3D/Cube" index="0"]
+surface_material_override/0 = ExtResource("2_03vs5")
+
+[node name="Cube002" parent="Armature/Skeleton3D" index="1"]
+transform = Transform3D(0.0044331, 0, 0, 0, 0.0076403, 0, 0, 0, 0.0044331, 0, 0.764444, -0.184129)
+bone_idx = 5
+
+[node name="Cube002" parent="Armature/Skeleton3D/Cube002" index="0"]
+surface_material_override/0 = ExtResource("2_03vs5")
+
+[node name="Cube001" parent="Armature/Skeleton3D" index="2"]
+transform = Transform3D(0.0044331, 0, 0, 0, 0.0076403, 0, 0, 0, 0.0044331, 0, 0.764444, -0.184129)
+bone_idx = 8
+
+[node name="Cube001" parent="Armature/Skeleton3D/Cube001" index="0"]
+surface_material_override/0 = ExtResource("2_03vs5")

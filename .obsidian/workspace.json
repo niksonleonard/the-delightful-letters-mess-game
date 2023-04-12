@@ -4,17 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "0a7209098daa17b5",
+        "id": "271be24cbaf51407",
         "type": "tabs",
         "children": [
           {
-            "id": "0345561f85e900ae",
+            "id": "837a3342743e723e",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "documentation/images/FKy5y_wXMAIk5By.jpeg"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -144,32 +142,35 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0345561f85e900ae",
+  "active": "427629d110f977ef",
   "lastOpenFiles": [
+    "scenes/PlayerObject.tscn.tmp",
+    "documentation/images/Pasted image 20230410195441.png.import",
+    "assets/models/textures/SimpleTown.png.import",
+    "assets/models/textures/SimpleTown.png",
+    "assets/models/blender_files/textures/cocinelle.png.001.png.import",
+    "assets/models/blender_files/textures/cocinelle.png.import",
     "scenes/game_screens/main_screen.tscn.tmp",
-    "project.godot.tmp",
-    "documentation/images/referece-mamu-original.png",
-    "documentation/images/Pasted image 20230411133824.png",
-    "documentation/images/Pasted image 20230411133756.png",
-    "documentation/images/Pasted image 20230411132858.png",
-    "documentation/images/Pasted image 20230411132822.png",
-    "documentation/images/Pasted image 20230410195441.png",
-    "documentation/images/IMG_5179.jpeg",
-    "documentation/images/Hospital-2-640x424.jpg",
-    "documentation/images/harena-invite-mamu-reference.jpeg",
-    "documentation/images/ha-infatil-intenal-facility.jpeg",
-    "documentation/pages/Game Story Narrative.md",
+    "assets/models/blender_files/textures/cocinelle.png.001.png",
+    "assets/models/blender_files/textures/cocinelle.png",
+    "assets/models/blender_files/textures",
+    "assets/models/blender_files/ladybug.blend.import",
+    "assets/models/blender_files/ladybug.blend",
+    "assets/models/blender_files/fixing_shop.blend.import",
+    "assets/models/blender_files/fixing_shop.blend",
+    "assets/models/3DGodotRobot_GodotPalette.png",
+    "assets/models/textures/cocinelle.png.001.png",
+    "assets/models/textures/TEX_Concrete_Sidewalk_1024x1024_roughness.png",
+    "assets/models/textures/TEX_Concrete_Sidewalk_1024x1024_normal.png",
+    "assets/models/textures/TEX_Concrete_Sidewalk_1024x1024_ao.png",
+    "assets/models/textures/TEX_Concrete_Sidewalk_1024x1024_albedo.png",
+    "assets/models/textures/cocinelle.png",
+    "documentation/pages/Game_Story_Narrative.md",
+    "documentation/pages/Level_Design.md",
     "README.md",
+    "documentation/CharactersDesignCanvas.canvas",
+    "documentation/pages/Characters_Design_Dcoument.md",
     "CHANGELOG.md",
-    "yarn.lock",
-    "node_modules/meow/node_modules/read-pkg/node_modules/normalize-package-data/node_modules",
-    "node_modules/meow/node_modules/normalize-package-data/node_modules",
-    "node_modules/handlebars/node_modules",
-    "node_modules/git-semver-tags/node_modules",
-    "node_modules/conventional-recommended-bump/node_modules",
-    "node_modules/conventional-commits-parser/node_modules",
-    "node_modules/conventional-changelog-writer/node_modules",
-    "node_modules/conventional-changelog-core/node_modules/normalize-package-data/node_modules",
     "node_modules/get-pkg-repo/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md",
     "node_modules/conventional-changelog-config-spec/versions/2.0.0/README.md",
     "node_modules/conventional-changelog-config-spec/versions/1.0.0/README.md",
@@ -189,9 +190,6 @@
     "node_modules/xtend/README.md",
     "node_modules/redent/readme.md",
     "node_modules/yocto-queue/readme.md",
-    "node_modules/yargs-parser/README.md",
-    "node_modules/yargs-parser/CHANGELOG.md",
-    "node_modules/yargs/README.md",
-    "documentation/CharactersDesignCanvas.canvas"
+    "node_modules/yargs-parser/README.md"
   ]
 }
