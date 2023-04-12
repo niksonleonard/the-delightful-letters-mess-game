@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 var holdingLetter: bool = false
 @onready var gameSession: GameSessionState = get_node("/root/GameSession")
+@onready var animationPlayer: AnimationPlayer = $AnimationPlayer
 
 @export var scoretext: Label
 
@@ -12,6 +13,9 @@ var holdingLetter: bool = false
 
 ## Speed that player moves
 var Speed = 5
+
+func _ready():
+	animationPlayer.play("Idle")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -73,6 +77,7 @@ func faceDirection(direction):
 func _input(_event):
 	# Check if the player performed a click 
 	if Input.is_action_just_pressed("PointClick"):
+		animationPlayer.play("Run")
 
 		# The following stuff it is about Trigonometry, we must to calculate
 		# where is the point clicked from the camera view that is
@@ -101,4 +106,6 @@ func holdTheFoundLetter(letter: Object):
 	# For now just destroy the letter
 	letter.queue_free()
 
+func _on_navigation_agent_3d_navigation_finished():
+	animationPlayer.play("Idle")
 

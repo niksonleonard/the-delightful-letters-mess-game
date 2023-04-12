@@ -14,9 +14,9 @@ Well, to have a good and enjoyable reading of it documentation it is remcomended
 
 ## Narrative
 
-The story can be found in [[Game Story Narrative]] page.
+The story can be found in [Game Story Narrative Document](./documentation/pages/Game_Story_Narrative.md) page.
 
-# Assets resources
+# Assets resources to get development faster 🐎
 
 Here some places in web to get free studff
 
@@ -39,14 +39,22 @@ https://freemusicarchive.org/home
 
 ## Some development interesting stuff to study
 
-### Versioning 
+Do you need some help with Markdown language?
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links
 
+Lets try to have a good commit history? For now just a suggestion but soon lets adopt it: [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+
+### Versioning
 * https://semver.org
 * https://rogerdudler.github.io/git-guide/
 * https://docs.godotengine.org/en/stable/
 
+### Project managemen awesome stuff
 
-Lets try to have a good commit history? For now just a suggestion but soon lets adopt it: [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+![User Story as method to describe demand](https://blog.myscrumhalf.com/wp-content/uploads/2011/10/card5.png)
+
+About User Story: https://blog.myscrumhalf.com/en/user-stories-o-que-sao-como-usar/
+
 
 Git commands to remember
 

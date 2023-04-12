@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dkvxp80vmmk0o"]
+
+[ext_resource type="Texture2D" uid="uid://camk8vqr6pojp" path="res://assets/models/textures/cocinelle.png" id="1_khwq6"]
+
+[resource]
+albedo_texture = ExtResource("1_khwq6")

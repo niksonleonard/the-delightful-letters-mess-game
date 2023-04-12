@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://5n24h6tvjqpi"]
+[gd_scene load_steps=4 format=3]
 
-[ext_resource type="PackedScene" uid="uid://blr132xmjuhct" path="res://assets/models/fixing_shop.blend" id="1_h3rp3"]
-[ext_resource type="Texture2D" uid="uid://72dolrgcqmaa" path="res://assets/models/SimpleTown.png" id="2_fksgo"]
+[ext_resource type="PackedScene" uid="uid://blr132xmjuhct" path="res://assets/models/blender_files/fixing_shop.blend" id="1_h3rp3"]
+[ext_resource type="Texture2D" uid="uid://72dolrgcqmaa" path="res://assets/models/textures/SimpleTown.png" id="2_fksgo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_latbs"]
 albedo_texture = ExtResource("2_fksgo")
