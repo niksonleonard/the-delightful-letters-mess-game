@@ -33,4 +33,4 @@ mesh = SubResource("CylinderMesh_lxvwa")
 stream = ExtResource("2_ubcd5")
 
 [node name="ladybug" parent="." instance=ExtResource("3_s6gok")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 2.08165e-12, 0.326685, 2.08165e-12)
+transform = Transform3D(-15, 5.2318e-15, -1.31134e-06, 5.2318e-15, 15, -5.2318e-15, 1.31134e-06, -5.2318e-15, -15, 2.08165e-12, 0.326685, 2.08165e-12)
