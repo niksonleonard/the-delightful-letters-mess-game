@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://ca7siycorwti8"]
+
+[ext_resource type="PackedScene" uid="uid://s1gysxtab7cp" path="res://assets/models/mamu-headonly.gltf" id="1_hg55o"]
+
+[node name="mamu-headonly" instance=ExtResource("1_hg55o")]
