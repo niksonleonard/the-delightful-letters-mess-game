@@ -40,8 +40,10 @@ PointClick={
 
 [rendering]
 
+textures/canvas_textures/default_texture_repeat=1
 renderer/rendering_method="mobile"
 renderer/rendering_method.web="mobile"
+textures/vram_compression/import_s3tc_bptc=true
 
 [xr]
 

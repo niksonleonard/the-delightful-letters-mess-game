@@ -35,7 +35,7 @@ func _process(_delta):
 func moveToPoint():
 	var targetPos = navigationAgent.get_next_path_position()
 	var direction = global_position.direction_to(targetPos)
-	# faceDirection(targetPos)
+	look_at(Vector3(targetPos.x, global_position.y, targetPos.z), Vector3.UP)
 	velocity = direction * Speed
 	move_and_slide()
 

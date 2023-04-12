@@ -113,7 +113,7 @@ omni_range = 28.571
 transform = Transform3D(1, 0, 0, 0, 0.964123, 0.265455, 0, -0.265455, 0.964123, 0.219497, 8.56812, 18.7637)
 current = true
 fov = 53.2
-far = 40.0
+far = 100.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.999989, -3.68055e-09, -0.00467747, 0.0034952, 0.664553, 0.747233, 0.00310842, -0.747242, 0.664545, 0, 13.1525, 1.01298)

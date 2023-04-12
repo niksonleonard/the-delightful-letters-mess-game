@@ -4,13 +4,16 @@
 | ------------- | ------------- |
 | Project Name | The Delightful Letters Mess |
 | Project short code | TDLM |
-
+| Projet code repo | https://github.com/niksonleonard/mamu-adventure |
+| Project Management Page | https://github.com/users/niksonleonard/projects/3/views/1 |
 
 It is a project to intent to study Game Development and who knows be a solution to catch resource for the Hospital de Amor institution.
 
 # Documentation Stuff
 
 Well, to have a good and enjoyable reading of it documentation it is remcomended to open it using [Obsidian](https://obsidian.md). It is not a FOSS kind of software but til now it is free and could be helpfull.
+
+If accessing via Github you can direct to main documentation at [Documentation Directory](./documentation/)
 
 ## Narrative
 
