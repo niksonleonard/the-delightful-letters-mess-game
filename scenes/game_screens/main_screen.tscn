@@ -170,22 +170,7 @@ transform = Transform3D(0.0212262, 0, 0.999775, 0, 1, 0, -0.999775, 0, 0.0212262
 wait_time = 30.0
 autostart = true
 script = ExtResource("12_pf7sc")
-hourlass = NodePath("Hourlass")
-
-[node name="Hourlass" type="Label" parent="GameTimer"]
-anchors_preset = -1
-anchor_left = 0.134
-anchor_top = 0.457
-anchor_right = 0.423
-anchor_bottom = 0.74
-offset_left = -154.368
-offset_top = -296.136
-offset_right = 20.704
-offset_bottom = 50.48
-size_flags_horizontal = 8
-text = "aaaa"
-label_settings = SubResource("LabelSettings_gngbh")
-script = ExtResource("13_cidp2")
+hourlass = NodePath("../UserInterface/ScoreGameStateUI/Hourlass")
 
 [node name="UserInterface" type="Control" parent="."]
 layout_mode = 3
@@ -201,10 +186,16 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Score" type="Label" parent="UserInterface/ScoreGameStateUI"]
-visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 45
 text = "Pontos: 0"
+
+[node name="Hourlass" type="Label" parent="UserInterface/ScoreGameStateUI"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "aaaa"
+label_settings = SubResource("LabelSettings_gngbh")
+script = ExtResource("13_cidp2")
 
 [node name="TextureRect" type="TextureRect" parent="UserInterface/ScoreGameStateUI"]
 visible = false
