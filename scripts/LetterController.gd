@@ -12,7 +12,6 @@ func _ready():
 
 ## Signal calls it whe touch something
 func _on_body_entered(_body:Node):
-	print("palmito incolor")
 	isOnTheFloor = true
 	get_tree().call_group("joaninha", "_letter_touched_floor", global_position)
 

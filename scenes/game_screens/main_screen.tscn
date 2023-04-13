@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://boox7qkod0yl0"]
+[gd_scene load_steps=27 format=3 uid="uid://boox7qkod0yl0"]
 
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_314rm"]
 [ext_resource type="PackedScene" uid="uid://bwmhxba2yl7lk" path="res://scenes/PlayerObject.tscn" id="1_wi3b8"]
@@ -11,9 +11,9 @@
 [ext_resource type="PackedScene" path="res://assets/models/fixing_shop.tscn" id="6_ey0g3"]
 [ext_resource type="Texture2D" uid="uid://cwevymh53jhgf" path="res://assets/models/textures/TEX_Concrete_Sidewalk_1024x1024_roughness.png" id="7_ningw"]
 [ext_resource type="PackedScene" path="res://assets/models/barber_shop.tscn" id="7_th4pw"]
+[ext_resource type="PackedScene" uid="uid://dy1fdrc8ukox0" path="res://scenes/LetterDeliveryPost.tscn" id="10_ii4hc"]
 [ext_resource type="Texture2D" uid="uid://cb2f0g6nigmqy" path="res://assets/letter.png" id="12_a1tg6"]
 [ext_resource type="Script" path="res://scenes/game_screens/GameTimer.gd" id="12_pf7sc"]
-[ext_resource type="Script" path="res://scenes/game_screens/Hourlass.gd" id="13_cidp2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_34ium"]
 sky_top_color = Color(0.2, 0.705882, 1, 1)
@@ -51,14 +51,6 @@ roughness_texture = ExtResource("7_ningw")
 normal_enabled = true
 normal_texture = ExtResource("6_8jlnp")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_65lqd"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l35dc"]
-albedo_color = Color(0.152941, 1, 1, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_20n2d"]
-material = SubResource("StandardMaterial3D_l35dc")
-
 [sub_resource type="Curve3D" id="Curve3D_iyj42"]
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, -7.54688, 0, -7.36835, 0, 0, 0, 0, 0, 0, 7.74164, 0, -7.04376, 0, 0, 0, 0, 0, 0, 8.00132, 0, 7.04376, 0, 0, 0, 0, 0, 0, -8.35837, 0, 7.85525, 0, 0, 0, 0, 0, 0, -7.54688, 0, -7.36835),
@@ -80,7 +72,7 @@ font_size = 40
 script = ExtResource("1_314rm")
 scoreLabel = NodePath("UserInterface/ScoreGameStateUI/Score")
 finalScore = NodePath("UserInterface/Retry/FinalScore")
-holdingLetterTexture = NodePath("UserInterface/ScoreGameStateUI/TextureRect")
+holdingLetterTexture = NodePath("UserInterface/ScoreGameStateUI/HoldingLetterIndicator")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tnx11")
@@ -140,16 +132,8 @@ shadow_blur = 2.465
 [node name="JoaninhaObject" parent="." instance=ExtResource("2_2nq0w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.763, 0.476683, 2.08165e-12)
 
-[node name="DeliveryPost" type="StaticBody3D" parent="." groups=["delliverypost"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.601092, -10.1249)
-collision_layer = 8
-collision_mask = 3
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="DeliveryPost"]
-shape = SubResource("BoxShape3D_65lqd")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="DeliveryPost"]
-mesh = SubResource("BoxMesh_20n2d")
+[node name="DeliveryPost" parent="." instance=ExtResource("10_ii4hc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, -8.74956)
 
 [node name="LetterSpawner" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.9319, 0)
@@ -182,27 +166,32 @@ grow_vertical = 2
 
 [node name="ScoreGameStateUI" type="VBoxContainer" parent="UserInterface"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1000.0
+offset_bottom = 1146.0
 
 [node name="Score" type="Label" parent="UserInterface/ScoreGameStateUI"]
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 theme_override_font_sizes/font_size = 45
 text = "Pontos: 0"
 
 [node name="Hourlass" type="Label" parent="UserInterface/ScoreGameStateUI"]
 layout_mode = 2
-size_flags_horizontal = 8
-text = "aaaa"
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "00"
 label_settings = SubResource("LabelSettings_gngbh")
-script = ExtResource("13_cidp2")
 
-[node name="TextureRect" type="TextureRect" parent="UserInterface/ScoreGameStateUI"]
+[node name="HoldingLetterIndicator" type="TextureRect" parent="UserInterface/ScoreGameStateUI"]
 visible = false
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 0
 size_flags_vertical = 0
 texture = ExtResource("12_a1tg6")
+expand_mode = 3
+stretch_mode = 4
 
 [node name="Retry" type="ColorRect" parent="UserInterface"]
 layout_mode = 1

@@ -37,6 +37,5 @@ func _input(_event):
 
 func restart_the_game():
 	# This restarts the current scene.
-	print("Vida que segue")
 	get_tree().reload_current_scene()
 	gameSession.score = 0
