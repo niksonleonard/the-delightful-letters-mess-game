@@ -4,8 +4,6 @@ var holdingLetter: bool = false
 @onready var gameSession: GameSessionState = get_node("/root/GameSession")
 @onready var animationPlayer: AnimationPlayer = $AnimationPlayer
 
-@export var scoretext: Label
-
 # NavigationAgent3D it is a node that help us to find paths easily
 # for reference see: 
 # https://docs.godotengine.org/en/stable/tutorials/navigation/navigation_introduction_3d.html
@@ -49,8 +47,6 @@ func _process(delta):
 func collectTheLetter(collider):
 	holdingLetter = true
 	gameSession.add_score(10, GameSessionState.ScoreReason.DeliveredLetter)
-	scoretext.text="Pontos:"+ str(gameSession.score)
-	print("I take a letter " + str(gameSession.score))
 	$CollectAudio.play()
 	collider.queue_free()
 	gameSession.picked_letter()
@@ -59,7 +55,6 @@ func collectTheLetter(collider):
 func delliveryLetterInPost():
 	if(holdingLetter==true):
 		gameSession.add_score(20, GameSessionState.ScoreReason.DeliveredLetter)
-		scoretext.text="Pontos:"+ str(gameSession.score)
 		holdingLetter = false
 		$DelliveryAudio.play()
 		gameSession.delivered_letter()

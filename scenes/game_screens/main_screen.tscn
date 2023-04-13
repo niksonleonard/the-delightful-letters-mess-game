@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://boox7qkod0yl0"]
+[gd_scene load_steps=27 format=3 uid="uid://boox7qkod0yl0"]
 
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_314rm"]
 [ext_resource type="PackedScene" uid="uid://bwmhxba2yl7lk" path="res://scenes/PlayerObject.tscn" id="1_wi3b8"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" path="res://assets/models/fixing_shop.tscn" id="6_ey0g3"]
 [ext_resource type="Texture2D" uid="uid://cwevymh53jhgf" path="res://assets/models/textures/TEX_Concrete_Sidewalk_1024x1024_roughness.png" id="7_ningw"]
 [ext_resource type="PackedScene" path="res://assets/models/barber_shop.tscn" id="7_th4pw"]
+[ext_resource type="Texture2D" uid="uid://cb2f0g6nigmqy" path="res://assets/letter.png" id="12_a1tg6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_34ium"]
 sky_top_color = Color(0.2, 0.705882, 1, 1)
@@ -63,11 +64,17 @@ _data = {
 }
 point_count = 5
 
-[sub_resource type="LabelSettings" id="LabelSettings_to3bp"]
-font_size = 50
+[sub_resource type="LabelSettings" id="LabelSettings_5lgwd"]
+line_spacing = 2.0
+font_size = 30
 
-[node name="MainScene" type="Node3D"]
+[sub_resource type="LabelSettings" id="LabelSettings_to3bp"]
+font_size = 40
+
+[node name="MainScene" type="Node3D" node_paths=PackedStringArray("scoreLabel", "holdingLetterTexture")]
 script = ExtResource("1_314rm")
+scoreLabel = NodePath("UserInterface/ScoreGameStateUI/Score")
+holdingLetterTexture = NodePath("UserInterface/ScoreGameStateUI/TextureRect")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tnx11")
@@ -122,8 +129,7 @@ shadow_enabled = true
 shadow_opacity = 0.82
 shadow_blur = 2.465
 
-[node name="Player" parent="." node_paths=PackedStringArray("scoretext") instance=ExtResource("1_wi3b8")]
-scoretext = NodePath("../UserInterface/ScoreGameStateUI/Score")
+[node name="Player" parent="." instance=ExtResource("1_wi3b8")]
 
 [node name="JoaninhaObject" parent="." instance=ExtResource("2_2nq0w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.763, 0.476683, 2.08165e-12)
@@ -155,7 +161,7 @@ curve = SubResource("Curve3D_iyj42")
 transform = Transform3D(0.0212262, 0, 0.999775, 0, 1, 0, -0.999775, 0, 0.0212262, -7.54688, 0, -7.36835)
 
 [node name="GameTimer" type="Timer" parent="."]
-wait_time = 30.0
+wait_time = 10.0
 autostart = true
 
 [node name="UserInterface" type="Control" parent="."]
@@ -176,9 +182,11 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 45
 text = "Pontos: 0"
 
-[node name="HoldingLetter" type="Label" parent="UserInterface/ScoreGameStateUI"]
+[node name="TextureRect" type="TextureRect" parent="UserInterface/ScoreGameStateUI"]
 layout_mode = 2
-text = "Segurando: Carta Tipo Fogo"
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("12_a1tg6")
 
 [node name="Retry" type="ColorRect" parent="UserInterface"]
 layout_mode = 1
@@ -189,6 +197,17 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0.403922, 0.501961, 0.454902)
 
+[node name="Score2" type="Label" parent="UserInterface/Retry"]
+layout_mode = 2
+offset_left = 466.0
+offset_top = 329.0
+offset_right = 679.0
+offset_bottom = 395.0
+theme_override_font_sizes/font_size = 45
+text = "XXXXX"
+label_settings = SubResource("LabelSettings_5lgwd")
+horizontal_alignment = 1
+
 [node name="Label" type="Label" parent="UserInterface/Retry"]
 layout_mode = 1
 anchors_preset = 8
@@ -196,10 +215,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_left = -276.0
+offset_top = -231.0
+offset_right = 276.0
+offset_bottom = -87.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Dê um clique

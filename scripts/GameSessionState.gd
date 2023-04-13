@@ -14,6 +14,10 @@ enum ScoreReason {
     DeliveredLetter
 }
 
+signal score_changed
+signal letter_picked
+signal letter_dellivered
+
 ## Level created letters
 ## In the future it could be used to calculate a better score or something
 var levelCreatedLetters: int = 0
@@ -33,6 +37,7 @@ var eatenLetters: int = 0
 ## Registers some score attributed to the player
 func add_score(score_value: int, _score_reason: ScoreReason):
     score += score_value
+    score_changed.emit()
 
 ## Registers each letter that was created in the current session
 func created_letter():
@@ -45,7 +50,9 @@ func eaten_letter():
 ## Register when the player successfuly collect a letter from the floor
 func picked_letter():
     pickedLetters += 1
+    letter_picked.emit()
 
 ## Register when the player successfuly delivery to a post office
 func delivered_letter():
     deliveredLetters += 1
+    letter_dellivered.emit()
