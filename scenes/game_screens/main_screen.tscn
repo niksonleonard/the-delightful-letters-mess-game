@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://boox7qkod0yl0"]
+[gd_scene load_steps=27 format=3 uid="uid://cxuhvxh4lguqs"]
 
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_314rm"]
 [ext_resource type="PackedScene" uid="uid://bwmhxba2yl7lk" path="res://scenes/PlayerObject.tscn" id="1_wi3b8"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" path="res://assets/models/barber_shop.tscn" id="7_th4pw"]
 [ext_resource type="PackedScene" uid="uid://dy1fdrc8ukox0" path="res://scenes/LetterDeliveryPost.tscn" id="10_ii4hc"]
 [ext_resource type="Texture2D" uid="uid://cb2f0g6nigmqy" path="res://assets/letter.png" id="12_a1tg6"]
-[ext_resource type="Script" path="res://scenes/game_screens/GameTimer.gd" id="12_pf7sc"]
+[ext_resource type="Script" path="res://scripts/GameTimer.gd" id="13_xepny"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_34ium"]
 sky_top_color = Color(0.2, 0.705882, 1, 1)
@@ -153,7 +153,7 @@ transform = Transform3D(0.0212262, 0, 0.999775, 0, 1, 0, -0.999775, 0, 0.0212262
 [node name="GameTimer" type="Timer" parent="." node_paths=PackedStringArray("hourlass")]
 wait_time = 30.0
 autostart = true
-script = ExtResource("12_pf7sc")
+script = ExtResource("13_xepny")
 hourlass = NodePath("../UserInterface/ScoreGameStateUI/Hourlass")
 
 [node name="UserInterface" type="Control" parent="."]

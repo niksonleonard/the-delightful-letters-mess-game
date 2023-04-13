@@ -1,0 +1,115 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvqe1o1koc1nx"]
+
+[ext_resource type="Texture2D" uid="uid://du51v0wo8hkl" path="res://assets/textures/mail-305433_640.png" id="1_0oo76"]
+[ext_resource type="Texture2D" uid="uid://bltqkyhujudxy" path="res://assets/textures/award-3694138_640.png" id="2_wtpw0"]
+
+[node name="StampAlbumScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "Album de Selos"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 3
+
+[node name="StampPlaceholder1" type="TextureRect" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_0oo76")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="FilledStamp" type="TextureRect" parent="VBoxContainer/GridContainer/StampPlaceholder1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wtpw0")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="StampPlaceholder2" type="TextureRect" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_0oo76")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="StampPlaceholder3" type="TextureRect" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_0oo76")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="StampPlaceholder4" type="TextureRect" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_0oo76")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_0oo76")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TextureRect6" type="TextureRect" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_0oo76")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TextureRect7" type="TextureRect" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_0oo76")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TextureRect8" type="TextureRect" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_0oo76")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TextureRect9" type="TextureRect" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_0oo76")
+expand_mode = 3
+stretch_mode = 5
