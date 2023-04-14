@@ -26,11 +26,14 @@
             "id": "5a541fb010534486",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "documentation/attachments/Font.md",
-                "mode": "source",
-                "source": false
+                "file": "documentation/ScreenDesgignCanvas.canvas",
+                "viewState": {
+                  "x": -756.3939077495331,
+                  "y": -3075.152039952214,
+                  "zoom": -2.334695632436549
+                }
               }
             }
           }
@@ -101,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "documentation/attachments/Font.md",
+                "file": "documentation/images/Screen References/Wacky Races.jpg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "documentation/attachments/Font.md",
+                "file": "documentation/images/Screen References/Wacky Races.jpg",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "documentation/attachments/Font.md"
+                "file": "documentation/images/Screen References/Wacky Races.jpg"
               }
             }
           }
@@ -165,22 +168,22 @@
   "active": "5a541fb010534486",
   "lastOpenFiles": [
     "documentation/CharactersDesignCanvas.canvas",
-    "documentation/attachments/Font.md",
-    "documentation/pages/Level_Design.md",
+    "documentation/ScreenDesgignCanvas.canvas",
     "documentation/pages/Game_Story_Narrative.md",
+    "documentation/pages/Level_Design.md",
+    "documentation/images/Screen References/crash.jpg",
+    "documentation/images/Screen References/Screen.png",
     "documentation/pages/Characters_Design_Dcoument.md",
     "documentation/images/mamu's end.png",
+    "documentation/images/Pasted image 20230411133756.png",
+    "documentation/images/Pasted image 20230410195441.png",
+    "documentation/images/IMG_5179.jpeg",
+    "documentation/attachments/HA_OFICIAL_V7.pdf",
+    "documentation/attachments/Font.md",
     "assets/models/blender_files/textures/cocinelle.png.001.png",
     "assets/models/blender_files/textures/cocinelle.png",
     "assets/Images/mamu.png",
-    "documentation/attachments/HA_OFICIAL_V7.pdf",
-    "documentation/images/Screen References/Screen.png",
     "documentation/images/Screen References/Wacky Races.jpg",
-    "documentation/images/Screen References/Sonic.jpg",
-    "documentation/images/Screen References/Mario 64.jpg",
-    "documentation/images/Screen References/Donald.jpg",
-    "documentation/images/Screen References/Donald 2.png",
-    "documentation/images/Untitled.canvas",
     "documentation/images/Untitled.md",
     "documentation/images/Screen References",
     "scenes/game_screens/main_screen.tscn.tmp",

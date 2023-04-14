@@ -1,17 +1,17 @@
 {
 	"nodes":[
 		{"type":"group","id":"919696e1555e029a","x":80,"y":240,"width":658,"height":480,"color":"2","label":"External References"},
-		{"type":"group","id":"e9b96ddbb222c9b7","x":-880,"y":110,"width":545,"height":460,"label":"References"},
+		{"type":"group","id":"e9b96ddbb222c9b7","x":-860,"y":140,"width":545,"height":459,"label":"References"},
 		{"type":"text","text":"Characters","id":"7e73cd25f1642f07","x":-311,"y":-214,"width":250,"height":60},
 		{"type":"text","text":"Mamu","id":"e3b5ded1bbfe1aaf","x":-420,"y":-60,"width":120,"height":60},
 		{"type":"text","text":"Joaninhas","id":"010658d9f0016d61","x":200,"y":-30,"width":250,"height":60},
 		{"type":"text","text":"Pombis","id":"c14198afde956d9d","x":-140,"y":-60,"width":250,"height":60},
-		{"type":"file","file":"documentation/images/Pasted image 20230410195441.png","id":"3776feb6bea98ab9","x":558,"y":328,"width":142,"height":142},
-		{"type":"file","file":"documentation/images/referece-mamu-original.png","id":"950a82279b5870c7","x":-800,"y":180,"width":340,"height":120},
-		{"type":"file","file":"documentation/images/harena-invite-mamu-reference.jpeg","id":"8abf76545912fb4e","x":-800,"y":339,"width":157,"height":198},
-		{"type":"file","file":"documentation/images/IMG_5179.jpeg","id":"4ad282e60578ee63","x":521,"y":30,"width":216,"height":162},
 		{"type":"file","file":"documentation/images/Pasted image 20230411132822.png","id":"55533c8a7328d0c0","x":331,"y":339,"width":154,"height":121},
 		{"type":"file","file":"documentation/images/Pasted image 20230411132858.png","id":"a9964f866acfe7eb","x":129,"y":329,"width":146,"height":140},
+		{"type":"file","file":"documentation/images/harena-invite-mamu-reference.jpeg","id":"8abf76545912fb4e","x":-780,"y":368,"width":157,"height":198},
+		{"type":"file","file":"documentation/images/referece-mamu-original.png","id":"950a82279b5870c7","x":-780,"y":221,"width":340,"height":120},
+		{"type":"file","file":"documentation/images/Pasted image 20230410195441.png","id":"3776feb6bea98ab9","x":558,"y":328,"width":142,"height":142},
+		{"type":"file","file":"documentation/images/IMG_5179.jpeg","id":"4ad282e60578ee63","x":521,"y":30,"width":216,"height":162},
 		{"type":"file","file":"documentation/images/Pasted image 20230411133824.png","id":"87cb577615356474","x":346,"y":500,"width":354,"height":168},
 		{"type":"file","file":"documentation/images/Pasted image 20230411133756.png","id":"99ded56864c585d8","x":130,"y":500,"width":145,"height":145}
 	],
