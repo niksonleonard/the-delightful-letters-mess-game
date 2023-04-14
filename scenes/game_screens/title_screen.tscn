@@ -59,6 +59,6 @@ text = "Albuns de Selos"
 layout_mode = 2
 text = "Configurações"
 
-[connection signal="pressed" from="HBoxContainer/StartGameButton" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/StampAlbumButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/StartGameButton" to="." method="_on_button_startgame_pressed"]
+[connection signal="pressed" from="HBoxContainer/StampAlbumButton" to="." method="_on_button_album_pressed"]
 [connection signal="pressed" from="HBoxContainer/SettingsButton" to="." method="_on_button_pressed"]
