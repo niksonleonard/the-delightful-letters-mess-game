@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cxuhvxh4lguqs"]
+[gd_scene load_steps=29 format=3 uid="uid://cxuhvxh4lguqs"]
 
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_314rm"]
 [ext_resource type="PackedScene" uid="uid://bwmhxba2yl7lk" path="res://scenes/PlayerObject.tscn" id="1_wi3b8"]
@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://dy1fdrc8ukox0" path="res://scenes/LetterDeliveryPost.tscn" id="10_ii4hc"]
 [ext_resource type="Texture2D" uid="uid://cb2f0g6nigmqy" path="res://assets/letter.png" id="12_a1tg6"]
 [ext_resource type="Script" path="res://scripts/GameTimer.gd" id="13_xepny"]
+[ext_resource type="Texture2D" uid="uid://ctfr8rucm8lo0" path="res://assets/Images/mamu.png" id="15_euiab"]
+[ext_resource type="FontFile" uid="uid://d3yhgmqnakxng" path="res://phantomstorm.ttf" id="16_1a5jw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_34ium"]
 sky_top_color = Color(0.2, 0.705882, 1, 1)
@@ -61,12 +63,18 @@ point_count = 5
 [sub_resource type="LabelSettings" id="LabelSettings_gngbh"]
 font_size = 50
 
+[sub_resource type="LabelSettings" id="LabelSettings_to3bp"]
+font = ExtResource("16_1a5jw")
+font_size = 40
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3, 3)
+
 [sub_resource type="LabelSettings" id="LabelSettings_5lgwd"]
 line_spacing = 2.0
+font = ExtResource("16_1a5jw")
 font_size = 30
-
-[sub_resource type="LabelSettings" id="LabelSettings_to3bp"]
-font_size = 40
+shadow_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
+shadow_offset = Vector2(3, 3)
 
 [node name="MainScene" type="Node3D" node_paths=PackedStringArray("scoreLabel", "finalScore", "holdingLetterTexture")]
 script = ExtResource("1_314rm")
@@ -168,6 +176,7 @@ grow_vertical = 2
 layout_mode = 0
 offset_right = 1000.0
 offset_bottom = 1146.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Score" type="Label" parent="UserInterface/ScoreGameStateUI"]
 layout_mode = 2
@@ -202,16 +211,19 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0.403922, 0.501961, 0.454902)
 
-[node name="FinalScore" type="Label" parent="UserInterface/Retry"]
-layout_mode = 2
-offset_left = 466.0
-offset_top = 329.0
-offset_right = 679.0
-offset_bottom = 395.0
-theme_override_font_sizes/font_size = 45
-text = "XXXXX"
-label_settings = SubResource("LabelSettings_5lgwd")
-horizontal_alignment = 1
+[node name="TextureRect" type="TextureRect" parent="UserInterface/Retry"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.000868056
+anchor_right = 0.995
+anchor_bottom = 1.01804
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 3.76001
+offset_bottom = 44.3101
+texture = ExtResource("15_euiab")
+expand_mode = 1
 
 [node name="Label" type="Label" parent="UserInterface/Retry"]
 layout_mode = 1
@@ -220,15 +232,25 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -276.0
-offset_top = -231.0
-offset_right = 276.0
-offset_bottom = -87.0
+offset_left = -338.0
+offset_top = -81.0
+offset_right = 214.0
+offset_bottom = 63.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Dê um clique
 para jogar novamente."
 label_settings = SubResource("LabelSettings_to3bp")
+
+[node name="FinalScore" type="Label" parent="UserInterface/Retry"]
+layout_mode = 2
+offset_left = 244.0
+offset_top = 389.0
+offset_right = 457.0
+offset_bottom = 455.0
+theme_override_font_sizes/font_size = 45
+text = "XXXXX"
+label_settings = SubResource("LabelSettings_5lgwd")
 horizontal_alignment = 1
 
 [node name="XROrigin3D" type="XROrigin3D" parent="."]

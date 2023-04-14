@@ -9,11 +9,11 @@
 		{"type":"file","file":"documentation/images/Pasted image 20230410195441.png","id":"3776feb6bea98ab9","x":558,"y":328,"width":142,"height":142},
 		{"type":"file","file":"documentation/images/referece-mamu-original.png","id":"950a82279b5870c7","x":-800,"y":180,"width":340,"height":120},
 		{"type":"file","file":"documentation/images/harena-invite-mamu-reference.jpeg","id":"8abf76545912fb4e","x":-800,"y":339,"width":157,"height":198},
+		{"type":"file","file":"documentation/images/IMG_5179.jpeg","id":"4ad282e60578ee63","x":521,"y":30,"width":216,"height":162},
 		{"type":"file","file":"documentation/images/Pasted image 20230411132822.png","id":"55533c8a7328d0c0","x":331,"y":339,"width":154,"height":121},
 		{"type":"file","file":"documentation/images/Pasted image 20230411132858.png","id":"a9964f866acfe7eb","x":129,"y":329,"width":146,"height":140},
 		{"type":"file","file":"documentation/images/Pasted image 20230411133824.png","id":"87cb577615356474","x":346,"y":500,"width":354,"height":168},
-		{"type":"file","file":"documentation/images/Pasted image 20230411133756.png","id":"99ded56864c585d8","x":130,"y":500,"width":145,"height":145},
-		{"type":"file","file":"documentation/images/IMG_5179.jpeg","id":"4ad282e60578ee63","x":521,"y":30,"width":216,"height":162}
+		{"type":"file","file":"documentation/images/Pasted image 20230411133756.png","id":"99ded56864c585d8","x":130,"y":500,"width":145,"height":145}
 	],
 	"edges":[
 		{"id":"de9731b8bfe11727","fromNode":"7e73cd25f1642f07","fromSide":"bottom","toNode":"e3b5ded1bbfe1aaf","toSide":"top"},

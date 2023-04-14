@@ -11,11 +11,31 @@
             "id": "837a3342743e723e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "canvas",
+              "state": {
+                "file": "documentation/CharactersDesignCanvas.canvas",
+                "viewState": {
+                  "x": -71,
+                  "y": 253,
+                  "zoom": -0.578330895717751
+                }
+              }
+            }
+          },
+          {
+            "id": "5a541fb010534486",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "documentation/attachments/Font.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "documentation/images/FKy5y_wXMAIk5By.jpeg",
+                "file": "documentation/attachments/Font.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "documentation/images/FKy5y_wXMAIk5By.jpeg",
+                "file": "documentation/attachments/Font.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "documentation/images/FKy5y_wXMAIk5By.jpeg"
+                "file": "documentation/attachments/Font.md"
               }
             }
           }
@@ -142,34 +162,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "427629d110f977ef",
+  "active": "5a541fb010534486",
   "lastOpenFiles": [
-    "scenes/game_screens/main_screen.tscn.tmp",
-    "scenes/PlayerObject.tscn.tmp",
-    "assets/models/mamu_headonly.tscn",
-    "documentation/images/Pasted image 20230410195441.png.import",
-    "assets/models/textures/SimpleTown.png.import",
-    "assets/models/textures/SimpleTown.png",
-    "assets/models/blender_files/textures/cocinelle.png.001.png.import",
-    "assets/models/blender_files/textures/cocinelle.png.import",
+    "documentation/CharactersDesignCanvas.canvas",
+    "documentation/attachments/Font.md",
+    "documentation/pages/Level_Design.md",
+    "documentation/pages/Game_Story_Narrative.md",
+    "documentation/pages/Characters_Design_Dcoument.md",
+    "documentation/images/mamu's end.png",
     "assets/models/blender_files/textures/cocinelle.png.001.png",
     "assets/models/blender_files/textures/cocinelle.png",
-    "assets/models/blender_files/textures",
-    "assets/models/blender_files/ladybug.blend.import",
-    "assets/models/blender_files/ladybug.blend",
-    "assets/models/blender_files/fixing_shop.blend.import",
-    "assets/models/3DGodotRobot_GodotPalette.png",
-    "assets/models/textures/cocinelle.png.001.png",
-    "assets/models/textures/TEX_Concrete_Sidewalk_1024x1024_roughness.png",
-    "assets/models/textures/TEX_Concrete_Sidewalk_1024x1024_normal.png",
-    "assets/models/textures/TEX_Concrete_Sidewalk_1024x1024_ao.png",
-    "assets/models/textures/TEX_Concrete_Sidewalk_1024x1024_albedo.png",
-    "assets/models/textures/cocinelle.png",
-    "documentation/pages/Game_Story_Narrative.md",
-    "documentation/pages/Level_Design.md",
+    "assets/Images/mamu.png",
+    "documentation/attachments/HA_OFICIAL_V7.pdf",
+    "documentation/images/Screen References/Screen.png",
+    "documentation/images/Screen References/Wacky Races.jpg",
+    "documentation/images/Screen References/Sonic.jpg",
+    "documentation/images/Screen References/Mario 64.jpg",
+    "documentation/images/Screen References/Donald.jpg",
+    "documentation/images/Screen References/Donald 2.png",
+    "documentation/images/Untitled.canvas",
+    "documentation/images/Untitled.md",
+    "documentation/images/Screen References",
+    "scenes/game_screens/main_screen.tscn.tmp",
+    "phantomstorm.ttf.import",
+    "phantomstorm.ttf",
+    "phantom_storm.zip",
+    "project.godot.tmp",
+    "assets/Images/mamu.png.import",
+    "assets/Images",
+    "assets/mamu.png.import",
     "README.md",
-    "documentation/CharactersDesignCanvas.canvas",
-    "documentation/pages/Characters_Design_Dcoument.md",
     "CHANGELOG.md",
     "node_modules/get-pkg-repo/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md",
     "node_modules/conventional-changelog-config-spec/versions/2.0.0/README.md",
@@ -188,8 +210,6 @@
     "node_modules/string_decoder/node_modules/safe-buffer/README.md",
     "node_modules/p-locate/node_modules/p-limit/readme.md",
     "node_modules/xtend/README.md",
-    "node_modules/redent/readme.md",
-    "node_modules/yocto-queue/readme.md",
-    "node_modules/yargs-parser/README.md"
+    "node_modules/redent/readme.md"
   ]
 }
