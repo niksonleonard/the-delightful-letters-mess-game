@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsd5hcvmtiyyk"]
+
+[ext_resource type="Script" path="res://scripts/game_result_screen.gd" id="1_grark"]
+[ext_resource type="Texture2D" uid="uid://ctfr8rucm8lo0" path="res://assets/Images/mamu.png" id="1_odb2k"]
+
+[node name="GameResultScreen" type="Control" node_paths=PackedStringArray("scoreLabel")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_grark")
+scoreLabel = NodePath("VBoxContainer/TotalScore")
+
+[node name="BackgroundImage" type="TextureRect" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.000868056
+anchor_right = 0.995
+anchor_bottom = 1.01804
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 3.75999
+offset_bottom = 44.3101
+texture = ExtResource("1_odb2k")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 220.0
+offset_right = 530.0
+offset_bottom = 541.0
+theme_override_constants/separation = 10
+
+[node name="TotalScore" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 121
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayAgainButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "Jogar Novamente"
+
+[node name="TitleScreenButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Voltar Tela Inicial"
+
+[connection signal="pressed" from="VBoxContainer/PlayAgainButton" to="." method="_on_button_startgame_pressed"]
+[connection signal="pressed" from="VBoxContainer/TitleScreenButton" to="." method="_on_title_screen_button_pressed"]

@@ -7,11 +7,10 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$UserInterface/Retry.hide()
+	gameSession.reset_gamedata()
 	gameSession.score_changed.connect(update_label)
 	gameSession.letter_picked.connect(show_letter_indicator)
 	gameSession.letter_dellivered.connect(hide_letter_indicator)
-	
 
 func show_letter_indicator():
 	holdingLetterTexture.visible = true
@@ -23,16 +22,10 @@ func update_label():
 	scoreLabel.text = "Pontos:" + str(gameSession.score)
 
 func _on_game_timer_timeout():
-	$UserInterface/Retry.show()
-	finalScore.text = "Sua pontuação foi: \n" + str(gameSession.score)
-	$Player.queue_free()
+	get_tree().change_scene_to_file("res://scenes/game_screens/game_result_screen.tscn")
 
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_accept") and $UserInterface/Retry.visible:
-		restart_the_game()
-
-func _input(_event):
-	if Input.is_action_just_pressed("PointClick") and $UserInterface/Retry.visible:
 		restart_the_game()
 
 func restart_the_game():

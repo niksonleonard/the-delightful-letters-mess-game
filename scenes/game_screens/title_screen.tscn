@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cumy33v5vy7ca"]
+[gd_scene load_steps=4 format=3 uid="uid://cumy33v5vy7ca"]
 
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_oie0x"]
 [ext_resource type="Texture2D" uid="uid://dp01u31srpxgo" path="res://assets/textures/trees-g89b2e018b_1280.jpg" id="2_ihrq5"]
+[ext_resource type="Texture2D" uid="uid://cvomn2aln85ko" path="res://assets/textures/mamu-with-letters.png" id="3_7gwxr"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -39,24 +40,38 @@ offset_right = 413.5
 offset_bottom = 98.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 12
 
 [node name="Label" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0.858824, 0, 0.815686, 1)
 theme_override_font_sizes/font_size = 64
-text = "Delicious Letter Adventure"
+text = "A Deliciosa Bagunça das Cartas"
 horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_7gwxr")
+expand_mode = 3
+stretch_mode = 5
 
 [node name="StartGameButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 25
 text = "Iniciar Jogo"
 
 [node name="StampAlbumButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 25
 text = "Albuns de Selos"
 
 [node name="SettingsButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 25
+disabled = true
 text = "Configurações"
 
 [connection signal="pressed" from="HBoxContainer/StartGameButton" to="." method="_on_button_startgame_pressed"]

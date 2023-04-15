@@ -1,13 +1,10 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://cpguae56bolbh"]
 
 [ext_resource type="PackedScene" uid="uid://b30uyd6uxjw8s" path="res://assets/models/blender_files/barber_shop.blend" id="1_k62xi"]
-[ext_resource type="Texture2D" uid="uid://72dolrgcqmaa" path="res://assets/models/textures/SimpleTown.png" id="2_sr2xr"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_umxym"]
-albedo_texture = ExtResource("2_sr2xr")
+[ext_resource type="Material" uid="uid://7tho6s4ef2vh" path="res://assets/models/materials/city_material.tres" id="2_yw771"]
 
 [node name="barber_shop" instance=ExtResource("1_k62xi")]
 
 [node name="Building_BarberShop" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-surface_material_override/0 = SubResource("StandardMaterial3D_umxym")
+surface_material_override/0 = ExtResource("2_yw771")

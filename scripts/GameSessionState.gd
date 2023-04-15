@@ -56,3 +56,10 @@ func picked_letter():
 func delivered_letter():
     deliveredLetters += 1
     letter_dellivered.emit()
+
+func reset_gamedata():
+    score = 0
+    pickedLetters = 0
+    deliveredLetters = 0
+    eatenLetters = 0
+    levelCreatedLetters = 0
