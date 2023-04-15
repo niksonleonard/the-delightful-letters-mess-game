@@ -21,11 +21,20 @@
             "id": "ed8fc5d18d8ca2e7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
+<<<<<<< HEAD
                 "file": "documentation/pages/Ope Page Game Design Document.md",
                 "mode": "source",
                 "source": false
+=======
+                "file": "documentation/ScreenDesgignCanvas.canvas",
+                "viewState": {
+                  "x": -756.3939077495331,
+                  "y": -3075.152039952214,
+                  "zoom": -2.334695632436549
+                }
+>>>>>>> ecda2175ff6a56b00e21b36d689d591e719b0e92
               }
             }
           }
@@ -96,7 +105,11 @@
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< HEAD
                 "file": "documentation/pages/Ope Page Game Design Document.md",
+=======
+                "file": "documentation/images/Screen References/Wacky Races.jpg",
+>>>>>>> ecda2175ff6a56b00e21b36d689d591e719b0e92
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +126,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+<<<<<<< HEAD
                 "file": "documentation/pages/Ope Page Game Design Document.md",
+=======
+                "file": "documentation/images/Screen References/Wacky Races.jpg",
+>>>>>>> ecda2175ff6a56b00e21b36d689d591e719b0e92
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +153,11 @@
             "state": {
               "type": "outline",
               "state": {
+<<<<<<< HEAD
                 "file": "documentation/pages/Ope Page Game Design Document.md"
+=======
+                "file": "documentation/images/Screen References/Wacky Races.jpg"
+>>>>>>> ecda2175ff6a56b00e21b36d689d591e719b0e92
               }
             }
           }
@@ -159,6 +180,7 @@
   },
   "active": "ed8fc5d18d8ca2e7",
   "lastOpenFiles": [
+<<<<<<< HEAD
     "mamu.png",
     "documentation/pages/Ope Page Game Design Document.md",
     "assets/models/building_mall.tscn.tmp",
@@ -188,6 +210,25 @@
     "documentation/images/Screen References/Donald 2.png",
     "documentation/images/Screen References/Donald.jpg",
     "documentation/images/Untitled.canvas",
+=======
+    "documentation/CharactersDesignCanvas.canvas",
+    "documentation/ScreenDesgignCanvas.canvas",
+    "documentation/pages/Game_Story_Narrative.md",
+    "documentation/pages/Level_Design.md",
+    "documentation/images/Screen References/crash.jpg",
+    "documentation/images/Screen References/Screen.png",
+    "documentation/pages/Characters_Design_Dcoument.md",
+    "documentation/images/mamu's end.png",
+    "documentation/images/Pasted image 20230411133756.png",
+    "documentation/images/Pasted image 20230410195441.png",
+    "documentation/images/IMG_5179.jpeg",
+    "documentation/attachments/HA_OFICIAL_V7.pdf",
+    "documentation/attachments/Font.md",
+    "assets/models/blender_files/textures/cocinelle.png.001.png",
+    "assets/models/blender_files/textures/cocinelle.png",
+    "assets/Images/mamu.png",
+    "documentation/images/Screen References/Wacky Races.jpg",
+>>>>>>> ecda2175ff6a56b00e21b36d689d591e719b0e92
     "documentation/images/Untitled.md",
     "README.md",
     "CHANGELOG.md",
