@@ -6,6 +6,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	scoreLabel.text = str(gameSession.score)
+	gameSession.save_player_data()
 
 func _on_button_startgame_pressed():
 	get_tree().change_scene_to_file("res://scenes/game_screens/main_screen.tscn")

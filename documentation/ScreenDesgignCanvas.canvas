@@ -2,10 +2,10 @@
 	"nodes":[
 		{"type":"group","id":"410809973069ed84","x":-2640,"y":-3200,"width":2360,"height":1920,"label":"Top References"},
 		{"type":"group","id":"873f8f7d0d34df53","x":240,"y":-3200,"width":2360,"height":1920,"label":"Botton Reference"},
-		{"type":"file","file":"documentation/images/Screen References/Mario 64.jpg","id":"0112f4e4957539f6","x":-2520,"y":-2520,"width":999,"height":525},
+		{"type":"file","file":"documentation/images/Screen References/Mario 64.jpg","id":"0112f4e4957539f6","x":-2520,"y":-2520,"width":998,"height":525},
 		{"type":"file","file":"documentation/images/Screen References/crash.jpg","id":"97957798deb584cf","x":-2505,"y":-1962,"width":984,"height":551},
 		{"type":"file","file":"documentation/images/Screen References/Wacky Races.jpg","id":"c94766fa98efb418","x":-1335,"y":-1962,"width":796,"height":597},
-		{"type":"file","file":"documentation/images/Screen References/Donald.jpg","id":"d0b3a436eec1a96d","x":-2520,"y":-3112,"width":999,"height":559},
+		{"type":"file","file":"documentation/images/Screen References/Donald.jpg","id":"d0b3a436eec1a96d","x":-2520,"y":-3112,"width":998,"height":559},
 		{"type":"file","file":"documentation/images/Screen References/Donald 2.png","id":"a28a73c987556076","x":-1332,"y":-3086,"width":793,"height":446},
 		{"type":"file","file":"documentation/images/Screen References/Zelda.jpg","id":"83ad630573dec2e8","x":-1332,"y":-2524,"width":945,"height":529},
 		{"type":"file","file":"documentation/images/Screen References/Sonic.jpg","id":"b1185ceb1fdacab1","x":800,"y":-2974,"width":1349,"height":1012},

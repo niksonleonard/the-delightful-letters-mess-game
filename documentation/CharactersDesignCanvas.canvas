@@ -1,25 +1,29 @@
 {
 	"nodes":[
-		{"type":"group","id":"919696e1555e029a","x":80,"y":240,"width":658,"height":480,"color":"2","label":"External References"},
-		{"type":"group","id":"e9b96ddbb222c9b7","x":-860,"y":140,"width":545,"height":459,"label":"References"},
-		{"type":"text","text":"Characters","id":"7e73cd25f1642f07","x":-311,"y":-214,"width":250,"height":60},
-		{"type":"text","text":"Mamu","id":"e3b5ded1bbfe1aaf","x":-420,"y":-60,"width":120,"height":60},
+		{"type":"group","id":"919696e1555e029a","x":280,"y":370,"width":658,"height":480,"color":"2","label":"External References"},
+		{"type":"group","id":"7fe8699aade900c8","x":-435,"y":370,"width":660,"height":400,"label":"External References"},
+		{"type":"group","id":"e9b96ddbb222c9b7","x":-1060,"y":370,"width":545,"height":459,"label":"References"},
 		{"type":"text","text":"Joaninhas","id":"010658d9f0016d61","x":200,"y":-30,"width":250,"height":60},
-		{"type":"text","text":"Pombis","id":"c14198afde956d9d","x":-140,"y":-60,"width":250,"height":60},
-		{"type":"file","file":"documentation/images/Pasted image 20230411132822.png","id":"55533c8a7328d0c0","x":331,"y":339,"width":154,"height":121},
-		{"type":"file","file":"documentation/images/Pasted image 20230411132858.png","id":"a9964f866acfe7eb","x":129,"y":329,"width":146,"height":140},
-		{"type":"file","file":"documentation/images/harena-invite-mamu-reference.jpeg","id":"8abf76545912fb4e","x":-780,"y":368,"width":157,"height":198},
-		{"type":"file","file":"documentation/images/referece-mamu-original.png","id":"950a82279b5870c7","x":-780,"y":221,"width":340,"height":120},
-		{"type":"file","file":"documentation/images/Pasted image 20230410195441.png","id":"3776feb6bea98ab9","x":558,"y":328,"width":142,"height":142},
 		{"type":"file","file":"documentation/images/IMG_5179.jpeg","id":"4ad282e60578ee63","x":521,"y":30,"width":216,"height":162},
-		{"type":"file","file":"documentation/images/Pasted image 20230411133824.png","id":"87cb577615356474","x":346,"y":500,"width":354,"height":168},
-		{"type":"file","file":"documentation/images/Pasted image 20230411133756.png","id":"99ded56864c585d8","x":130,"y":500,"width":145,"height":145}
+		{"type":"file","file":"documentation/images/Pasted image 20230410195441.png","id":"3776feb6bea98ab9","x":758,"y":458,"width":142,"height":142},
+		{"type":"file","file":"documentation/images/Pasted image 20230411132858.png","id":"a9964f866acfe7eb","x":329,"y":459,"width":146,"height":140},
+		{"type":"file","file":"documentation/images/Pasted image 20230411132822.png","id":"55533c8a7328d0c0","x":531,"y":469,"width":154,"height":121},
+		{"type":"text","text":"Characters","id":"7e73cd25f1642f07","x":-311,"y":-214,"width":250,"height":60},
+		{"type":"text","text":"Pombis","id":"c14198afde956d9d","x":-140,"y":-30,"width":250,"height":60},
+		{"type":"text","text":"Mamu","id":"e3b5ded1bbfe1aaf","x":-420,"y":-60,"width":120,"height":60},
+		{"type":"file","file":"documentation/images/Pasted image 20230411133756.png","id":"99ded56864c585d8","x":330,"y":630,"width":145,"height":145},
+		{"type":"file","file":"documentation/images/Pasted image 20230411133824.png","id":"87cb577615356474","x":546,"y":630,"width":354,"height":168},
+		{"type":"file","file":"documentation/images/Screenshot 2023-04-17 at 13.43.34.png","id":"5b0f5e9e300bba02","x":-427,"y":403,"width":209,"height":213},
+		{"id":"da6e05931cbab3e0","x":-195,"y":403,"width":400,"height":238,"type":"file","file":"documentation/images/Screenshot 2023-04-18 at 00.23.18.png"},
+		{"type":"file","file":"documentation/images/referece-mamu-original.png","id":"950a82279b5870c7","x":-980,"y":451,"width":340,"height":120},
+		{"type":"file","file":"documentation/images/harena-invite-mamu-reference.jpeg","id":"8abf76545912fb4e","x":-980,"y":598,"width":157,"height":198}
 	],
 	"edges":[
 		{"id":"de9731b8bfe11727","fromNode":"7e73cd25f1642f07","fromSide":"bottom","toNode":"e3b5ded1bbfe1aaf","toSide":"top"},
 		{"id":"8da25b96ee288b0d","fromNode":"7e73cd25f1642f07","fromSide":"bottom","toNode":"c14198afde956d9d","toSide":"left"},
 		{"id":"7fd9ffa89bd951af","fromNode":"7e73cd25f1642f07","fromSide":"right","toNode":"010658d9f0016d61","toSide":"top"},
 		{"id":"9a10508a755532af","fromNode":"010658d9f0016d61","fromSide":"bottom","toNode":"919696e1555e029a","toSide":"top"},
-		{"id":"1afc28fc80fe0813","fromNode":"e3b5ded1bbfe1aaf","fromSide":"left","toNode":"e9b96ddbb222c9b7","toSide":"top"}
+		{"id":"1afc28fc80fe0813","fromNode":"e3b5ded1bbfe1aaf","fromSide":"left","toNode":"e9b96ddbb222c9b7","toSide":"top"},
+		{"id":"babc7de130e80c7b","fromNode":"c14198afde956d9d","fromSide":"bottom","toNode":"7fe8699aade900c8","toSide":"top"}
 	]
 }

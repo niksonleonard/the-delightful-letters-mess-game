@@ -1,59 +1,42 @@
 {
   "main": {
-    "id": "8fbdcd83e85f2345",
+    "id": "7889bc8aaae95af0",
     "type": "split",
     "children": [
       {
-        "id": "271be24cbaf51407",
+        "id": "d0ebb84c01c05691",
         "type": "tabs",
         "children": [
           {
-            "id": "837a3342743e723e",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "mamu.png"
-              }
-            }
-          },
-          {
-            "id": "ed8fc5d18d8ca2e7",
+            "id": "d4f48b6e9de6b498",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
-<<<<<<< HEAD
-                "file": "documentation/pages/Ope Page Game Design Document.md",
-                "mode": "source",
-                "source": false
-=======
-                "file": "documentation/ScreenDesgignCanvas.canvas",
+                "file": "documentation/CharactersDesignCanvas.canvas",
                 "viewState": {
-                  "x": -756.3939077495331,
-                  "y": -3075.152039952214,
-                  "zoom": -2.334695632436549
+                  "x": 39.737430650775885,
+                  "y": 297.7469160583943,
+                  "zoom": -0.6815231337173852
                 }
->>>>>>> ecda2175ff6a56b00e21b36d689d591e719b0e92
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "e5d0eeb754054749",
+    "id": "dfb84b95ae171fa0",
     "type": "split",
     "children": [
       {
-        "id": "b0b4a21d8c044826",
+        "id": "a12b7ce1fc88a8f7",
         "type": "tabs",
         "children": [
           {
-            "id": "427629d110f977ef",
+            "id": "d68e069c6266fe41",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -63,7 +46,7 @@
             }
           },
           {
-            "id": "5c4a13912830c02b",
+            "id": "f84fcc29bddcc03b",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -78,7 +61,7 @@
             }
           },
           {
-            "id": "c5d542f45647ded6",
+            "id": "287dc5fcc1acdfc2",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -92,24 +75,20 @@
     "width": 300
   },
   "right": {
-    "id": "52f11e61c2926dfc",
+    "id": "1adcf5bd5303fb98",
     "type": "split",
     "children": [
       {
-        "id": "b08d87776e5a21f9",
+        "id": "5cb65984c95a6f8c",
         "type": "tabs",
         "children": [
           {
-            "id": "8aaa226336270bf4",
+            "id": "2eb3f413edc91837",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< HEAD
-                "file": "documentation/pages/Ope Page Game Design Document.md",
-=======
-                "file": "documentation/images/Screen References/Wacky Races.jpg",
->>>>>>> ecda2175ff6a56b00e21b36d689d591e719b0e92
+                "file": "documentation/CharactersDesignCanvas.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,23 +100,19 @@
             }
           },
           {
-            "id": "8bdf1e76547b2276",
+            "id": "1c8073995c8ae198",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-<<<<<<< HEAD
-                "file": "documentation/pages/Ope Page Game Design Document.md",
-=======
-                "file": "documentation/images/Screen References/Wacky Races.jpg",
->>>>>>> ecda2175ff6a56b00e21b36d689d591e719b0e92
+                "file": "documentation/CharactersDesignCanvas.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "13b81b9dab067044",
+            "id": "b237d587d0a81f13",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -148,16 +123,12 @@
             }
           },
           {
-            "id": "9fecd78463532658",
+            "id": "a6ec057e593d8562",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-<<<<<<< HEAD
-                "file": "documentation/pages/Ope Page Game Design Document.md"
-=======
-                "file": "documentation/images/Screen References/Wacky Races.jpg"
->>>>>>> ecda2175ff6a56b00e21b36d689d591e719b0e92
+                "file": "documentation/CharactersDesignCanvas.canvas"
               }
             }
           }
@@ -178,75 +149,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ed8fc5d18d8ca2e7",
+  "active": "d4f48b6e9de6b498",
   "lastOpenFiles": [
-<<<<<<< HEAD
-    "mamu.png",
-    "documentation/pages/Ope Page Game Design Document.md",
-    "assets/models/building_mall.tscn.tmp",
-    "scenes/game_screens/main_screen.tscn.tmp",
-    "assets/models/materials/city_material.tres",
-    "assets/models/building_mall.tscn",
-    "assets/models/blender_files/building_mall.blend.import",
-    "assets/models/blender_files/building_mall.blend",
-    "assets/textures/mamu-with-letters.png.import",
-    "assets/textures/mamu-with-letters.png",
-    "mamu-with-letters.png.import",
-    "mamu-with-letters.png",
-    "mamu.png.import",
-    "letter.png",
-    "icon.svg",
-    "Obsidian.md",
-    "documentation/pages/Game_Story_Narrative.md",
-    "documentation/pages/Level_Design.md",
-    "documentation/pages/Characters_Design_Dcoument.md",
+    "documentation/images/Screenshot 2023-04-18 at 00.23.18.png",
     "documentation/CharactersDesignCanvas.canvas",
-    "documentation/attachments/HA_OFICIAL_V7.pdf",
-    "documentation/attachments/Font.md",
-    "documentation/images/Screen References/Wacky Races.jpg",
-    "documentation/images/Screen References/Sonic.jpg",
-    "documentation/images/Screen References/Screen.png",
-    "documentation/images/Screen References/Mario 64.jpg",
-    "documentation/images/Screen References/Donald 2.png",
-    "documentation/images/Screen References/Donald.jpg",
-    "documentation/images/Untitled.canvas",
-=======
-    "documentation/CharactersDesignCanvas.canvas",
+    "documentation/images/Screenshot 2023-04-17 at 13.43.34.png",
+    "documentation/Business Model Canvas.canvas",
+    "Business_Model_Canvas.png.import",
+    "assets/textures/pombas-games-logo.png.import",
+    "assets/textures/pombas-games-logo.png",
+    "Business_Model_Canvas.png",
     "documentation/ScreenDesgignCanvas.canvas",
-    "documentation/pages/Game_Story_Narrative.md",
-    "documentation/pages/Level_Design.md",
-    "documentation/images/Screen References/crash.jpg",
-    "documentation/images/Screen References/Screen.png",
-    "documentation/pages/Characters_Design_Dcoument.md",
-    "documentation/images/mamu's end.png",
-    "documentation/images/Pasted image 20230411133756.png",
-    "documentation/images/Pasted image 20230410195441.png",
-    "documentation/images/IMG_5179.jpeg",
-    "documentation/attachments/HA_OFICIAL_V7.pdf",
-    "documentation/attachments/Font.md",
-    "assets/models/blender_files/textures/cocinelle.png.001.png",
-    "assets/models/blender_files/textures/cocinelle.png",
-    "assets/Images/mamu.png",
-    "documentation/images/Screen References/Wacky Races.jpg",
->>>>>>> ecda2175ff6a56b00e21b36d689d591e719b0e92
-    "documentation/images/Untitled.md",
-    "README.md",
-    "CHANGELOG.md",
-    "node_modules/get-pkg-repo/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md",
-    "node_modules/conventional-changelog-config-spec/versions/2.0.0/README.md",
-    "node_modules/conventional-changelog-config-spec/versions/1.0.0/README.md",
-    "node_modules/conventional-changelog-config-spec/versions/2.1.0/README.md",
-    "node_modules/read-pkg-up/node_modules/p-limit/readme.md",
-    "node_modules/wrap-ansi/node_modules/ansi-styles/readme.md",
-    "node_modules/wrap-ansi/node_modules/color-name/README.md",
-    "node_modules/read-pkg-up/node_modules/p-locate/readme.md",
-    "node_modules/read-pkg-up/node_modules/p-try/readme.md",
-    "node_modules/read-pkg-up/node_modules/locate-path/readme.md",
-    "node_modules/standard-version/node_modules/semver/README.md",
-    "node_modules/wrap-ansi/node_modules/color-convert/README.md",
-    "node_modules/wrap-ansi/node_modules/color-convert/CHANGELOG.md",
-    "node_modules/read-pkg-up/node_modules/find-up/readme.md",
-    "node_modules/string_decoder/node_modules/safe-buffer/README.md",
-    "node_modules/p-locate/node_modules/p-limit/readme.md"
+    "assets/textures/boot-splash.png.import",
+    "assets/textures/boot-splash.png",
+    "scenes/game_screens/splash.tscn",
+    "assets/textures/klumfy-logotype.png.import",
+    "assets/textures/harena-logo-azul-vector.png.import",
+    "assets/textures/harena-logo-azul-vector.png",
+    "assets/textures/klumfy-logotype.png"
   ]
 }

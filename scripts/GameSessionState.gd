@@ -34,6 +34,15 @@ var deliveredLetters: int = 0
 ## Eaten letterls
 var eatenLetters: int = 0
 
+var playerData: PlayerData
+
+func _ready():
+    playerData = ResourceLoader.load(PlayerData.PLAYERDATA_PATH)
+    if !playerData:
+        playerData = PlayerData.new()
+        ResourceSaver.save(playerData, PlayerData.PLAYERDATA_PATH)
+    print(playerData)
+
 ## Registers some score attributed to the player
 func add_score(score_value: int, _score_reason: ScoreReason):
     score += score_value
@@ -63,3 +72,10 @@ func reset_gamedata():
     deliveredLetters = 0
     eatenLetters = 0
     levelCreatedLetters = 0
+
+func tutorial_done():
+    playerData.tutorialCompletedTimes += 1
+    save_player_data()
+
+func save_player_data():
+    ResourceSaver.save(playerData, PlayerData.PLAYERDATA_PATH)
