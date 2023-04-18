@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bapg4i1i25mrx"]
+[gd_scene load_steps=6 format=3 uid="uid://bapg4i1i25mrx"]
 
 [ext_resource type="Texture2D" uid="uid://cq501hmdyjd41" path="res://assets/textures/klumfy-logotype.png" id="1_oj3cf"]
 [ext_resource type="Script" path="res://scripts/splash_screen.gd" id="1_pvmqa"]
 [ext_resource type="Texture2D" uid="uid://cdc71dfg71lgc" path="res://assets/textures/harena-logo-azul-vector.png" id="2_tn8ka"]
 [ext_resource type="Texture2D" uid="uid://cqsfsdq1gdsmg" path="res://assets/textures/pombas-games-logo.png" id="3_glgwp"]
+[ext_resource type="AudioStream" uid="uid://dps1tam3732us" path="res://assets/sounds/524345__javierserrat__pigeon.mp3" id="5_enkwk"]
 
 [node name="SplashScreen" type="Control"]
 layout_mode = 3
@@ -49,5 +50,9 @@ texture = ExtResource("2_tn8ka")
 position = Vector2(927, 560)
 scale = Vector2(0.239437, 0.239437)
 texture = ExtResource("1_oj3cf")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_enkwk")
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

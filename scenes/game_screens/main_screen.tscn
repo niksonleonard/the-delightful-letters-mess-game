@@ -150,6 +150,7 @@ omni_range = 28.571
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="Cenario"]
 stream = ExtResource("5_oyj76")
+volume_db = -15.0
 autoplay = true
 
 [node name="Camera3D" type="Camera3D" parent="." groups=["Camera"]]
@@ -282,9 +283,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 98.5
-offset_right = 198.533
-offset_bottom = 99.9999
+offset_left = -51.5
+offset_top = -49.0
+offset_right = 48.5327
+offset_bottom = 50.9999
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
