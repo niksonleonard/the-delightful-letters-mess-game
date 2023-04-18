@@ -11,14 +11,9 @@
             "id": "d4f48b6e9de6b498",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "image",
               "state": {
-                "file": "documentation/CharactersDesignCanvas.canvas",
-                "viewState": {
-                  "x": 39.737430650775885,
-                  "y": 297.7469160583943,
-                  "zoom": -0.6815231337173852
-                }
+                "file": "icon.svg"
               }
             }
           }
@@ -88,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "documentation/CharactersDesignCanvas.canvas",
+                "file": "icon.svg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "documentation/CharactersDesignCanvas.canvas",
+                "file": "icon.svg",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "documentation/CharactersDesignCanvas.canvas"
+                "file": "icon.svg"
               }
             }
           }
@@ -151,21 +146,27 @@
   },
   "active": "d4f48b6e9de6b498",
   "lastOpenFiles": [
-    "documentation/images/Screenshot 2023-04-18 at 00.23.18.png",
+    "scripts/game_preparation_screen.gd",
+    "scenes/game_screens/game_preparation_screen.tscn",
+    "scenes/game_screens/splash_screen.tscn",
+    "mamu.png",
+    "letter.png",
+    "mamu-with-letters.png",
+    "assets/textures/mamu-with-letters.png",
     "documentation/CharactersDesignCanvas.canvas",
+    "documentation/images/Screenshot 2023-04-18 at 00.23.18.png",
     "documentation/images/Screenshot 2023-04-17 at 13.43.34.png",
     "documentation/Business Model Canvas.canvas",
     "Business_Model_Canvas.png.import",
     "assets/textures/pombas-games-logo.png.import",
     "assets/textures/pombas-games-logo.png",
-    "Business_Model_Canvas.png",
+    "documentation/images/Business_Model_Canvas.png",
     "documentation/ScreenDesgignCanvas.canvas",
     "assets/textures/boot-splash.png.import",
     "assets/textures/boot-splash.png",
     "scenes/game_screens/splash.tscn",
     "assets/textures/klumfy-logotype.png.import",
     "assets/textures/harena-logo-azul-vector.png.import",
-    "assets/textures/harena-logo-azul-vector.png",
-    "assets/textures/klumfy-logotype.png"
+    "assets/textures/harena-logo-azul-vector.png"
   ]
 }

@@ -1,6 +1,6 @@
 {
 	"nodes":[
-		{"type":"group","id":"19598c7550c45db3","x":-400,"y":-280,"width":2750,"height":1560,"label":"Canvas","background":"Business_Model_Canvas.png"},
+		{"type":"group","id":"19598c7550c45db3","x":-400,"y":-280,"width":2750,"height":1560,"label":"Canvas","background":"documentation/images/Business_Model_Canvas.png"},
 		{"type":"text","text":"Jogadores Adultos Casuais","id":"b4b2e27a30d6e560","x":1760,"y":-143,"width":200,"height":50,"color":"3"},
 		{"type":"text","text":"Interessados em colaboração filantrópica","id":"779440a087fbb0ca","x":1760,"y":-83,"width":200,"height":105,"color":"3"},
 		{"type":"text","text":"Interessados no deselvolvimento do ecosistema de inovação","id":"878ad00e3a92c897","x":1760,"y":32,"width":200,"height":113,"color":"3"},

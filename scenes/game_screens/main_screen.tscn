@@ -203,31 +203,34 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ScoreGameStateUI" type="VBoxContainer" parent="UserInterface"]
-layout_mode = 0
-offset_right = 1000.0
-offset_bottom = 1146.0
-metadata/_edit_use_anchors_ = true
+[node name="ScoreGameStateUI" type="HBoxContainer" parent="UserInterface"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Score" type="Label" parent="UserInterface/ScoreGameStateUI"]
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 45
 text = "Pontos: 0"
 
 [node name="Hourlass" type="Label" parent="UserInterface/ScoreGameStateUI"]
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 3
 size_flags_vertical = 0
+theme_override_font_sizes/font_size = 0
 text = "00"
 label_settings = SubResource("LabelSettings_gngbh")
+horizontal_alignment = 1
 
 [node name="HoldingLetterIndicator" type="TextureRect" parent="UserInterface/ScoreGameStateUI"]
-visible = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 3
 size_flags_vertical = 0
 texture = ExtResource("12_a1tg6")
 expand_mode = 3

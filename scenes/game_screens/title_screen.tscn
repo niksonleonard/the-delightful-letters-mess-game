@@ -62,17 +62,17 @@ stretch_mode = 5
 
 [node name="StartGameButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 40
 text = "Iniciar Jogo"
 
 [node name="StampAlbumButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 40
 text = "Albuns de Selos"
 
 [node name="SettingsButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 40
 disabled = true
 text = "Configurações"
 
