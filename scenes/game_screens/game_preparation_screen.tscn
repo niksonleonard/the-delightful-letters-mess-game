@@ -38,6 +38,7 @@ theme_override_font_sizes/font_size = 50
 text = "Colete as cartas antes que joaninha coma"
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
 one_shot = true
 autostart = true
 
@@ -53,6 +54,7 @@ expand_mode = 3
 stretch_mode = 5
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
 offset_left = 897.349
 offset_top = -483.934
 offset_right = 1395.35

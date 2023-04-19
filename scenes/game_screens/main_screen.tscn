@@ -151,7 +151,7 @@ volume_db = -15.0
 autoplay = true
 
 [node name="Camera3D" type="Camera3D" parent="." groups=["Camera"]]
-transform = Transform3D(1, 0, 0, 0, 0.964123, 0.265455, 0, -0.265455, 0.964123, 0.219497, 8.56812, 18.7637)
+transform = Transform3D(1, 0, 0, 0, 0.964123, 0.265455, 0, -0.265455, 0.964123, 0.219497, 7.18466, 17.789)
 current = true
 fov = 53.2
 far = 100.0
@@ -273,7 +273,8 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 98.5
-offset_right = 98.5
+offset_right = 398.5
+offset_bottom = 98.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
