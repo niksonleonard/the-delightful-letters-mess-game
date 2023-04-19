@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cxuhvxh4lguqs"]
+[gd_scene load_steps=31 format=3 uid="uid://cxuhvxh4lguqs"]
 
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_314rm"]
 [ext_resource type="PackedScene" uid="uid://bwmhxba2yl7lk" path="res://scenes/PlayerObject.tscn" id="1_wi3b8"]
@@ -12,8 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://cwevymh53jhgf" path="res://assets/models/textures/TEX_Concrete_Sidewalk_1024x1024_roughness.png" id="7_ningw"]
 [ext_resource type="PackedScene" uid="uid://cpguae56bolbh" path="res://assets/models/barber_shop.tscn" id="7_th4pw"]
 [ext_resource type="PackedScene" uid="uid://dy1fdrc8ukox0" path="res://scenes/LetterDeliveryPost.tscn" id="10_ii4hc"]
-[ext_resource type="Texture2D" uid="uid://cb2f0g6nigmqy" path="res://assets/letter.png" id="12_a1tg6"]
 [ext_resource type="Script" path="res://scripts/GameTimer.gd" id="13_xepny"]
+[ext_resource type="Texture2D" uid="uid://d1hemq4lfcgym" path="res://assets/Images/letter 2.png" id="15_obw3k"]
 [ext_resource type="PackedScene" uid="uid://4wqlvtw1d7ux" path="res://assets/models/building_mall.tscn" id="17_01hho"]
 [ext_resource type="Texture2D" uid="uid://b8q7nqddfoxry" path="res://assets/textures/touch-6602643_640.png" id="18_6u8dc"]
 
@@ -59,6 +59,17 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0)
 }
 point_count = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_0gw0d"]
+font_size = 100
+shadow_size = 3
+shadow_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bpkfa"]
+font_size = 45
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3, 3)
 
 [sub_resource type="Animation" id="Animation_xj0tk"]
 resource_name = "MovingHand"
@@ -187,10 +198,10 @@ curve = SubResource("Curve3D_iyj42")
 transform = Transform3D(0.0212262, 0, 0.999775, 0, 1, 0, -0.999775, 0, 0.0212262, -7.54688, 0, -7.36835)
 
 [node name="GameTimer" type="Timer" parent="." node_paths=PackedStringArray("hourlass")]
-wait_time = 30.0
+wait_time = 20.0
 autostart = true
 script = ExtResource("13_xepny")
-hourlass = NodePath("../UserInterface/ScoreGameStateUI/Hourlass")
+hourlass = NodePath("../UserInterface/Hourlass")
 
 [node name="UserInterface" type="Control" parent="."]
 layout_mode = 3
@@ -200,6 +211,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Hourlass" type="Label" parent="UserInterface"]
+layout_mode = 2
+offset_left = 385.0
+offset_top = -20.0
+offset_right = 767.0
+offset_bottom = 618.0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 65
+text = "00"
+label_settings = SubResource("LabelSettings_0gw0d")
+horizontal_alignment = 1
+vertical_alignment = 3
+
 [node name="ScoreGameStateUI" type="HBoxContainer" parent="UserInterface"]
 layout_mode = 1
 anchors_preset = 15
@@ -207,6 +231,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Score" type="Label" parent="UserInterface/ScoreGameStateUI"]
 layout_mode = 2
@@ -214,21 +239,15 @@ size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 45
 text = "Pontos: 0"
-
-[node name="Hourlass" type="Label" parent="UserInterface/ScoreGameStateUI"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-theme_override_font_sizes/font_size = 65
-text = "00"
-horizontal_alignment = 1
+label_settings = SubResource("LabelSettings_bpkfa")
 
 [node name="HoldingLetterIndicator" type="TextureRect" parent="UserInterface/ScoreGameStateUI"]
+visible = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 0
-texture = ExtResource("12_a1tg6")
+texture = ExtResource("15_obw3k")
 expand_mode = 3
 stretch_mode = 4
 
@@ -273,8 +292,8 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 98.5
-offset_right = 398.5
-offset_bottom = 98.0
+offset_right = 698.5
+offset_bottom = 196.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4

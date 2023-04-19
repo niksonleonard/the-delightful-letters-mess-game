@@ -13,31 +13,7 @@
             "state": {
               "type": "image",
               "state": {
-<<<<<<< HEAD
-                "file": "documentation/CharactersDesignCanvas.canvas",
-                "viewState": {
-                  "x": -71,
-                  "y": 253,
-                  "zoom": -0.578330895717751
-                }
-              }
-            }
-          },
-          {
-            "id": "5a541fb010534486",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "documentation/HUD_Design_Canvas.canvas",
-                "viewState": {
-                  "x": -20,
-                  "y": -1600,
-                  "zoom": -2.2736860997125863
-                }
-=======
-                "file": "icon.svg"
->>>>>>> 7d1efcfcb0be485ecf5fca77b03cde2f430a5d40
+                "file": "assets/Images/letter 2.png"
               }
             }
           }
@@ -107,11 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< HEAD
-                "file": "documentation/HUD_Design_Canvas.canvas",
-=======
-                "file": "icon.svg",
->>>>>>> 7d1efcfcb0be485ecf5fca77b03cde2f430a5d40
+                "file": "assets/Images/letter 2.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,11 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-<<<<<<< HEAD
-                "file": "documentation/HUD_Design_Canvas.canvas",
-=======
-                "file": "icon.svg",
->>>>>>> 7d1efcfcb0be485ecf5fca77b03cde2f430a5d40
+                "file": "assets/Images/letter 2.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,11 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-<<<<<<< HEAD
-                "file": "documentation/HUD_Design_Canvas.canvas"
-=======
-                "file": "icon.svg"
->>>>>>> 7d1efcfcb0be485ecf5fca77b03cde2f430a5d40
+                "file": "assets/Images/letter 2.png"
               }
             }
           }
@@ -180,12 +144,9 @@
       "command-palette:Open command palette": false
     }
   },
-<<<<<<< HEAD
-  "active": "427629d110f977ef",
-=======
   "active": "d4f48b6e9de6b498",
->>>>>>> 7d1efcfcb0be485ecf5fca77b03cde2f430a5d40
   "lastOpenFiles": [
+    "icon.svg",
     "scripts/game_preparation_screen.gd",
     "scenes/game_screens/game_preparation_screen.tscn",
     "scenes/game_screens/splash_screen.tscn",
@@ -194,54 +155,6 @@
     "mamu-with-letters.png",
     "assets/textures/mamu-with-letters.png",
     "documentation/CharactersDesignCanvas.canvas",
-<<<<<<< HEAD
-    "documentation/HUD_Design_Canvas.canvas",
-    "documentation/images/mamu's end.png",
-    "documentation/images/referece-mamu-original.png",
-    "documentation/images/harena-invite-mamu-reference.jpeg",
-    "documentation/images/ha-infatil-intenal-facility.jpeg",
-    "documentation/images/FKy5y_wXMAIk5By.jpeg",
-    "documentation/images/Screen References/Sonic.jpg",
-    "documentation/images/Screen References/Wacky Races.jpg",
-    "documentation/images/Screen References/Zelda.jpg",
-    "documentation/images/Screen References/crash.jpg",
-    "documentation/attachments/Font.md",
-    "documentation/attachments/HA_OFICIAL_V7.pdf",
-    "documentation/pages/Game_Story_Narrative.md",
-    "documentation/pages/Level_Design.md",
-    "documentation/images/Screen References/Screen.png",
-    "documentation/pages/Characters_Design_Dcoument.md",
-    "documentation/images/Untitled.md",
-    "documentation/images/Screen References",
-    "scenes/game_screens/main_screen.tscn.tmp",
-    "phantomstorm.ttf.import",
-    "phantomstorm.ttf",
-    "phantom_storm.zip",
-    "project.godot.tmp",
-    "assets/Images/mamu.png.import",
-    "assets/Images",
-    "assets/mamu.png.import",
-    "README.md",
-    "CHANGELOG.md",
-    "node_modules/get-pkg-repo/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md",
-    "node_modules/conventional-changelog-config-spec/versions/2.0.0/README.md",
-    "node_modules/conventional-changelog-config-spec/versions/1.0.0/README.md",
-    "node_modules/conventional-changelog-config-spec/versions/2.1.0/README.md",
-    "node_modules/read-pkg-up/node_modules/p-limit/readme.md",
-    "node_modules/wrap-ansi/node_modules/ansi-styles/readme.md",
-    "node_modules/wrap-ansi/node_modules/color-name/README.md",
-    "node_modules/read-pkg-up/node_modules/p-locate/readme.md",
-    "node_modules/read-pkg-up/node_modules/p-try/readme.md",
-    "node_modules/read-pkg-up/node_modules/locate-path/readme.md",
-    "node_modules/standard-version/node_modules/semver/README.md",
-    "node_modules/wrap-ansi/node_modules/color-convert/README.md",
-    "node_modules/wrap-ansi/node_modules/color-convert/CHANGELOG.md",
-    "node_modules/read-pkg-up/node_modules/find-up/readme.md",
-    "node_modules/string_decoder/node_modules/safe-buffer/README.md",
-    "node_modules/p-locate/node_modules/p-limit/readme.md",
-    "node_modules/xtend/README.md",
-    "node_modules/redent/readme.md"
-=======
     "documentation/images/Screenshot 2023-04-18 at 00.23.18.png",
     "documentation/images/Screenshot 2023-04-17 at 13.43.34.png",
     "documentation/Business Model Canvas.canvas",
@@ -256,6 +169,5 @@
     "assets/textures/klumfy-logotype.png.import",
     "assets/textures/harena-logo-azul-vector.png.import",
     "assets/textures/harena-logo-azul-vector.png"
->>>>>>> 7d1efcfcb0be485ecf5fca77b03cde2f430a5d40
   ]
 }

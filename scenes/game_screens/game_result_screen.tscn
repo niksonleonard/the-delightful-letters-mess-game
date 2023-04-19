@@ -1,9 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://bsd5hcvmtiyyk"]
+[gd_scene load_steps=5 format=3 uid="uid://bsd5hcvmtiyyk"]
 
 [ext_resource type="Script" path="res://scripts/game_result_screen.gd" id="1_grark"]
 [ext_resource type="Texture2D" uid="uid://ctfr8rucm8lo0" path="res://assets/Images/mamu.png" id="1_odb2k"]
 
-[node name="GameResultScreen" type="Control" node_paths=PackedStringArray("scoreLabel")]
+[sub_resource type="LabelSettings" id="LabelSettings_t4kol"]
+font_size = 100
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 0.988235)
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1ny3p"]
+font_size = 30
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3, 3)
+
+[node name="GameResultScreen" type="Control" node_paths=PackedStringArray("scoreLabel", "ladyBugLetters")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,6 +23,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_grark")
 scoreLabel = NodePath("VBoxContainer/TotalScore")
+ladyBugLetters = NodePath("LettersResult")
 
 [node name="BackgroundImage" type="TextureRect" parent="."]
 show_behind_parent = true
@@ -39,6 +51,7 @@ theme_override_constants/separation = 10
 layout_mode = 2
 theme_override_font_sizes/font_size = 121
 text = "00"
+label_settings = SubResource("LabelSettings_t4kol")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -51,6 +64,15 @@ text = "Jogar Novamente"
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Voltar Tela Inicial"
+
+[node name="LettersResult" type="Label" parent="."]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 75.0
+offset_right = 530.0
+offset_bottom = 133.0
+text = "Font's Test"
+label_settings = SubResource("LabelSettings_1ny3p")
 
 [connection signal="pressed" from="VBoxContainer/PlayAgainButton" to="." method="_on_button_startgame_pressed"]
 [connection signal="pressed" from="VBoxContainer/TitleScreenButton" to="." method="_on_title_screen_button_pressed"]
