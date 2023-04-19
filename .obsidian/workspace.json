@@ -28,11 +28,11 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "documentation/ScreenDesgignCanvas.canvas",
+                "file": "documentation/HUD_Design_Canvas.canvas",
                 "viewState": {
-                  "x": -756.3939077495331,
-                  "y": -3075.152039952214,
-                  "zoom": -2.334695632436549
+                  "x": -20,
+                  "y": -1600,
+                  "zoom": -2.2736860997125863
                 }
               }
             }
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "documentation/images/Screen References/Wacky Races.jpg",
+                "file": "documentation/HUD_Design_Canvas.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "documentation/images/Screen References/Wacky Races.jpg",
+                "file": "documentation/HUD_Design_Canvas.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "documentation/images/Screen References/Wacky Races.jpg"
+                "file": "documentation/HUD_Design_Canvas.canvas"
               }
             }
           }
@@ -165,25 +165,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5a541fb010534486",
+  "active": "427629d110f977ef",
   "lastOpenFiles": [
     "documentation/CharactersDesignCanvas.canvas",
-    "documentation/ScreenDesgignCanvas.canvas",
+    "documentation/HUD_Design_Canvas.canvas",
+    "documentation/images/mamu's end.png",
+    "documentation/images/referece-mamu-original.png",
+    "documentation/images/harena-invite-mamu-reference.jpeg",
+    "documentation/images/ha-infatil-intenal-facility.jpeg",
+    "documentation/images/FKy5y_wXMAIk5By.jpeg",
+    "documentation/images/Screen References/Sonic.jpg",
+    "documentation/images/Screen References/Wacky Races.jpg",
+    "documentation/images/Screen References/Zelda.jpg",
+    "documentation/images/Screen References/crash.jpg",
+    "documentation/attachments/Font.md",
+    "documentation/attachments/HA_OFICIAL_V7.pdf",
     "documentation/pages/Game_Story_Narrative.md",
     "documentation/pages/Level_Design.md",
-    "documentation/images/Screen References/crash.jpg",
     "documentation/images/Screen References/Screen.png",
     "documentation/pages/Characters_Design_Dcoument.md",
-    "documentation/images/mamu's end.png",
-    "documentation/images/Pasted image 20230411133756.png",
-    "documentation/images/Pasted image 20230410195441.png",
-    "documentation/images/IMG_5179.jpeg",
-    "documentation/attachments/HA_OFICIAL_V7.pdf",
-    "documentation/attachments/Font.md",
-    "assets/models/blender_files/textures/cocinelle.png.001.png",
-    "assets/models/blender_files/textures/cocinelle.png",
-    "assets/Images/mamu.png",
-    "documentation/images/Screen References/Wacky Races.jpg",
     "documentation/images/Untitled.md",
     "documentation/images/Screen References",
     "scenes/game_screens/main_screen.tscn.tmp",
