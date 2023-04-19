@@ -1,18 +1,19 @@
 {
   "main": {
-    "id": "8fbdcd83e85f2345",
+    "id": "7889bc8aaae95af0",
     "type": "split",
     "children": [
       {
-        "id": "271be24cbaf51407",
+        "id": "d0ebb84c01c05691",
         "type": "tabs",
         "children": [
           {
-            "id": "837a3342743e723e",
+            "id": "d4f48b6e9de6b498",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "image",
               "state": {
+<<<<<<< HEAD
                 "file": "documentation/CharactersDesignCanvas.canvas",
                 "viewState": {
                   "x": -71,
@@ -34,25 +35,27 @@
                   "y": -1600,
                   "zoom": -2.2736860997125863
                 }
+=======
+                "file": "icon.svg"
+>>>>>>> 7d1efcfcb0be485ecf5fca77b03cde2f430a5d40
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "e5d0eeb754054749",
+    "id": "dfb84b95ae171fa0",
     "type": "split",
     "children": [
       {
-        "id": "b0b4a21d8c044826",
+        "id": "a12b7ce1fc88a8f7",
         "type": "tabs",
         "children": [
           {
-            "id": "427629d110f977ef",
+            "id": "d68e069c6266fe41",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -62,7 +65,7 @@
             }
           },
           {
-            "id": "5c4a13912830c02b",
+            "id": "f84fcc29bddcc03b",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -77,7 +80,7 @@
             }
           },
           {
-            "id": "c5d542f45647ded6",
+            "id": "287dc5fcc1acdfc2",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -91,20 +94,24 @@
     "width": 300
   },
   "right": {
-    "id": "52f11e61c2926dfc",
+    "id": "1adcf5bd5303fb98",
     "type": "split",
     "children": [
       {
-        "id": "b08d87776e5a21f9",
+        "id": "5cb65984c95a6f8c",
         "type": "tabs",
         "children": [
           {
-            "id": "8aaa226336270bf4",
+            "id": "2eb3f413edc91837",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< HEAD
                 "file": "documentation/HUD_Design_Canvas.canvas",
+=======
+                "file": "icon.svg",
+>>>>>>> 7d1efcfcb0be485ecf5fca77b03cde2f430a5d40
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,19 +123,23 @@
             }
           },
           {
-            "id": "8bdf1e76547b2276",
+            "id": "1c8073995c8ae198",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+<<<<<<< HEAD
                 "file": "documentation/HUD_Design_Canvas.canvas",
+=======
+                "file": "icon.svg",
+>>>>>>> 7d1efcfcb0be485ecf5fca77b03cde2f430a5d40
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "13b81b9dab067044",
+            "id": "b237d587d0a81f13",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -139,12 +150,16 @@
             }
           },
           {
-            "id": "9fecd78463532658",
+            "id": "a6ec057e593d8562",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
+<<<<<<< HEAD
                 "file": "documentation/HUD_Design_Canvas.canvas"
+=======
+                "file": "icon.svg"
+>>>>>>> 7d1efcfcb0be485ecf5fca77b03cde2f430a5d40
               }
             }
           }
@@ -165,9 +180,21 @@
       "command-palette:Open command palette": false
     }
   },
+<<<<<<< HEAD
   "active": "427629d110f977ef",
+=======
+  "active": "d4f48b6e9de6b498",
+>>>>>>> 7d1efcfcb0be485ecf5fca77b03cde2f430a5d40
   "lastOpenFiles": [
+    "scripts/game_preparation_screen.gd",
+    "scenes/game_screens/game_preparation_screen.tscn",
+    "scenes/game_screens/splash_screen.tscn",
+    "mamu.png",
+    "letter.png",
+    "mamu-with-letters.png",
+    "assets/textures/mamu-with-letters.png",
     "documentation/CharactersDesignCanvas.canvas",
+<<<<<<< HEAD
     "documentation/HUD_Design_Canvas.canvas",
     "documentation/images/mamu's end.png",
     "documentation/images/referece-mamu-original.png",
@@ -214,5 +241,21 @@
     "node_modules/p-locate/node_modules/p-limit/readme.md",
     "node_modules/xtend/README.md",
     "node_modules/redent/readme.md"
+=======
+    "documentation/images/Screenshot 2023-04-18 at 00.23.18.png",
+    "documentation/images/Screenshot 2023-04-17 at 13.43.34.png",
+    "documentation/Business Model Canvas.canvas",
+    "Business_Model_Canvas.png.import",
+    "assets/textures/pombas-games-logo.png.import",
+    "assets/textures/pombas-games-logo.png",
+    "documentation/images/Business_Model_Canvas.png",
+    "documentation/ScreenDesgignCanvas.canvas",
+    "assets/textures/boot-splash.png.import",
+    "assets/textures/boot-splash.png",
+    "scenes/game_screens/splash.tscn",
+    "assets/textures/klumfy-logotype.png.import",
+    "assets/textures/harena-logo-azul-vector.png.import",
+    "assets/textures/harena-logo-azul-vector.png"
+>>>>>>> 7d1efcfcb0be485ecf5fca77b03cde2f430a5d40
   ]
 }

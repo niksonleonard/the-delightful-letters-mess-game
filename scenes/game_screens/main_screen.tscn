@@ -10,12 +10,12 @@
 [ext_resource type="Texture2D" uid="uid://ck3ergkbdpbmp" path="res://assets/models/textures/TEX_Concrete_Sidewalk_1024x1024_normal.png" id="6_8jlnp"]
 [ext_resource type="PackedScene" path="res://assets/models/fixing_shop.tscn" id="6_ey0g3"]
 [ext_resource type="Texture2D" uid="uid://cwevymh53jhgf" path="res://assets/models/textures/TEX_Concrete_Sidewalk_1024x1024_roughness.png" id="7_ningw"]
-[ext_resource type="PackedScene" path="res://assets/models/barber_shop.tscn" id="7_th4pw"]
+[ext_resource type="PackedScene" uid="uid://cpguae56bolbh" path="res://assets/models/barber_shop.tscn" id="7_th4pw"]
 [ext_resource type="PackedScene" uid="uid://dy1fdrc8ukox0" path="res://scenes/LetterDeliveryPost.tscn" id="10_ii4hc"]
 [ext_resource type="Texture2D" uid="uid://cb2f0g6nigmqy" path="res://assets/letter.png" id="12_a1tg6"]
 [ext_resource type="Script" path="res://scripts/GameTimer.gd" id="13_xepny"]
-[ext_resource type="Texture2D" uid="uid://ctfr8rucm8lo0" path="res://assets/Images/mamu.png" id="15_euiab"]
-[ext_resource type="FontFile" uid="uid://d3yhgmqnakxng" path="res://phantomstorm.ttf" id="16_1a5jw"]
+[ext_resource type="PackedScene" uid="uid://4wqlvtw1d7ux" path="res://assets/models/building_mall.tscn" id="17_01hho"]
+[ext_resource type="Texture2D" uid="uid://b8q7nqddfoxry" path="res://assets/textures/touch-6602643_640.png" id="18_6u8dc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_34ium"]
 sky_top_color = Color(0.2, 0.705882, 1, 1)
@@ -33,11 +33,11 @@ sky = SubResource("Sky_xl4yy")
 sky_custom_fov = 64.5
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jidap"]
-size = Vector3(20, 0.4, 20)
+size = Vector3(32, 0.4, 20)
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_dlbk4"]
-vertices = PackedVector3Array(0, -1.51188, -9.5, -9.5, -1.51188, 0, -9.5, -1.51188, 9.5, 0, -1.51188, 9.5, 9.5, -1.51188, 0, 9.5, -1.51188, -9.5, 0, -1.51188, 9.5, 9.5, -1.51188, 9.5, 9.5, -1.51188, 0, 0, -1.51188, -9.5, -9.5, -1.51188, -9.5, -9.5, -1.51188, 0)
-polygons = [PackedInt32Array(5, 4, 0), PackedInt32Array(0, 4, 3), PackedInt32Array(0, 3, 1), PackedInt32Array(1, 3, 2), PackedInt32Array(8, 7, 6), PackedInt32Array(11, 10, 9)]
+vertices = PackedVector3Array(-12.562, -1.51188, 0, -12.562, -1.51188, 9.5, -4.81201, -1.51188, 9.5, 10.688, -1.51188, 9.5, 18.438, -1.51188, 9.5, 18.438, -1.51188, 0, 18.438, -1.51188, 0, 18.438, -1.51188, -9.5, 10.688, -1.51188, -9.5, -4.81201, -1.51188, -9.5, -12.562, -1.51188, -9.5, -12.562, -1.51188, 0, 2.93799, -1.51188, -9.5, -12.562, -1.51188, 0, -4.81201, -1.51188, 9.5, 2.93799, -1.51188, 9.5, 18.438, -1.51188, 0, 10.688, -1.51188, -9.5, 2.93799, -1.51188, 9.5, 10.688, -1.51188, 9.5, 18.438, -1.51188, 0, 2.93799, -1.51188, -9.5, -4.81201, -1.51188, -9.5, -12.562, -1.51188, 0)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Array(8, 7, 6), PackedInt32Array(11, 10, 9), PackedInt32Array(17, 16, 12), PackedInt32Array(12, 16, 15), PackedInt32Array(12, 15, 14), PackedInt32Array(12, 14, 13), PackedInt32Array(20, 19, 18), PackedInt32Array(23, 22, 21)]
 cell_height = 0.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vs0ir"]
@@ -45,7 +45,7 @@ albedo_color = Color(0.227451, 0.0196078, 0.184314, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_uq56s"]
 material = SubResource("StandardMaterial3D_vs0ir")
-size = Vector3(20, 0.2, 20)
+size = Vector3(32, 0.2, 20)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjxvq"]
 albedo_texture = ExtResource("5_qaa3v")
@@ -60,27 +60,49 @@ _data = {
 }
 point_count = 5
 
-[sub_resource type="LabelSettings" id="LabelSettings_gngbh"]
-font_size = 50
+[sub_resource type="Animation" id="Animation_xj0tk"]
+resource_name = "MovingHand"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(98.5, 0), Vector2(99, 10)]
+}
 
-[sub_resource type="LabelSettings" id="LabelSettings_to3bp"]
-font = ExtResource("16_1a5jw")
-font_size = 40
-shadow_color = Color(0, 0, 0, 1)
-shadow_offset = Vector2(3, 3)
+[sub_resource type="Animation" id="Animation_0x01d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(98.5, 0)]
+}
 
-[sub_resource type="LabelSettings" id="LabelSettings_5lgwd"]
-line_spacing = 2.0
-font = ExtResource("16_1a5jw")
-font_size = 30
-shadow_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-shadow_offset = Vector2(3, 3)
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lyx6c"]
+_data = {
+"MovingHand": SubResource("Animation_xj0tk"),
+"RESET": SubResource("Animation_0x01d")
+}
 
-[node name="MainScene" type="Node3D" node_paths=PackedStringArray("scoreLabel", "finalScore", "holdingLetterTexture")]
+[node name="MainScene" type="Node3D" node_paths=PackedStringArray("scoreLabel", "finalScore", "holdingLetterTexture", "tutorialScreen")]
 script = ExtResource("1_314rm")
 scoreLabel = NodePath("UserInterface/ScoreGameStateUI/Score")
-finalScore = NodePath("UserInterface/Retry/FinalScore")
+finalScore = NodePath("")
 holdingLetterTexture = NodePath("UserInterface/ScoreGameStateUI/HoldingLetterIndicator")
+tutorialScreen = NodePath("UserInterface/TutorialOnClick")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tnx11")
@@ -88,20 +110,21 @@ environment = SubResource("Environment_tnx11")
 [node name="Cenario" type="Node3D" parent="."]
 
 [node name="fixing_shop" parent="Cenario" instance=ExtResource("6_ey0g3")]
-transform = Transform3D(-4.37114e-08, -3.48787e-16, -1, 3.48787e-16, 1, -3.48787e-16, 1, -3.48787e-16, -4.37114e-08, -13.4998, 0.140366, 0.365382)
+transform = Transform3D(-4.37114e-08, -3.48787e-16, -1, 3.48787e-16, 1, -3.48787e-16, 1, -3.48787e-16, -4.37114e-08, -19.5234, 0.140366, 0.505037)
 
 [node name="barber_shop" parent="Cenario" instance=ExtResource("7_th4pw")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.275533, 0, -12.7474)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10.4446, 0, -12.7474)
 
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="Cenario"]
-stream = ExtResource("5_oyj76")
-autoplay = true
+[node name="building_mall" parent="Cenario" instance=ExtResource("17_01hho")]
+transform = Transform3D(-1, 3.48787e-16, 8.74228e-08, 3.48787e-16, 1, -3.48787e-16, -8.74228e-08, -3.48787e-16, -1, 15.5687, 0.2, -9.66874)
 
 [node name="Floor" type="StaticBody3D" parent="Cenario"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.01489, 0, 0)
 collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cenario/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.938, 2.08165e-12, 2.08165e-12)
 shape = SubResource("BoxShape3D_jidap")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="Cenario/Floor"]
@@ -109,21 +132,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.71188, 0)
 navigation_mesh = SubResource("NavigationMesh_dlbk4")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Cenario/Floor/NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.71188, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.93799, -1.71188, 0)
 mesh = SubResource("BoxMesh_uq56s")
 skeleton = NodePath("../../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_jjxvq")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Cenario"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.494036, 10.7062, 5.9512)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.50892, 10.7062, 5.9512)
 light_energy = 4.689
 light_indirect_energy = 0.0
 light_volumetric_fog_energy = 11.432
 light_size = 0.174
 omni_range = 28.571
 
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="Cenario"]
+stream = ExtResource("5_oyj76")
+volume_db = -15.0
+autoplay = true
+
 [node name="Camera3D" type="Camera3D" parent="." groups=["Camera"]]
-transform = Transform3D(1, 0, 0, 0, 0.964123, 0.265455, 0, -0.265455, 0.964123, 0.219497, 8.56812, 18.7637)
+transform = Transform3D(1, 0, 0, 0, 0.964123, 0.265455, 0, -0.265455, 0.964123, 0.219497, 7.18466, 17.789)
 current = true
 fov = 53.2
 far = 100.0
@@ -172,86 +200,117 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ScoreGameStateUI" type="VBoxContainer" parent="UserInterface"]
-layout_mode = 0
-offset_right = 1000.0
-offset_bottom = 1146.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Score" type="Label" parent="UserInterface/ScoreGameStateUI"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 45
-text = "Pontos: 0"
-
-[node name="Hourlass" type="Label" parent="UserInterface/ScoreGameStateUI"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-text = "00"
-label_settings = SubResource("LabelSettings_gngbh")
-
-[node name="HoldingLetterIndicator" type="TextureRect" parent="UserInterface/ScoreGameStateUI"]
-visible = false
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-texture = ExtResource("12_a1tg6")
-expand_mode = 3
-stretch_mode = 4
-
-[node name="Retry" type="ColorRect" parent="UserInterface"]
+[node name="ScoreGameStateUI" type="HBoxContainer" parent="UserInterface"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0.403922, 0.501961, 0.454902)
 
-[node name="TextureRect" type="TextureRect" parent="UserInterface/Retry"]
-show_behind_parent = true
+[node name="Score" type="Label" parent="UserInterface/ScoreGameStateUI"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 45
+text = "Pontos: 0"
+
+[node name="Hourlass" type="Label" parent="UserInterface/ScoreGameStateUI"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 65
+text = "00"
+horizontal_alignment = 1
+
+[node name="HoldingLetterIndicator" type="TextureRect" parent="UserInterface/ScoreGameStateUI"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 0
+texture = ExtResource("12_a1tg6")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="TutorialOnClick" type="Control" parent="UserInterface"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.000868056
-anchor_right = 0.995
-anchor_bottom = 1.01804
-offset_left = 4.0
-offset_top = 3.0
-offset_right = 3.76001
-offset_bottom = 44.3101
-texture = ExtResource("15_euiab")
-expand_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Label" type="Label" parent="UserInterface/Retry"]
+[node name="ColorRect" type="ColorRect" parent="UserInterface/TutorialOnClick"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.901961, 0.686275, 0.839216, 0.521569)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UserInterface/TutorialOnClick"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -218.0
+offset_right = 150.0
+offset_bottom = -17.9794
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Control" type="Control" parent="UserInterface/TutorialOnClick/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="UserInterface/TutorialOnClick/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 98.5
+offset_right = 398.5
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("18_6u8dc")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UserInterface/TutorialOnClick/VBoxContainer/Control/TextureRect"]
+autoplay = "MovingHand"
+libraries = {
+"": SubResource("AnimationLibrary_lyx6c")
+}
+
+[node name="ColorRect" type="ColorRect" parent="UserInterface/TutorialOnClick/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0.411765, 0.458824, 1)
+
+[node name="Label" type="Label" parent="UserInterface/TutorialOnClick/VBoxContainer/ColorRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -338.0
-offset_top = -81.0
-offset_right = 214.0
-offset_bottom = 63.0
+offset_left = -133.5
+offset_top = -17.0
+offset_right = 133.5
+offset_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Dê um clique
-para jogar novamente."
-label_settings = SubResource("LabelSettings_to3bp")
-
-[node name="FinalScore" type="Label" parent="UserInterface/Retry"]
-layout_mode = 2
-offset_left = 244.0
-offset_top = 389.0
-offset_right = 457.0
-offset_bottom = 455.0
-theme_override_font_sizes/font_size = 45
-text = "XXXXX"
-label_settings = SubResource("LabelSettings_5lgwd")
+theme_override_font_sizes/font_size = 23
+text = "Toque na tela para que o jogador move-se"
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="XROrigin3D" type="XROrigin3D" parent="."]
 

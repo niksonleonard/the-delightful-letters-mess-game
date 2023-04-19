@@ -1,0 +1,33 @@
+{
+	"nodes":[
+		{"type":"group","id":"19598c7550c45db3","x":-400,"y":-280,"width":2750,"height":1560,"label":"Canvas","background":"documentation/images/Business_Model_Canvas.png"},
+		{"type":"text","text":"Jogadores Adultos Casuais","id":"b4b2e27a30d6e560","x":1760,"y":-143,"width":200,"height":50,"color":"3"},
+		{"type":"text","text":"Interessados em colaboração filantrópica","id":"779440a087fbb0ca","x":1760,"y":-83,"width":200,"height":105,"color":"3"},
+		{"type":"text","text":"Interessados no deselvolvimento do ecosistema de inovação","id":"878ad00e3a92c897","x":1760,"y":32,"width":200,"height":113,"color":"3"},
+		{"type":"text","text":"Jogadores Infantil","id":"262b340438bb38b4","x":1760,"y":153,"width":200,"height":50,"color":"3"},
+		{"type":"text","text":"Push noitifications","id":"22637da5b6515aff","x":1280,"y":-160,"width":200,"height":55,"color":"3"},
+		{"type":"text","text":"E-mails","id":"4668d66f5b7d59fd","x":1280,"y":-93,"width":200,"height":55,"color":"3"},
+		{"type":"text","text":"Appel Appstore","id":"945f1a867b3ea7a9","x":1280,"y":340,"width":200,"height":50,"color":"3"},
+		{"type":"text","text":"Meta Store","id":"d34963390525127b","x":1280,"y":440,"width":200,"height":50,"color":"3"},
+		{"type":"text","text":"Google Play","id":"3ce790eccd764769","x":1280,"y":390,"width":200,"height":50,"color":"3"},
+		{"type":"text","text":"Pontos Comerciais que já possuem caixinha de arrecadação","id":"16c3b1453991d77d","x":1280,"y":490,"width":200,"height":115,"color":"3"},
+		{"type":"text","text":"Contribuir com HA de forma simples e acessível e gamificada","id":"8029aa01856d00bc","x":760,"y":-152,"width":200,"height":113,"color":"3"},
+		{"type":"text","text":"Para pacientes - ambientado com elementos visuais da própria instituição","id":"80b42496b602e408","x":760,"y":-27,"width":200,"height":155,"color":"3"},
+		{"type":"text","text":"Diferenciada e inovadora forma de estabelecer contato com a instituição HA","id":"8b1381ade12ae890","x":760,"y":133,"width":200,"height":155,"color":"3"},
+		{"type":"text","text":"Aquisição do Aplicativo","id":"e937ba7a97515c3e","x":1000,"y":960,"width":220,"height":60,"color":"3"},
+		{"type":"text","text":"Compra de Passe de Temporada com Cosméticos","id":"6e8c3170562feb00","x":1000,"y":1030,"width":220,"height":100,"color":"3"},
+		{"type":"text","text":"Aquisição de desafios adicionais","id":"561bb01a6c27f281","x":1230,"y":960,"width":220,"height":70,"color":"3"},
+		{"type":"text","text":"Dinâmica do game pode proporcionar educação dobre saúde com conteúdos informativo imersos na game play e narrativa do game","id":"7c95d0ee4f4ea103","x":760,"y":302,"width":240,"height":177,"color":"3"},
+		{"type":"text","text":"Desenvolvimento de novos profissionais de TI","id":"ba54b9ce2421c0c7","x":240,"y":-152,"width":240,"height":80,"color":"3"},
+		{"type":"text","text":"Desenvolvimento saional de novos conteúdos para o game","id":"5c3c2fd13ddd9ac1","x":240,"y":-67,"width":240,"height":84,"color":"3"},
+		{"type":"text","text":"i9dea Infra-structure Knoledge","id":"d3972b136b0f3227","x":240,"y":390,"width":200,"height":75,"color":"3"},
+		{"type":"text","text":"Tarifa Transacional dos Canais (Appstores)","id":"2200bde99ce430de","x":-260,"y":925,"width":220,"height":60,"color":"3"},
+		{"type":"text","text":"Anuidades de licença Dev da Apple","id":"0eaed946c4a9261b","x":10,"y":920,"width":220,"height":60,"color":"3"},
+		{"type":"text","text":"Equipe de Desenvolvimento","id":"5545f0d1a1281f3d","x":10,"y":995,"width":220,"height":60,"color":"3"},
+		{"type":"text","text":"Hospedagem de material de divulgação","id":"d227d6ef52ec6937","x":-260,"y":1000,"width":220,"height":60,"color":"3"},
+		{"type":"text","text":"Harena","id":"4fa6db65eff24e28","x":-260,"y":-143,"width":120,"height":60,"color":"3"},
+		{"type":"text","text":"i9dea Klumnfy","id":"d77b64e2782d0633","x":-260,"y":-73,"width":180,"height":50,"color":"3"},
+		{"type":"text","text":"Hospital do Amor","id":"385228b3b8a9f4b3","x":-260,"y":-11,"width":120,"height":60,"color":"3"}
+	],
+	"edges":[]
+}

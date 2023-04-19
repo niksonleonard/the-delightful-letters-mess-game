@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/niksonleonard/mamu-adventure/compare/v0.0.2...v0.0.3) (2023-04-18)
+
+
+### Features
+
+* mamu end screen ([d6aed15](https://github.com/niksonleonard/mamu-adventure/commit/d6aed15834ae7f7a154799b9b8690b0ffad1d212))
+* scratched stamps album screen ([b0a215f](https://github.com/niksonleonard/mamu-adventure/commit/b0a215f82da64d66cb6000aaa4c4a9ebf857a43c))
+* splash with bg music ([2110e4c](https://github.com/niksonleonard/mamu-adventure/commit/2110e4cf486efcac9466f3dbac78bd83841e1bd5))
+* splashscreen with pombas games ([31d2d30](https://github.com/niksonleonard/mamu-adventure/commit/31d2d30e78e1efbc37e28f4563a5f0799663e430))
+* title screen to album flow ([6733b45](https://github.com/niksonleonard/mamu-adventure/commit/6733b452375072f36f71e9e6343a518cf03a8100))
+
+
+### Bug Fixes
+
+* image documentation ([ecda217](https://github.com/niksonleonard/mamu-adventure/commit/ecda2175ff6a56b00e21b36d689d591e719b0e92))
+
 ### [0.0.2](https://github.com/niksonleonard/mamu-adventure/compare/v0.0.1...v0.0.2) (2023-04-13)
 
 

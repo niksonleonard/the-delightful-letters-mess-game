@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3 uid="uid://xgbrmrtgpi80"]
+
+[ext_resource type="Script" path="res://scripts/game_preparation_screen.gd" id="1_lys2i"]
+[ext_resource type="Texture2D" uid="uid://cqph4bnoy5jww" path="res://assets/textures/envelope-3172770.svg" id="2_84quc"]
+
+[node name="GamePreparationScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lys2i")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.192157, 0.501961, 1, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -503.5
+offset_top = -36.0
+offset_right = 503.5
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Colete as cartas antes que joaninha coma"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -89.0
+offset_top = 339.0
+offset_right = 409.0
+offset_bottom = 638.0
+rotation = 0.208202
+texture = ExtResource("2_84quc")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 897.349
+offset_top = -483.934
+offset_right = 1395.35
+offset_bottom = -184.934
+rotation = -0.641983
+scale = Vector2(0.538172, 0.538172)
+texture = ExtResource("2_84quc")
+expand_mode = 3
+stretch_mode = 5
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
