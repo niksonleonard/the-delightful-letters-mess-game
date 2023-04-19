@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://xgbrmrtgpi80"]
+[gd_scene load_steps=3 format=3 uid="uid://xgbrmrtgpi80"]
 
 [ext_resource type="Script" path="res://scripts/game_preparation_screen.gd" id="1_lys2i"]
+[ext_resource type="Texture2D" uid="uid://cqph4bnoy5jww" path="res://assets/textures/envelope-3172770.svg" id="2_84quc"]
 
 [node name="GamePreparationScreen" type="Control"]
 layout_mode = 3
@@ -39,5 +40,27 @@ text = "Colete as cartas antes que joaninha coma"
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 autostart = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -89.0
+offset_top = 339.0
+offset_right = 409.0
+offset_bottom = 638.0
+rotation = 0.208202
+texture = ExtResource("2_84quc")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+offset_left = 897.349
+offset_top = -483.934
+offset_right = 1395.35
+offset_bottom = -184.934
+rotation = -0.641983
+scale = Vector2(0.538172, 0.538172)
+texture = ExtResource("2_84quc")
+expand_mode = 3
+stretch_mode = 5
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

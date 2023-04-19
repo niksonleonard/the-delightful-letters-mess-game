@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cxuhvxh4lguqs"]
+[gd_scene load_steps=29 format=3 uid="uid://cxuhvxh4lguqs"]
 
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_314rm"]
 [ext_resource type="PackedScene" uid="uid://bwmhxba2yl7lk" path="res://scenes/PlayerObject.tscn" id="1_wi3b8"]
@@ -59,9 +59,6 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0)
 }
 point_count = 5
-
-[sub_resource type="LabelSettings" id="LabelSettings_gngbh"]
-font_size = 50
 
 [sub_resource type="Animation" id="Animation_xj0tk"]
 resource_name = "MovingHand"
@@ -221,16 +218,15 @@ text = "Pontos: 0"
 [node name="Hourlass" type="Label" parent="UserInterface/ScoreGameStateUI"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 65
 text = "00"
-label_settings = SubResource("LabelSettings_gngbh")
 horizontal_alignment = 1
 
 [node name="HoldingLetterIndicator" type="TextureRect" parent="UserInterface/ScoreGameStateUI"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 10
 size_flags_vertical = 0
 texture = ExtResource("12_a1tg6")
 expand_mode = 3
@@ -255,48 +251,36 @@ color = Color(0.901961, 0.686275, 0.839216, 0.521569)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UserInterface/TutorialOnClick"]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -122.0
-offset_top = 119.0
-offset_right = 178.0
-offset_bottom = 319.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -218.0
+offset_right = 150.0
+offset_bottom = -17.9794
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 
 [node name="Control" type="Control" parent="UserInterface/TutorialOnClick/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ColorRect2" type="ColorRect" parent="UserInterface/TutorialOnClick/VBoxContainer/Control"]
-visible = false
-layout_mode = 2
-offset_top = 4.0
-offset_right = 297.0
-offset_bottom = 91.0
-size_flags_vertical = 3
-
 [node name="TextureRect" type="TextureRect" parent="UserInterface/TutorialOnClick/VBoxContainer/Control"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -51.5
-offset_top = -49.0
-offset_right = 48.5327
-offset_bottom = 50.9999
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 98.5
+offset_right = 98.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("18_6u8dc")
 expand_mode = 3
-stretch_mode = 4
+stretch_mode = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UserInterface/TutorialOnClick/VBoxContainer/Control/TextureRect"]
 autoplay = "MovingHand"
@@ -326,10 +310,6 @@ theme_override_font_sizes/font_size = 23
 text = "Toque na tela para que o jogador move-se"
 horizontal_alignment = 1
 autowrap_mode = 2
-
-[node name="ColorRect" type="ColorRect" parent="UserInterface"]
-layout_mode = 2
-offset_right = 1000.0
 
 [node name="XROrigin3D" type="XROrigin3D" parent="."]
 
