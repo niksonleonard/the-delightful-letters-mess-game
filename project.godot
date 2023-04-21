@@ -17,6 +17,10 @@ boot_splash/show_image=false
 boot_splash/image="res://assets/textures/boot-splash.png"
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout=""
+
 [autoload]
 
 GameSession="*res://scripts/GameSessionState.gd"

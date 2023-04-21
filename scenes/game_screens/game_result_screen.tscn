@@ -14,7 +14,7 @@ font_size = 30
 shadow_color = Color(0, 0, 0, 1)
 shadow_offset = Vector2(3, 3)
 
-[node name="GameResultScreen" type="Control" node_paths=PackedStringArray("scoreLabel", "ladyBugLetters")]
+[node name="GameResultScreen" type="Control" node_paths=PackedStringArray("scoreLabel", "ladyBugLetters", "newRecordPanel")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,18 +24,16 @@ grow_vertical = 2
 script = ExtResource("1_grark")
 scoreLabel = NodePath("VBoxContainer/TotalScore")
 ladyBugLetters = NodePath("LettersResult")
+newRecordPanel = NodePath("VBoxContainer/NewRecordPanel")
 
 [node name="BackgroundImage" type="TextureRect" parent="."]
 show_behind_parent = true
 layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.000868056
-anchor_right = 0.995
-anchor_bottom = 1.01804
-offset_left = 4.0
-offset_top = 3.0
-offset_right = 3.75999
-offset_bottom = 44.3101
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_odb2k")
 expand_mode = 1
 
@@ -65,6 +63,27 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Voltar Tela Inicial"
 
+[node name="NewRecordPanel" type="VBoxContainer" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/NewRecordPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Novo Recorde"
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/NewRecordPanel"]
+custom_minimum_size = Vector2(2.08165e-12, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+placeholder_text = "Apelido"
+
+[node name="Button" type="Button" parent="VBoxContainer/NewRecordPanel"]
+layout_mode = 2
+text = "Enviar"
+
 [node name="LettersResult" type="Label" parent="."]
 layout_mode = 0
 offset_left = 178.0
@@ -76,3 +95,4 @@ label_settings = SubResource("LabelSettings_1ny3p")
 
 [connection signal="pressed" from="VBoxContainer/PlayAgainButton" to="." method="_on_button_startgame_pressed"]
 [connection signal="pressed" from="VBoxContainer/TitleScreenButton" to="." method="_on_title_screen_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/NewRecordPanel/Button" to="." method="_on_button_pressed"]

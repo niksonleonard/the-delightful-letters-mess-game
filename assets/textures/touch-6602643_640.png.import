@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8q7nqddfoxry"
-path.s3tc="res://.godot/imported/touch-6602643_640.png-e7a4492b1d50cd22fdcf8ad0973c0d9f.s3tc.ctex"
+path.etc2="res://.godot/imported/touch-6602643_640.png-e7a4492b1d50cd22fdcf8ad0973c0d9f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/textures/touch-6602643_640.png"
-dest_files=["res://.godot/imported/touch-6602643_640.png-e7a4492b1d50cd22fdcf8ad0973c0d9f.s3tc.ctex"]
+dest_files=["res://.godot/imported/touch-6602643_640.png-e7a4492b1d50cd22fdcf8ad0973c0d9f.etc2.ctex"]
 
 [params]
 
