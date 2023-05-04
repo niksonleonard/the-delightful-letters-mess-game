@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bapg4i1i25mrx"]
+[gd_scene load_steps=6 format=3 uid="uid://bapg4i1i25mrx"]
 
 [ext_resource type="Script" path="res://scripts/splash_screen.gd" id="1_pnmhl"]
 [ext_resource type="Texture2D" uid="uid://cqsfsdq1gdsmg" path="res://assets/textures/pombas-games-logo.png" id="2_kttkq"]
 [ext_resource type="Texture2D" uid="uid://cq501hmdyjd41" path="res://assets/textures/klumfy-logotype.png" id="4_leoni"]
+[ext_resource type="Texture2D" uid="uid://cdc71dfg71lgc" path="res://assets/textures/harena-logo-azul-vector.png" id="5_iahyw"]
 [ext_resource type="AudioStream" uid="uid://dps1tam3732us" path="res://assets/sounds/524345__javierserrat__pigeon.mp3" id="5_yey5s"]
 
 [node name="SplashScreen" type="Control"]
@@ -55,6 +56,13 @@ grow_vertical = 0
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("4_leoni")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Klumfy-logotype2" type="TextureRect" parent="Control"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_iahyw")
 expand_mode = 3
 stretch_mode = 5
 

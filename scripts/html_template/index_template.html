@@ -289,8 +289,6 @@ const engine = new Engine(GODOT_CONFIG);
             {
                 window.getRank()
                     .then(sortedList =>  {
-                        console.log(sortedList)
-
                         // Check if is a new global record
                         if (score <= sortedList[0].score)
                         {

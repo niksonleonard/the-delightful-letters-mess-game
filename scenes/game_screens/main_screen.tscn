@@ -66,47 +66,46 @@ shadow_size = 3
 shadow_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
 shadow_offset = Vector2(4, 4)
 
-[sub_resource type="LabelSettings" id="LabelSettings_bpkfa"]
-font_size = 45
-shadow_color = Color(0, 0, 0, 1)
-shadow_offset = Vector2(3, 3)
-
-[sub_resource type="Animation" id="Animation_xj0tk"]
-resource_name = "MovingHand"
+[sub_resource type="Animation" id="Animation_hen4g"]
+resource_name = "Movement"
+length = 2.0
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 2
+tracks/0/path = NodePath(".:flip_h")
+tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(98.5, 0), Vector2(99, 10)]
+"update": 1,
+"values": [false, true]
 }
 
-[sub_resource type="Animation" id="Animation_0x01d"]
+[sub_resource type="Animation" id="Animation_bodm6"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath(".:flip_h")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(98.5, 0)]
+"update": 1,
+"values": [false]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_lyx6c"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_52c1u"]
 _data = {
-"MovingHand": SubResource("Animation_xj0tk"),
-"RESET": SubResource("Animation_0x01d")
+"Movement": SubResource("Animation_hen4g"),
+"RESET": SubResource("Animation_bodm6")
 }
+
+[sub_resource type="BoxMesh" id="BoxMesh_oiuuf"]
+size = Vector3(2, 1, 0.1)
 
 [node name="MainScene" type="Node3D" node_paths=PackedStringArray("scoreLabel", "finalScore", "holdingLetterTexture", "tutorialScreen")]
 script = ExtResource("1_314rm")
@@ -198,7 +197,7 @@ curve = SubResource("Curve3D_iyj42")
 transform = Transform3D(0.0212262, 0, 0.999775, 0, 1, 0, -0.999775, 0, 0.0212262, -7.54688, 0, -7.36835)
 
 [node name="GameTimer" type="Timer" parent="." node_paths=PackedStringArray("hourlass")]
-wait_time = 20.0
+wait_time = 45.0
 autostart = true
 script = ExtResource("13_xepny")
 hourlass = NodePath("../UserInterface/Hourlass")
@@ -212,11 +211,14 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Hourlass" type="Label" parent="UserInterface"]
-layout_mode = 2
-offset_left = 385.0
-offset_top = -20.0
-offset_right = 767.0
-offset_bottom = 618.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -191.0
+offset_right = 191.0
+offset_bottom = 638.0
+grow_horizontal = 2
 size_flags_vertical = 1
 theme_override_font_sizes/font_size = 65
 text = "00"
@@ -237,9 +239,8 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
-theme_override_font_sizes/font_size = 45
+theme_override_font_sizes/font_size = 80
 text = "Pontos: 0"
-label_settings = SubResource("LabelSettings_bpkfa")
 
 [node name="HoldingLetterIndicator" type="TextureRect" parent="UserInterface/ScoreGameStateUI"]
 visible = false
@@ -270,42 +271,37 @@ color = Color(0.901961, 0.686275, 0.839216, 0.521569)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UserInterface/TutorialOnClick"]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -150.0
-offset_top = -218.0
-offset_right = 150.0
-offset_bottom = -17.9794
+anchors_preset = -1
+anchor_left = 0.370868
+anchor_top = 0.664
+anchor_right = 0.630868
+anchor_bottom = 0.972
+offset_left = -0.240005
+offset_top = -0.272022
+offset_right = 0.239937
+offset_bottom = 0.164589
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
+alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="Control" type="Control" parent="UserInterface/TutorialOnClick/VBoxContainer"]
+[node name="Control" type="MarginContainer" parent="UserInterface/TutorialOnClick/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
 [node name="TextureRect" type="TextureRect" parent="UserInterface/TutorialOnClick/VBoxContainer/Control"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 98.5
-offset_right = 998.5
-offset_bottom = 294.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+layout_mode = 2
 texture = ExtResource("18_6u8dc")
 expand_mode = 3
 stretch_mode = 5
+flip_h = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UserInterface/TutorialOnClick/VBoxContainer/Control/TextureRect"]
-autoplay = "MovingHand"
+autoplay = "Movement"
+reset_on_save = false
 libraries = {
-"": SubResource("AnimationLibrary_lyx6c")
+"": SubResource("AnimationLibrary_52c1u")
 }
 
 [node name="ColorRect" type="ColorRect" parent="UserInterface/TutorialOnClick/VBoxContainer"]
@@ -315,24 +311,27 @@ color = Color(0, 0.411765, 0.458824, 1)
 
 [node name="Label" type="Label" parent="UserInterface/TutorialOnClick/VBoxContainer/ColorRect"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -133.5
-offset_top = -17.0
-offset_right = 133.5
-offset_bottom = 18.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 23
+theme_override_font_sizes/font_size = 29
 text = "Toque na tela para que o jogador move-se"
 horizontal_alignment = 1
-autowrap_mode = 2
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="XROrigin3D" type="XROrigin3D" parent="."]
 
 [node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+
+[node name="ChatBubble" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.6851, 0)
+mesh = SubResource("BoxMesh_oiuuf")
+
+[node name="Label3D" type="Label3D" parent="ChatBubble"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0, 0.1)
+text = "Delivery here!"
 
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]

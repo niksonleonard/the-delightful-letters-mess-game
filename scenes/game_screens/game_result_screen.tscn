@@ -59,6 +59,7 @@ theme_override_font_sizes/font_size = 42
 text = "Jogar Novamente"
 
 [node name="TitleScreenButton" type="Button" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Voltar Tela Inicial"

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxhm5rfn8mdr8"]
+
+[ext_resource type="PackedScene" uid="uid://bowfxbwbflmnt" path="res://assets/models/blender_files/delivery_box.blend" id="1_gmukw"]
+[ext_resource type="Texture2D" uid="uid://c17syn78gemul" path="res://assets/textures/SimpleOffice_Texture.png" id="2_j8ucw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_06wif"]
+albedo_texture = ExtResource("2_j8ucw")
+
+[node name="delivery_box" instance=ExtResource("1_gmukw")]
+
+[node name="Materials" parent="SO_CarboardBox_02001" index="0"]
+visible = false
+
+[node name="SO_CarboardBox_02_geometry" parent="SO_CarboardBox_02001/SO_CarboardBox_02" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_06wif")

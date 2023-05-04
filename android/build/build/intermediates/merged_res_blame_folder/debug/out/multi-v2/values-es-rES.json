@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.godot.game-mergeDebugResources-9:/values-es-rES/values-es-rES.xml",
+            "map": [
+                {
+                    "source": "/Users/niksonleonard/Projects/i9dea/harena/mamu-adventure/android/build/res/values-es-rES/godot_project_name_string.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "1",
+                        "startOffsets": "112",
+                        "endColumns": "78",
+                        "endOffsets": "189"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "81",
+                        "endOffsets": "132"
+                    }
+                }
+            ]
+        }
+    ]
+}

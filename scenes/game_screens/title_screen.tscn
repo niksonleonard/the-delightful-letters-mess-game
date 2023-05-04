@@ -66,11 +66,13 @@ theme_override_font_sizes/font_size = 40
 text = "Iniciar Jogo"
 
 [node name="StampAlbumButton" type="Button" parent="HBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Albuns de Selos"
 
 [node name="SettingsButton" type="Button" parent="HBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 disabled = true

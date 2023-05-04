@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dy1fdrc8ukox0"]
+[gd_scene load_steps=5 format=3 uid="uid://dy1fdrc8ukox0"]
+
+[ext_resource type="PackedScene" uid="uid://docpabyluqhl7" path="res://assets/models/delivery_box.glb" id="1_1q4p2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_65lqd"]
 size = Vector3(2.5, 2, 1.2)
@@ -21,4 +23,8 @@ shape = SubResource("BoxShape3D_65lqd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 2.08165e-12)
+visible = false
 mesh = SubResource("BoxMesh_20n2d")
+
+[node name="delivery_box" parent="." instance=ExtResource("1_1q4p2")]
+transform = Transform3D(-6.55671e-08, 5.2318e-16, 1.5, 5.2318e-16, 1.5, -5.2318e-16, -1.5, 5.2318e-16, -6.55671e-08, 0, 0, 0)

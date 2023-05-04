@@ -1,0 +1,16 @@
+{
+  "name": "the-delightful-letters-mess",
+  "version": "0.0.3",
+  "description": "create a game to studing game development",
+  "main": "index.js",
+  "repository": "git@github.com:niksonleonard/mamu-adventure.git",
+  "author": "Alan <raniel29c@gmail.com>",
+  "license": "unlicense",
+  "private": true,
+  "scripts": {
+    "versionit": "standard-version"
+  },
+  "devDependencies": {
+    "standard-version": "^9.5.0"
+  }
+}
